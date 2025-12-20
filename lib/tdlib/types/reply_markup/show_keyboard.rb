@@ -2,7 +2,7 @@ module TD::Types
   # Contains a custom keyboard layout to quickly reply to bots.
   #
   # @attr rows [Array<Array<TD::Types::KeyboardButton>>] A list of rows of bot keyboard buttons.
-  # @attr is_persistent [Boolean] True, if the keyboard is supposed to always be shown when the ordinary keyboard is
+  # @attr is_persistent [Boolean] True, if the keyboard is expected to always be shown when the ordinary keyboard is
   #   hidden.
   # @attr resize_keyboard [Boolean] True, if the application needs to resize the keyboard vertically.
   # @attr one_time [Boolean] True, if the application needs to hide the keyboard after use.

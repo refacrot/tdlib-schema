@@ -1,8 +1,8 @@
 module TD::Types
   # Represents a part of the text which must be formatted differently.
   class TextEntityType < Base
-    %w[
-      mention
+%w[
+  mention
       hashtag
       cashtag
       bot_command
@@ -24,8 +24,8 @@ module TD::Types
       mention_name
       custom_emoji
       media_timestamp
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/text_entity_type/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/text_entity_type/#{type}"
+end
   end
 end

@@ -1,8 +1,8 @@
 module TD::Types
   # Describes a block of an instant view for a web page.
   class PageBlock < Base
-    %w[
-      title
+%w[
+  title
       subtitle
       author_date
       header
@@ -31,8 +31,8 @@ module TD::Types
       details
       related_articles
       map
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/page_block/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/page_block/#{type}"
+end
   end
 end

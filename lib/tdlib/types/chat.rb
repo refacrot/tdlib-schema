@@ -10,6 +10,8 @@ module TD::Types
   #   photo, reply header, and link preview.
   # @attr background_custom_emoji_id [Integer] Identifier of a custom emoji to be shown on the reply header and link
   #   preview background for messages sent by the chat; 0 if none.
+  # @attr upgraded_gift_colors [TD::Types::UpgradedGiftColors, nil] Color scheme based on an upgraded gift to be used
+  #   for the chat instead of accent_color_id and background_custom_emoji_id; may be null if none.
   # @attr profile_accent_color_id [Integer] Identifier of the profile accent color for the chat's profile; -1 if none.
   # @attr profile_background_custom_emoji_id [Integer] Identifier of a custom emoji to be shown on the background of
   #   the chat's profile; 0 if none.
@@ -18,8 +20,8 @@ module TD::Types
   # @attr last_message [TD::Types::Message, nil] Last message in the chat; may be null if none or unknown.
   # @attr positions [Array<TD::Types::ChatPosition>] Positions of the chat in chat lists.
   # @attr chat_lists [Array<TD::Types::ChatList>] Chat lists to which the chat belongs.
-  #   A chat can have a non-zero position in a chat list even it doesn't belong to the chat list and have no position
-  #   in a chat list even it belongs to the chat list.
+  #   A chat can have a non-zero position in a chat list even if it doesn't belong to the chat list and have no
+  #   position in a chat list even if it belongs to the chat list.
   # @attr message_sender_id [TD::Types::MessageSender, nil] Identifier of a user or chat that is selected to send
   #   messages in the chat; may be null if the user can't change message sender.
   # @attr block_list [TD::Types::BlockList, nil] Block list to which the chat is added; may be null if none.
@@ -49,7 +51,7 @@ module TD::Types
   #   Auto-delete timer in other chats starts from the send date.
   # @attr emoji_status [TD::Types::EmojiStatus, nil] Emoji status to be shown along with chat title; may be null.
   # @attr background [TD::Types::ChatBackground, nil] Background set for the chat; may be null if none.
-  # @attr theme_name [TD::Types::String] If non-empty, name of a theme, set for the chat.
+  # @attr theme [TD::Types::ChatTheme, nil] Theme set for the chat; may be null if none.
   # @attr action_bar [TD::Types::ChatActionBar, nil] Information about actions which must be possible to do through the
   #   chat action bar; may be null if none.
   # @attr business_bot_manage_bar [TD::Types::BusinessBotManageBar, nil] Information about bar for managing a business
@@ -70,6 +72,7 @@ module TD::Types
     attribute :photo, TD::Types::ChatPhotoInfo.optional.default(nil)
     attribute :accent_color_id, TD::Types::Coercible::Integer
     attribute :background_custom_emoji_id, TD::Types::Coercible::Integer
+    attribute :upgraded_gift_colors, TD::Types::UpgradedGiftColors.optional.default(nil)
     attribute :profile_accent_color_id, TD::Types::Coercible::Integer
     attribute :profile_background_custom_emoji_id, TD::Types::Coercible::Integer
     attribute :permissions, TD::Types::ChatPermissions
@@ -97,7 +100,7 @@ module TD::Types
     attribute :message_auto_delete_time, TD::Types::Coercible::Integer
     attribute :emoji_status, TD::Types::EmojiStatus.optional.default(nil)
     attribute :background, TD::Types::ChatBackground.optional.default(nil)
-    attribute :theme_name, TD::Types::String
+    attribute :theme, TD::Types::ChatTheme.optional.default(nil)
     attribute :action_bar, TD::Types::ChatActionBar.optional.default(nil)
     attribute :business_bot_manage_bar, TD::Types::BusinessBotManageBar.optional.default(nil)
     attribute :video_chat, TD::Types::VideoChat

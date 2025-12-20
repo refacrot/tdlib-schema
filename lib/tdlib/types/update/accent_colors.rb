@@ -7,7 +7,7 @@ module TD::Types
   #   The exact colors for the accent colors with identifiers 0-6 must be taken from the app theme.
   # @attr available_accent_color_ids [Array<Integer>] The list of accent color identifiers, which can be set through
   #   setAccentColor and setChatAccentColor.
-  #   The colors must be shown in the specififed order.
+  #   The colors must be shown in the specified order.
   class Update::AccentColors < Update
     attribute :colors, TD::Types::Array.of(TD::Types::AccentColor)
     attribute :available_accent_color_ids, TD::Types::Array.of(TD::Types::Coercible::Integer)

@@ -15,6 +15,7 @@ module TD::Types
   # @attr invite_link_changes [Boolean] True, if changes to invite links need to be returned.
   # @attr video_chat_changes [Boolean] True, if video chat actions need to be returned.
   # @attr forum_changes [Boolean] True, if forum-related actions need to be returned.
+  # @attr subscription_extensions [Boolean] True, if subscription extensions need to be returned.
   class ChatEventLogFilters < Base
     attribute :message_edits, TD::Types::Bool
     attribute :message_deletions, TD::Types::Bool
@@ -29,5 +30,6 @@ module TD::Types
     attribute :invite_link_changes, TD::Types::Bool
     attribute :video_chat_changes, TD::Types::Bool
     attribute :forum_changes, TD::Types::Bool
+    attribute :subscription_extensions, TD::Types::Bool
   end
 end

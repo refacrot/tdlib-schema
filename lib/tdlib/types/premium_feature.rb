@@ -1,8 +1,8 @@
 module TD::Types
   # Describes a feature available to Premium users.
   class PremiumFeature < Base
-    %w[
-      increased_limits
+%w[
+  increased_limits
       increased_upload_file_size
       improved_download_speed
       voice_recognition
@@ -26,8 +26,10 @@ module TD::Types
       last_seen_times
       business
       message_effects
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/premium_feature/#{type}"
-    end
+      checklists
+      paid_messages
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/premium_feature/#{type}"
+end
   end
 end

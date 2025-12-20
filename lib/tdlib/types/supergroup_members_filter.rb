@@ -1,8 +1,8 @@
 module TD::Types
   # Specifies the kind of chat members to return in getSupergroupMembers.
   class SupergroupMembersFilter < Base
-    %w[
-      recent
+%w[
+  recent
       contacts
       administrators
       search
@@ -10,8 +10,8 @@ module TD::Types
       banned
       mention
       bots
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/supergroup_members_filter/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/supergroup_members_filter/#{type}"
+end
   end
 end

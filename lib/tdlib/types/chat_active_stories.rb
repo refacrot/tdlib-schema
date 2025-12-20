@@ -6,7 +6,11 @@ module TD::Types
   #   the stories aren't shown in a story list.
   # @attr order [Integer] A parameter used to determine order of the stories in the story list; 0 if the stories
   #   doesn't need to be shown in the story list.
-  #   Stories must be sorted by the pair (order, story_sender_chat_id) in descending order.
+  #   Stories must be sorted by the pair (order, story_poster_chat_id) in descending order.
+  # @attr can_be_archived [Boolean] True, if the stories are shown in the main story list and can be archived;
+  #   otherwise, the stories can be hidden from the main story list only by calling removeTopChat with
+  #   {TD::Types::TopChatCategory::Users} and the chat_id.
+  #   Stories of the current user can't be archived nor hidden using removeTopChat.
   # @attr max_read_story_id [Integer] Identifier of the last read active story.
   # @attr stories [Array<TD::Types::StoryInfo>] Basic information about the stories; use getStory to get full
   #   information about the stories.
@@ -15,6 +19,7 @@ module TD::Types
     attribute :chat_id, TD::Types::Coercible::Integer
     attribute :list, TD::Types::StoryList.optional.default(nil)
     attribute :order, TD::Types::Coercible::Integer
+    attribute :can_be_archived, TD::Types::Bool
     attribute :max_read_story_id, TD::Types::Coercible::Integer
     attribute :stories, TD::Types::Array.of(TD::Types::StoryInfo)
   end

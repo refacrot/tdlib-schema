@@ -1,8 +1,8 @@
 module TD::Types
   # Describes type of limit, increased for Premium users.
   class PremiumLimitType < Base
-    %w[
-      supergroup_count
+%w[
+  supergroup_count
       pinned_chat_count
       created_public_chat_count
       saved_animation_count
@@ -16,13 +16,13 @@ module TD::Types
       chat_folder_invite_link_count
       shareable_chat_folder_count
       active_story_count
-      weekly_sent_story_count
-      monthly_sent_story_count
+      weekly_posted_story_count
+      monthly_posted_story_count
       story_caption_length
       story_suggested_reaction_area_count
       similar_chat_count
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/premium_limit_type/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/premium_limit_type/#{type}"
+end
   end
 end

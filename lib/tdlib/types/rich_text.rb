@@ -1,8 +1,8 @@
 module TD::Types
   # Describes a formatted text object.
   class RichText < Base
-    %w[
-      plain
+%w[
+  plain
       bold
       italic
       underline
@@ -19,8 +19,8 @@ module TD::Types
       anchor
       anchor_link
       s
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/rich_text/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/rich_text/#{type}"
+end
   end
 end

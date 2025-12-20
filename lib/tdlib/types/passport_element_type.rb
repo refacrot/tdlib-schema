@@ -1,8 +1,8 @@
 module TD::Types
   # Contains the type of Telegram Passport element.
   class PassportElementType < Base
-    %w[
-      personal_details
+%w[
+  personal_details
       passport
       driver_license
       identity_card
@@ -15,8 +15,8 @@ module TD::Types
       temporary_registration
       phone_number
       email_address
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/passport_element_type/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/passport_element_type/#{type}"
+end
   end
 end

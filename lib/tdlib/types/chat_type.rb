@@ -1,13 +1,13 @@
 module TD::Types
   # Describes the type of chat.
   class ChatType < Base
-    %w[
-      private
+%w[
+  private
       basic_group
       supergroup
       secret
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/chat_type/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/chat_type/#{type}"
+end
   end
 end

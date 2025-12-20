@@ -1,12 +1,13 @@
 module TD::Types
   # Contains the content of a story.
   class StoryContent < Base
-    %w[
-      photo
+%w[
+  photo
       video
+      live
       unsupported
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/story_content/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/story_content/#{type}"
+end
   end
 end

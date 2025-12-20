@@ -3,6 +3,8 @@ module TD::Types
   #
   # @attr info [TD::Types::ForumTopicInfo] Basic information about the topic.
   # @attr last_message [TD::Types::Message, nil] Last message in the topic; may be null if unknown.
+  # @attr order [Integer] A parameter used to determine order of the topic in the topic list.
+  #   Topics must be sorted by the order in descending order.
   # @attr is_pinned [Boolean] True, if the topic is pinned in the topic list.
   # @attr unread_count [Integer] Number of unread messages in the topic.
   # @attr last_read_inbox_message_id [Integer] Identifier of the last read incoming message.
@@ -14,6 +16,7 @@ module TD::Types
   class ForumTopic < Base
     attribute :info, TD::Types::ForumTopicInfo
     attribute :last_message, TD::Types::Message.optional.default(nil)
+    attribute :order, TD::Types::Coercible::Integer
     attribute :is_pinned, TD::Types::Bool
     attribute :unread_count, TD::Types::Coercible::Integer
     attribute :last_read_inbox_message_id, TD::Types::Coercible::Integer

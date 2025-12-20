@@ -1,8 +1,8 @@
 module TD::Types
   # Describes an internal https://t.me or tg: link, which must be processed by the application in a special way.
   class InternalLinkType < Base
-    %w[
-      active_sessions
+%w[
+  active_sessions
       attachment_menu_bot
       authentication_code
       background
@@ -12,22 +12,33 @@ module TD::Types
       business_chat
       buy_stars
       change_phone_number
+      chat_affiliate_program
       chat_boost
       chat_folder_invite
       chat_folder_settings
       chat_invite
       default_message_auto_delete_timer_settings
+      direct_messages_chat
       edit_profile_settings
       game
+      gift_auction
+      gift_collection
+      group_call
       instant_view
       invoice
       language_pack
       language_settings
+      live_story
+      login_email_settings
       main_web_app
       message
       message_draft
+      my_stars
+      my_toncoins
       passport_data_request
+      password_settings
       phone_number_confirmation
+      phone_number_privacy_settings
       premium_features
       premium_gift
       premium_gift_code
@@ -39,16 +50,18 @@ module TD::Types
       settings
       sticker_set
       story
+      story_album
       theme
       theme_settings
       unknown_deep_link
       unsupported_proxy
+      upgraded_gift
       user_phone_number
       user_token
       video_chat
       web_app
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/internal_link_type/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/internal_link_type/#{type}"
+end
   end
 end

@@ -1,8 +1,8 @@
 module TD::Types
   # Describes the type of inline keyboard button.
   class InlineKeyboardButtonType < Base
-    %w[
-      url
+%w[
+  url
       login_url
       web_app
       callback
@@ -11,8 +11,9 @@ module TD::Types
       switch_inline
       buy
       user
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/inline_keyboard_button_type/#{type}"
-    end
+      copy_text
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/inline_keyboard_button_type/#{type}"
+end
   end
 end

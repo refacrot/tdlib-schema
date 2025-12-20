@@ -1,9 +1,10 @@
 module TD::Types
   # Represents the current authorization state of the TDLib client.
   class AuthorizationState < Base
-    %w[
-      wait_tdlib_parameters
+%w[
+  wait_tdlib_parameters
       wait_phone_number
+      wait_premium_purchase
       wait_email_address
       wait_email_code
       wait_code
@@ -14,8 +15,8 @@ module TD::Types
       logging_out
       closing
       closed
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/authorization_state/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/authorization_state/#{type}"
+end
   end
 end

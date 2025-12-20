@@ -1,8 +1,8 @@
 module TD::Types
   # Represents a chat event.
   class ChatEventAction < Base
-    %w[
-      message_edited
+%w[
+  message_edited
       message_deleted
       message_pinned
       message_unpinned
@@ -14,6 +14,7 @@ module TD::Types
       member_left
       member_promoted
       member_restricted
+      member_subscription_extended
       available_reactions_changed
       background_changed
       description_changed
@@ -37,6 +38,7 @@ module TD::Types
       has_aggressive_anti_spam_enabled_toggled
       sign_messages_toggled
       show_message_sender_toggled
+      automatic_translation_toggled
       invite_link_edited
       invite_link_revoked
       invite_link_deleted
@@ -52,8 +54,8 @@ module TD::Types
       forum_topic_toggle_is_hidden
       forum_topic_deleted
       forum_topic_pinned
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/chat_event_action/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/chat_event_action/#{type}"
+end
   end
 end

@@ -9,6 +9,7 @@ module TD::Types
   #   chats and not just those addressed to the bot.
   #   In private and channel chats a bot can always read all messages.
   # @attr has_main_web_app [Boolean] True, if the bot has the main Web App.
+  # @attr has_topics [Boolean] True, if the bot has topics.
   # @attr is_inline [Boolean] True, if the bot supports inline queries.
   # @attr inline_query_placeholder [TD::Types::String] Placeholder for inline queries (displayed on the application
   #   input field).
@@ -22,6 +23,7 @@ module TD::Types
     attribute :can_join_groups, TD::Types::Bool
     attribute :can_read_all_group_messages, TD::Types::Bool
     attribute :has_main_web_app, TD::Types::Bool
+    attribute :has_topics, TD::Types::Bool
     attribute :is_inline, TD::Types::Bool
     attribute :inline_query_placeholder, TD::Types::String
     attribute :need_location, TD::Types::Bool

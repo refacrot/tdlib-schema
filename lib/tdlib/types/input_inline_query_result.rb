@@ -1,8 +1,8 @@
 module TD::Types
   # Represents a single result of an inline query; for bots only.
   class InputInlineQueryResult < Base
-    %w[
-      animation
+%w[
+  animation
       article
       audio
       contact
@@ -14,8 +14,8 @@ module TD::Types
       venue
       video
       voice_note
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/input_inline_query_result/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/input_inline_query_result/#{type}"
+end
   end
 end

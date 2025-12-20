@@ -1,8 +1,8 @@
 module TD::Types
   # Represents the type of session.
   class SessionType < Base
-    %w[
-      android
+%w[
+  android
       apple
       brave
       chrome
@@ -19,8 +19,8 @@ module TD::Types
       vivaldi
       windows
       xbox
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/session_type/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/session_type/#{type}"
+end
   end
 end

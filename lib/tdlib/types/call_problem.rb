@@ -1,8 +1,8 @@
 module TD::Types
   # Describes the exact type of problem with a call.
   class CallProblem < Base
-    %w[
-      echo
+%w[
+  echo
       noise
       interruptions
       distorted_speech
@@ -11,8 +11,8 @@ module TD::Types
       dropped
       distorted_video
       pixelated_video
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/call_problem/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/call_problem/#{type}"
+end
   end
 end

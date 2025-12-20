@@ -1,8 +1,8 @@
 module TD::Types
   # Describes the different types of activity in a chat.
   class ChatAction < Base
-    %w[
-      typing
+%w[
+  typing
       recording_video
       uploading_video
       recording_voice_note
@@ -17,8 +17,8 @@ module TD::Types
       uploading_video_note
       watching_animations
       cancel
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/chat_action/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/chat_action/#{type}"
+end
   end
 end

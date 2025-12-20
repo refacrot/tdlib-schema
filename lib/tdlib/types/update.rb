@@ -1,8 +1,8 @@
 module TD::Types
   # Contains notifications about data changes.
   class Update < Base
-    %w[
-      authorization_state
+%w[
+  authorization_state
       new_message
       message_send_acknowledged
       message_send_succeeded
@@ -15,7 +15,9 @@ module TD::Types
       message_mention_read
       message_unread_reactions
       message_fact_check
+      message_suggested_post_info
       message_live_location_viewed
+      video_published
       new_chat
       chat_title
       chat_photo
@@ -53,11 +55,14 @@ module TD::Types
       chat_online_member_count
       saved_messages_topic
       saved_messages_topic_count
+      direct_messages_chat_topic
+      topic_message_count
       quick_reply_shortcut
       quick_reply_shortcut_deleted
       quick_reply_shortcuts
       quick_reply_shortcut_messages
       forum_topic_info
+      forum_topic
       scope_notification_settings
       reaction_notification_settings
       notification
@@ -66,6 +71,7 @@ module TD::Types
       have_pending_notifications
       delete_messages
       chat_action
+      pending_text_message
       user_status
       user
       basic_group
@@ -83,20 +89,31 @@ module TD::Types
       file_download
       file_removed_from_downloads
       application_verification_required
+      application_recaptcha_verification_required
       call
       group_call
       group_call_participant
+      group_call_participants
+      group_call_verification_state
+      new_group_call_message
+      new_group_call_paid_reaction
+      group_call_message_send_failed
+      group_call_messages_deleted
+      live_story_top_donors
       new_call_signaling_data
+      gift_auction_state
+      active_gift_auctions
       user_privacy_setting_rules
       unread_message_count
       unread_chat_count
       story
       story_deleted
-      story_send_succeeded
-      story_send_failed
+      story_post_succeeded
+      story_post_failed
       chat_active_stories
       story_list_chat_count
       story_stealth_mode
+      trusted_mini_app_bots
       option
       sticker_set
       installed_sticker_sets
@@ -106,25 +123,30 @@ module TD::Types
       saved_animations
       saved_notification_sounds
       default_background
-      chat_themes
+      emoji_chat_themes
       accent_colors
       profile_accent_colors
       language_pack_strings
       connection_state
+      freeze_state
+      age_verification_parameters
       terms_of_service
-      users_nearby
       unconfirmed_session
       attachment_menu_bots
       web_app_message_sent
       active_emoji_reactions
       available_message_effects
       default_reaction_type
+      default_paid_reaction_type
       saved_messages_tags
       active_live_location_messages
       owned_star_count
+      owned_ton_count
       chat_revenue_amount
       star_revenue_status
+      ton_revenue_status
       speech_recognition_trial
+      group_call_message_levels
       dice_emojis
       animated_emoji_message_clicked
       animation_search_parameters
@@ -152,8 +174,9 @@ module TD::Types
       chat_boost
       message_reaction
       message_reactions
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/update/#{type}"
-    end
+      paid_media_purchased
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/update/#{type}"
+end
   end
 end

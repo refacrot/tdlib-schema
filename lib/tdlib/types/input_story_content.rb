@@ -1,11 +1,11 @@
 module TD::Types
-  # The content of a story to send.
+  # The content of a story to post.
   class InputStoryContent < Base
-    %w[
-      photo
+%w[
+  photo
       video
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/input_story_content/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/input_story_content/#{type}"
+end
   end
 end

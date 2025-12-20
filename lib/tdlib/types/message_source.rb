@@ -1,10 +1,11 @@
 module TD::Types
   # Describes source of a message.
   class MessageSource < Base
-    %w[
-      chat_history
+%w[
+  chat_history
       message_thread_history
       forum_topic_history
+      direct_messages_chat_topic_history
       history_preview
       chat_list
       search
@@ -12,8 +13,8 @@ module TD::Types
       notification
       screenshot
       other
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/message_source/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/message_source/#{type}"
+end
   end
 end

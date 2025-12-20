@@ -1,8 +1,8 @@
 module TD::Types
   # Represents the type of file.
   class FileType < Base
-    %w[
-      none
+%w[
+  none
       animation
       audio
       document
@@ -13,6 +13,10 @@ module TD::Types
       secret
       secret_thumbnail
       secure
+      self_destructing_photo
+      self_destructing_video
+      self_destructing_video_note
+      self_destructing_voice_note
       sticker
       thumbnail
       unknown
@@ -21,8 +25,8 @@ module TD::Types
       video_story
       voice_note
       wallpaper
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/file_type/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/file_type/#{type}"
+end
   end
 end

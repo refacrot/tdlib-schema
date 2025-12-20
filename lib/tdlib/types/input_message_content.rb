@@ -1,8 +1,8 @@
 module TD::Types
   # The content of a message to send.
   class InputMessageContent < Base
-    %w[
-      text
+%w[
+  text
       animation
       audio
       document
@@ -20,9 +20,10 @@ module TD::Types
       invoice
       poll
       story
+      checklist
       forwarded
-    ].each do |type|
-      autoload TD::Types.camelize(type), "tdlib/types/input_message_content/#{type}"
-    end
+].each do |type|
+  autoload TD::Types.camelize(type), "tdlib/types/input_message_content/#{type}"
+end
   end
 end

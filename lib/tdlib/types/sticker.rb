@@ -8,9 +8,6 @@ module TD::Types
   # @attr emoji [TD::Types::String] Emoji corresponding to the sticker.
   # @attr format [TD::Types::StickerFormat] Sticker format.
   # @attr full_type [TD::Types::StickerFullType] Sticker's full type.
-  # @attr outline [Array<TD::Types::ClosedVectorPath>, nil] Sticker's outline represented as a list of closed vector
-  #   paths; may be empty.
-  #   The coordinate system origin is in the upper-left corner.
   # @attr thumbnail [TD::Types::Thumbnail, nil] Sticker thumbnail in WEBP or JPEG format; may be null.
   # @attr sticker [TD::Types::File] File containing the sticker.
   class Sticker < Base
@@ -21,7 +18,6 @@ module TD::Types
     attribute :emoji, TD::Types::String
     attribute :format, TD::Types::StickerFormat
     attribute :full_type, TD::Types::StickerFullType
-    attribute :outline, TD::Types::Array.of(TD::Types::ClosedVectorPath).optional.default(nil)
     attribute :thumbnail, TD::Types::Thumbnail.optional.default(nil)
     attribute :sticker, TD::Types::File
   end

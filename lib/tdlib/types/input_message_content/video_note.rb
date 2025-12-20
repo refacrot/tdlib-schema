@@ -2,6 +2,8 @@ module TD::Types
   # A video note message.
   #
   # @attr video_note [TD::Types::InputFile] Video note to be sent.
+  #   The video is expected to be encoded to MPEG4 format with H.264 codec and have no data outside of the visible
+  #   circle.
   # @attr thumbnail [TD::Types::InputThumbnail, nil] Video thumbnail; may be null if empty; pass null to skip thumbnail
   #   uploading.
   # @attr duration [Integer] Duration of the video, in seconds; 0-60.

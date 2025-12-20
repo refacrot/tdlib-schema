@@ -9,7 +9,7 @@ module TD::Types
   # @attr can_send_videos [Boolean] True, if the user can send videos.
   # @attr can_send_video_notes [Boolean] True, if the user can send video notes.
   # @attr can_send_voice_notes [Boolean] True, if the user can send voice notes.
-  # @attr can_send_polls [Boolean] True, if the user can send polls.
+  # @attr can_send_polls [Boolean] True, if the user can send polls and checklists.
   # @attr can_send_other_messages [Boolean] True, if the user can send animations, games, stickers, and dice and use
   #   inline bots.
   # @attr can_add_link_previews [Boolean] True, if the user may add a link preview to their messages.
