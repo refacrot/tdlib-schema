@@ -1,16 +1,10 @@
 #!/usr/bin/env ruby
-
-# Possible errors:
-#   bin/parser:395:in `sort_by': comparison of NilClass with String failed (ArgumentError)
-# Solution:
-# Fix td_api.tl. In this case there is a extra line
-# "//-pass an empty string to abort verification and receive error VERIFICATION_FAILED for the request"
-# just move it to the previous line on td_api.tl
-
+# frozen_string_literal: true
 require 'active_support/all'
 
-AUTOLOAD_BASE_DIR  = 'tdlib/types'
-TD_API_TL_LOCATION = 'td/td/generate/scheme/td_api.tl'
+AUTOLOAD_BASE_DIR  = 'tdlib/types'.freeze
+TYPES_DIR = "lib/#{AUTOLOAD_BASE_DIR}".freeze
+TD_API_TL_LOCATION = 'td/td/generate/scheme/td_api.tl'.freeze
 
 def parse_tl_type(type)
   if (vector = type.scan(/[vV]ector<(.*)>/)).length > 0
@@ -154,14 +148,6 @@ def build_lookup_table(classes)
   lookup_table
 end
 
-# Splits tl file into usable chunks. Usually starts with a SuperClass followed by subclasses.
-def split_tl_file(tl_file, range = 0..-1)
-  # A fix for some entries (mainly chatAction ones) having a different structure from the rest
-  tl_file.gsub!(";\n//", ";\n\n//")
-
-  tl_file.split("\n\n\n")[range].map { |e| e.split("\n\n") }.flatten
-end
-
 # Partially taken from ActionView's word_wrap. Sowwy ;w;
 def wrap_comment(comment, indent = "  ", line_width: 117,
                  start_sequence: "#{indent}# ",
@@ -214,81 +200,92 @@ def attrs_to_yard_comment(attrs, key = 'attr')
   end.join("\n")
 end
 
-puts "Removing lib/tdlib/types"
-# `find lib/tdlib/types | grep -v base.rb | xargs rm -rf`
-`rm -rf lib/tdlib/types`
+puts "\n"
+puts "=" * 100
+puts "<<< Removing #{TYPES_DIR} directory"
+puts "\n"
+FileUtils.rmtree TYPES_DIR
 
-puts "MKDIR 'lib/tdlib/types'"
-FileUtils.mkdir_p "lib/tdlib/types"
+puts ">>> Creating #{TYPES_DIR} directory"
+FileUtils.mkdir_p TYPES_DIR
 
-puts "Writing Base class"
+puts "\n"
+puts "=" * 100
+puts ">>> Generating Base class"
+klass = <<~RUBY
+  module TD::Types
+    class Base < Dry::Struct
+      # convert string keys to symbols
+      transform_keys(&:to_sym)
 
-klass = <<-RUBY
-module TD::Types
-  class Base < Dry::Struct    
-    # convert string keys to symbols
-    transform_keys(&:to_sym)
-    
-    # resolve default types on nil
-    transform_types do |type|
-      if type.default?
-        type.constructor do |value|
-          value.nil? ? Dry::Types::Undefined : value
+      # resolve default types on nil
+      transform_types do |type|
+        if type.default?
+          type.constructor do |value|
+            value.nil? ? Dry::Types::Undefined : value
+          end
+        else
+          type
         end
-      else
-        type
+      end
+
+      def to_hash
+        { '@type' => LOOKUP_TABLE.key(self.class.name.sub('TD::Types::', '')) }.merge(super)
+      end
+      alias_method :to_h, :to_hash
+
+      def to_json(*args)
+        to_hash.to_json(*args)
       end
     end
-    
-    def to_hash
-      { '@type' => LOOKUP_TABLE.key(self.class.name.sub('TD::Types::', '')) }.merge(super)
-    end
-    alias_method :to_h, :to_hash
-    
-    def to_json(*args)
-      to_hash.to_json(*args)
-    end
   end
-end
 RUBY
 
-puts "Writing 'lib/tdlib/types/base.rb'"
-File.write 'lib/tdlib/types/base.rb', klass
+puts "--> Writing '#{TYPES_DIR}/base.rb'"
+File.write "#{TYPES_DIR}/base.rb", klass
 
-puts "Parsing #{TD_API_TL_LOCATION}"
+current_part = nil
 
-# Reading the TL file and splitting it into classes and functions
-@classes, @functions = File.read(TD_API_TL_LOCATION).split("\n\n---functions---\n\n")
+classes = []
+functions = []
 
-# First entry in td_api.tl is typecasting, it's worthless for us.
-# Last entry before functions is a testing class, once again worthless
-@classes = split_tl_file(@classes, 1..-2)
+File.foreach(TD_API_TL_LOCATION, '', chomp: true) do |line|
+  if current_part.nil? && line.start_with?('//@description')
+    current_part = :classes
+  elsif current_part == :classes && line.start_with?('---functions')
+    current_part = :functions
+    next
+  end
 
-# Last function in td_api.tl is for testing, another worthless thing for us
-@functions = split_tl_file(@functions, 0..-2)
+  if current_part == :classes
+    classes << line
+  elsif current_part == :functions
+    functions << line
+  end
+end
 
-puts "Converting classes into Ruby types"
+classes = classes.map { parse_tl_entry(it) }
+class_hierarchy = build_hierarchy(classes)
+@lookup_table = build_lookup_table(classes)
+@lookup_regex = Regexp.union(@lookup_table.keys.select { it.match?(/[a-z]+[A-Z][a-z]+/) }.map { /\W#{it}\W/ })
 
-@classes = @classes.map { |c| parse_tl_entry(c) }
-@class_names = @classes.map { |c| normalize_class_name(c[:class], c[:super_class]) }
-@class_hierarchy = build_hierarchy(@classes)
-@lookup_table = build_lookup_table(@classes)
-@lookup_regex = Regexp.union(@lookup_table.keys.select { |k| k.match?(/[a-z]+[A-Z][a-z]+/) }.map { |k| /\W#{k}\W/ })
-
-
-@classes.each do |class_info|
+puts "\n"
+puts "=" * 100
+puts ">>> Generating Types classes"
+puts "\n"
+classes.each do |class_info|
   class_name       = normalize_class_name(class_info[:class], class_info[:super_class])
   attributes       = class_info[:arguments]
   description      = class_info[:description]
   super_class_name = class_info[:super_class].camelcase
 
-  if (subclasses = @class_hierarchy[class_info[:class]])
-    autoload_statements = <<-RUBY
-    %w[
-      #{subclasses.map { |c| c.sub(class_name, '').underscore }.join("\n      ")}
-    ].each do |type|
-      autoload TD::Types.camelize(type), "#{AUTOLOAD_BASE_DIR}/#{class_name.underscore}/\#{type}"
-    end
+  if (subclasses = class_hierarchy[class_info[:class]])
+    autoload_statements = <<~RUBY
+      %w[
+        #{subclasses.map { |c| c.sub(class_name, '').underscore }.join("\n      ")}
+      ].each do |type|
+        autoload TD::Types.camelize(type), "#{AUTOLOAD_BASE_DIR}/#{class_name.underscore}/\#{type}"
+      end
     RUBY
   else
     autoload_statements = ""
@@ -301,8 +298,8 @@ puts "Converting classes into Ruby types"
     file_name  = "#{super_class_name.underscore}/#{class_name.sub(super_class_name, '').underscore}"
     class_name = "#{super_class_name}::#{class_name.sub(super_class_name, '')} < #{super_class_name}"
 
-    puts "MKDIR 'lib/tdlib/types/#{super_class_name.underscore}'"
-    FileUtils.mkdir_p "lib/tdlib/types/#{super_class_name.underscore}"
+    puts "++> Creating '#{TYPES_DIR}/#{super_class_name.underscore}' directory"
+    FileUtils.mkdir_p "#{TYPES_DIR}/#{super_class_name.underscore}"
   end
 
   if attributes.blank?
@@ -313,7 +310,7 @@ puts "Converting classes into Ruby types"
 
     attributes = "\n    " + attributes.map do |attr, info|
       "attribute :#{attr}, #{info[:type]}#{ ".optional.default(nil)" if info[:optional] }"
-    end.join("\n    ")
+    end.join("\n    ").strip
   end
 
   unless description.blank?
@@ -327,94 +324,98 @@ module TD::Types#{description}#{attributes_doc}
 end
   RUBY
 
-  puts  "Writing 'lib/tdlib/types/#{file_name}.rb'"
-  File.write "lib/tdlib/types/#{file_name}.rb", klass
+  puts "--> Writing '#{TYPES_DIR}/#{file_name}.rb'"
+  File.write "#{TYPES_DIR}/#{file_name}.rb", klass
 end
 
-puts "Generating Types class"
+puts "\n"
+puts "=" * 100
+puts ">>> Generating Types class"
 
-lt_max_length = @lookup_table.max_by { |k,_| k.length }[0].length
+lt_max_length = @lookup_table.max_by { |k, _| k.length }[0].length
 
-lookup_table = @lookup_table.map do |k,v|
+lookup_table = @lookup_table.map do |k, v|
   indent = " " * (lt_max_length - k.length + 1)
 
   "'#{k}'#{indent}=> '#{v}'"
 end
 
-klass = <<-RUBY
-require 'dry-struct'
-require 'dry-types'
+klass = <<~RUBY
+  require 'dry-struct'
+  require 'dry-types'
 
-module TD::Types
-  include Dry.Types()
-  
-  LOOKUP_TABLE = {
-      #{lookup_table.join(",\n      ")}
-  }.freeze
-  
-  module_function
-  
-  # Recursively wraps a hash into typed classes
-  def wrap(object)
-    # Wrapping each entry in array
-    if object.kind_of?(::Array)
-      object.map { |o| wrap(o) }
-    elsif object.kind_of?(::Hash)
-      type = object.delete('@type')
-      
-      object.each do |key, val|
-        if val.respond_to?(:each)
-          object[key] = wrap(val)
+  module TD::Types
+    include Dry.Types()
+
+    LOOKUP_TABLE = {
+        #{lookup_table.join(",\n      ")}
+    }.freeze
+
+    module_function
+
+    # Recursively wraps a hash into typed classes
+    def wrap(object)
+      # Wrapping each entry in array
+      if object.kind_of?(::Array)
+        object.map { |o| wrap(o) }
+      elsif object.kind_of?(::Hash)
+        type = object.delete('@type')
+
+        object.each do |key, val|
+          if val.respond_to?(:each)
+            object[key] = wrap(val)
+          end
         end
-      end
-      
-      unless type
-        return object
-      end
-      
-      if (klass = LOOKUP_TABLE[type])
-        const_get(klass).new(object)
+
+        unless type
+          return object
+        end
+
+        if (klass = LOOKUP_TABLE[type])
+          const_get(klass).new(object)
+        else
+          raise ArgumentError.new("Can't find class for \#{type}")
+        end
       else
-        raise ArgumentError.new("Can't find class for \#{type}")
+        object
       end
-    else 
-      object
+    end
+
+    # Simple implementation for internal use only.
+    def camelize(str)
+      str.gsub(/(?:_|(\\/)|^)([a-z\\d]*)/i) { "\#{$1}\#{$2.capitalize}" }
+    end
+
+    %w[
+      #{(class_hierarchy["Base"].map { |c| c.underscore } + ['base']).sort_by { |c| c }.join("\n    ")}
+    ].each do |type|
+      autoload camelize(type), "#{AUTOLOAD_BASE_DIR}/\#{type}"
     end
   end
-  
-  # Simple implementation for internal use only.
-  def camelize(str)
-    str.gsub(/(?:_|(\\/)|^)([a-z\\d]*)/i) { "\#{$1}\#{$2.capitalize}" }
-  end
-  
-  %w[
-    #{(@class_hierarchy["Base"].map { |c| c.underscore } + ['base']).sort_by { |c| c }.join("\n    ")}
-  ].each do |type|
-    autoload camelize(type), "#{AUTOLOAD_BASE_DIR}/\#{type}"
-  end
-end
 RUBY
 
-puts "Writing 'lib/tdlib/types.rb'"
+puts "--> Writing 'lib/tdlib/types.rb'"
 File.write 'lib/tdlib/types.rb', klass
 
-puts "Converting functions"
+puts "\n"
+puts "=" * 100
+puts ">>> Converting functions"
 
-@functions = @functions.map { |c| parse_tl_entry(c) }.sort_by { |c| c[:class] }
+functions = functions.map { parse_tl_entry(it) }.sort_by { it[:class] }
 
 # Converts TDApi functions into methods. Still need human touch haha
-@functions = @functions.map do |func|
+functions = functions.map do |func|
   method_name  = func[:class].underscore
   params       = func[:arguments]
   description  = func[:description]
   # TODO: Replace InputMessageContent and others (see #normalize_class_name)
   return_class = type_to_comment_type("TD::Types::#{func[:super_class].camelcase}")
 
-  param_max_length = params.merge({'@type' => nil}).max_by { |k,_| k.length }[0].length
+  param_max_length = params.merge({'@type' => nil}).max_by { |k, _| k.length }[0].length
 
   if params.blank?
-    params_doc      = ""
-    method_params   = ""
+    params_doc = ""
+    method_params = ""
     func_params = ""
   else
     params_doc = "\n" + attrs_to_yard_comment(params, 'param')
@@ -444,28 +445,33 @@ puts "Converting functions"
     end.join(",\n              ")
   end
 
-  unless description.blank?
-    description = wrap_comment(description, "  ")
-  end
+  description = wrap_comment(description, "  ") if description.present?
 
-  <<-RUBY
-#{description}
-  ##{params_doc}
-  # @return [#{return_class}]
-  def #{method_name}#{method_params}
-    broadcast('@type'#{" " * (param_max_length - 4)}=> '#{func[:class]}'#{func_params})
-  end
+  <<~RUBY
+    #{description}
+      ##{params_doc}
+      # @return [#{return_class}]
+      def #{method_name}#{method_params}
+        broadcast('@type'#{" " * (param_max_length - 4)}=> '#{func[:class]}'#{func_params})
+      end
   RUBY
 end
 
-klass = <<-RUBY
-# This is a generated module from current TDLib scheme
-# It contains all available TDLib methods
-module TD::ClientMethods
-#{@functions.join("  \n")}end
+klass = <<~RUBY
+  # frozen_string_literal: true
+
+  # This is a generated module from current TDLib scheme
+  # It contains all available TDLib methods
+  module TD::ClientMethods
+    #{functions.join("\n")}
+  end
 RUBY
 
-puts "Writing 'lib/tdlib/client_methods.rb'"
+puts "--> Writing 'lib/tdlib/client_methods.rb'"
 File.write 'lib/tdlib/client_methods.rb', klass
 
-puts "Done. Please look through client_methods.rb carefully, especially the set_password method!"
+puts "\n"
+puts "=" * 100
+puts "!!! Done."
+puts "!!! Please look through client_methods.rb carefully, especially the set_password method!"
+puts "=" * 100
