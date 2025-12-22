@@ -6,8 +6,8 @@ module TD::Types
   # @attr description [TD::Types::String] A short description of the result, if known.
   # @attr thumbnail_url [TD::Types::String] The URL of the video thumbnail (JPEG), if it exists.
   # @attr video_url [TD::Types::String] URL of the embedded video player or video file.
-  # @attr mime_type [TD::Types::String] MIME type of the content of the video URL, only "text/html" or "video/mp4" are
-  #   currently supported.
+  # @attr mime_type [TD::Types::String] MIME type of the content of the video URL, only "text/html" or "video/mp4"
+  #   are currently supported.
   # @attr video_width [Integer] Width of the video.
   # @attr video_height [Integer] Height of the video.
   # @attr video_duration [Integer] Video duration, in seconds.

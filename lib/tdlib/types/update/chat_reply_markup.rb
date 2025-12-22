@@ -1,6 +1,6 @@
 module TD::Types
   # The default chat reply markup was changed.
-  # Can occur because new messages with reply markup were received or because an old reply markup was hidden by the
+  #   Can occur because new messages with reply markup were received or because an old reply markup was hidden by the
   #   user.
   #
   # @attr chat_id [Integer] Chat identifier.

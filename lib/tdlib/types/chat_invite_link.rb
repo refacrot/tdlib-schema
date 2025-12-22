@@ -9,12 +9,12 @@ module TD::Types
   # @attr expiration_date [Integer] Point in time (Unix timestamp) when the link will expire; 0 if never.
   # @attr subscription_pricing [TD::Types::StarSubscriptionPricing, nil] Information about subscription plan that is
   #   applied to the users joining the chat by the link; may be null if the link doesn't require subscription.
-  # @attr member_limit [Integer] The maximum number of members, which can join the chat using the link simultaneously;
-  #   0 if not limited.
+  # @attr member_limit [Integer] The maximum number of members, which can join the chat using the link
+  #   simultaneously; 0 if not limited.
   #   Always 0 if the link requires approval.
   # @attr member_count [Integer] Number of chat members, which joined the chat using the link.
-  # @attr expired_member_count [Integer] Number of chat members, which joined the chat using the link, but have already
-  #   left because of expired subscription; for subscription links only.
+  # @attr expired_member_count [Integer] Number of chat members, which joined the chat using the link, but have
+  #   already left because of expired subscription; for subscription links only.
   # @attr pending_join_request_count [Integer] Number of pending join requests created using this link.
   # @attr creates_join_request [Boolean] True, if the link only creates join request.
   #   If true, total number of joining members will be unlimited.

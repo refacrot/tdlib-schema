@@ -2,8 +2,8 @@ module TD::Types
   # Contains properties of a message and describes actions that can be done with the message right now.
   #
   # @attr can_add_offer [Boolean] True, if an offer can be added to the message using addOffer.
-  # @attr can_add_tasks [Boolean] True, if tasks can be added to the message's checklist using addChecklistTasks if the
-  #   current user has Telegram Premium subscription.
+  # @attr can_add_tasks [Boolean] True, if tasks can be added to the message's checklist using addChecklistTasks if
+  #   the current user has Telegram Premium subscription.
   # @attr can_be_approved [Boolean] True, if the message is a suggested post that can be approved by the user using
   #   approveSuggestedPost.
   # @attr can_be_copied [Boolean] True, if content of the message can be copied using
@@ -52,14 +52,15 @@ module TD::Types
   #   though getVideoMessageAdvertisements.
   # @attr can_get_viewers [Boolean] True, if chat members already viewed the message can be received through
   #   getMessageViewers.
-  # @attr can_mark_tasks_as_done [Boolean] True, if tasks can be marked as done or not done in the message's checklist
-  #   using markChecklistTasksAsDone if the current user has Telegram Premium subscription.
+  # @attr can_mark_tasks_as_done [Boolean] True, if tasks can be marked as done or not done in the message's
+  #   checklist using markChecklistTasksAsDone if the current user has Telegram Premium subscription.
   # @attr can_recognize_speech [Boolean] True, if speech can be recognized for the message through recognizeSpeech.
   # @attr can_report_chat [Boolean] True, if the message can be reported using reportChat.
   # @attr can_report_reactions [Boolean] True, if reactions on the message can be reported through
   #   reportMessageReactions.
   # @attr can_report_supergroup_spam [Boolean] True, if the message can be reported using reportSupergroupSpam.
-  # @attr can_set_fact_check [Boolean] True, if fact check for the message can be changed through setMessageFactCheck.
+  # @attr can_set_fact_check [Boolean] True, if fact check for the message can be changed through
+  #   setMessageFactCheck.
   # @attr need_show_statistics [Boolean] True, if message statistics must be available from context menu of the
   #   message.
   class MessageProperties < Base

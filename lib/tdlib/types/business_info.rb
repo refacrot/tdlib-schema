@@ -13,10 +13,10 @@ module TD::Types
   #   An {TD::Types::Update::UserFullInfo} update is not triggered when value of this field changes.
   # @attr next_close_in [Integer] Time left before the business will close the next time, in seconds; 0 if unknown.
   #   An {TD::Types::Update::UserFullInfo} update is not triggered when value of this field changes.
-  # @attr greeting_message_settings [TD::Types::BusinessGreetingMessageSettings, nil] The greeting message; may be null
-  #   if none or the Business account is not of the current user.
-  # @attr away_message_settings [TD::Types::BusinessAwayMessageSettings, nil] The away message; may be null if none or
-  #   the Business account is not of the current user.
+  # @attr greeting_message_settings [TD::Types::BusinessGreetingMessageSettings, nil] The greeting message; may be
+  #   null if none or the Business account is not of the current user.
+  # @attr away_message_settings [TD::Types::BusinessAwayMessageSettings, nil] The away message; may be null if none
+  #   or the Business account is not of the current user.
   # @attr start_page [TD::Types::BusinessStartPage, nil] Information about start page of the account; may be null if
   #   none.
   class BusinessInfo < Base

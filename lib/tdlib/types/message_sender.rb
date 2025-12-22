@@ -1,11 +1,7 @@
 module TD::Types
   # Contains information about the sender of a message.
   class MessageSender < Base
-%w[
-  user
-      chat
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/message_sender/#{type}"
-end
+    autoload TD::Types.camelize('user'), 'tdlib/types/message_sender/user'
+    autoload TD::Types.camelize('chat'), 'tdlib/types/message_sender/chat'
   end
 end

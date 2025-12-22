@@ -20,11 +20,12 @@ module TD::Types
   # @attr member_count_graph [TD::Types::StatisticalGraph] A graph containing number of members in the chat.
   # @attr join_graph [TD::Types::StatisticalGraph] A graph containing number of members joined and left the chat.
   # @attr mute_graph [TD::Types::StatisticalGraph] A graph containing number of members muted and unmuted the chat.
-  # @attr view_count_by_hour_graph [TD::Types::StatisticalGraph] A graph containing number of message views in a given
-  #   hour in the last two weeks.
+  # @attr view_count_by_hour_graph [TD::Types::StatisticalGraph] A graph containing number of message views in a
+  #   given hour in the last two weeks.
   # @attr view_count_by_source_graph [TD::Types::StatisticalGraph] A graph containing number of message views per
   #   source.
-  # @attr join_by_source_graph [TD::Types::StatisticalGraph] A graph containing number of new member joins per source.
+  # @attr join_by_source_graph [TD::Types::StatisticalGraph] A graph containing number of new member joins per
+  #   source.
   # @attr language_graph [TD::Types::StatisticalGraph] A graph containing number of users viewed chat messages per
   #   language.
   # @attr message_interaction_graph [TD::Types::StatisticalGraph] A graph containing number of chat message views and
@@ -32,8 +33,8 @@ module TD::Types
   # @attr message_reaction_graph [TD::Types::StatisticalGraph] A graph containing number of reactions on messages.
   # @attr story_interaction_graph [TD::Types::StatisticalGraph] A graph containing number of story views and shares.
   # @attr story_reaction_graph [TD::Types::StatisticalGraph] A graph containing number of reactions on stories.
-  # @attr instant_view_interaction_graph [TD::Types::StatisticalGraph] A graph containing number of views of associated
-  #   with the chat instant views.
+  # @attr instant_view_interaction_graph [TD::Types::StatisticalGraph] A graph containing number of views of
+  #   associated with the chat instant views.
   # @attr recent_interactions [Array<TD::Types::ChatStatisticsInteractionInfo>] Detailed statistics about number of
   #   views and shares of recently sent messages and posted stories.
   class ChatStatistics::Channel < ChatStatistics

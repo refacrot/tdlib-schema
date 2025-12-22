@@ -7,8 +7,8 @@ module TD::Types
   # @attr cover [TD::Types::Photo, nil] Cover of the video; may be null if none.
   # @attr start_timestamp [Integer] Timestamp from which the video playing must start, in seconds.
   # @attr caption [TD::Types::FormattedText] Video caption.
-  # @attr show_caption_above_media [Boolean] True, if the caption must be shown above the video; otherwise, the caption
-  #   must be shown below the video.
+  # @attr show_caption_above_media [Boolean] True, if the caption must be shown above the video; otherwise, the
+  #   caption must be shown below the video.
   # @attr has_spoiler [Boolean] True, if the video preview must be covered by a spoiler animation.
   # @attr is_secret [Boolean] True, if the video thumbnail must be blurred and the video must be shown only while
   #   tapped.

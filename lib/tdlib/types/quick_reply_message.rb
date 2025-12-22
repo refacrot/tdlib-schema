@@ -11,7 +11,8 @@ module TD::Types
   # @attr media_album_id [Integer] Unique identifier of an album this message belongs to; 0 if none.
   #   Only audios, documents, photos and videos can be grouped together in albums.
   # @attr content [TD::Types::MessageContent] Content of the message.
-  # @attr reply_markup [TD::Types::ReplyMarkup, nil] Inline keyboard reply markup for the message; may be null if none.
+  # @attr reply_markup [TD::Types::ReplyMarkup, nil] Inline keyboard reply markup for the message; may be null if
+  #   none.
   class QuickReplyMessage < Base
     attribute :id, TD::Types::Coercible::Integer
     attribute :sending_state, TD::Types::MessageSendingState.optional.default(nil)

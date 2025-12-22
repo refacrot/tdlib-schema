@@ -1,13 +1,9 @@
 module TD::Types
   # Describes type of emoji category.
   class EmojiCategoryType < Base
-%w[
-  default
-      regular_stickers
-      emoji_status
-      chat_photo
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/emoji_category_type/#{type}"
-end
+    autoload TD::Types.camelize('default'), 'tdlib/types/emoji_category_type/default'
+    autoload TD::Types.camelize('regular_stickers'), 'tdlib/types/emoji_category_type/regular_stickers'
+    autoload TD::Types.camelize('emoji_status'), 'tdlib/types/emoji_category_type/emoji_status'
+    autoload TD::Types.camelize('chat_photo'), 'tdlib/types/emoji_category_type/chat_photo'
   end
 end

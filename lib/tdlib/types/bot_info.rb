@@ -13,20 +13,22 @@ module TD::Types
   # @attr privacy_policy_url [TD::Types::String] The HTTP link to the privacy policy of the bot.
   #   If empty, then /privacy command must be used if supported by the bot.
   #   If the command isn't supported, then https://telegram.org/privacy-tpa must be opened.
-  # @attr default_group_administrator_rights [TD::Types::ChatAdministratorRights, nil] Default administrator rights for
-  #   adding the bot to basic group and supergroup chats; may be null.
+  # @attr default_group_administrator_rights [TD::Types::ChatAdministratorRights, nil] Default administrator rights
+  #   for adding the bot to basic group and supergroup chats; may be null.
   # @attr default_channel_administrator_rights [TD::Types::ChatAdministratorRights, nil] Default administrator rights
   #   for adding the bot to channels; may be null.
-  # @attr affiliate_program [TD::Types::AffiliateProgramInfo, nil] Information about the affiliate program of the bot;
-  #   may be null if none.
+  # @attr affiliate_program [TD::Types::AffiliateProgramInfo, nil] Information about the affiliate program of the
+  #   bot; may be null if none.
   # @attr web_app_background_light_color [Integer] Default light background color for bot Web Apps; -1 if not
   #   specified.
-  # @attr web_app_background_dark_color [Integer] Default dark background color for bot Web Apps; -1 if not specified.
+  # @attr web_app_background_dark_color [Integer] Default dark background color for bot Web Apps; -1 if not
+  #   specified.
   # @attr web_app_header_light_color [Integer] Default light header color for bot Web Apps; -1 if not specified.
   # @attr web_app_header_dark_color [Integer] Default dark header color for bot Web Apps; -1 if not specified.
   # @attr verification_parameters [TD::Types::BotVerificationParameters, nil] Parameters of the verification that can
   #   be provided by the bot; may be null if none or the current user isn't the owner of the bot.
-  # @attr can_get_revenue_statistics [Boolean] True, if the bot's revenue statistics are available to the current user.
+  # @attr can_get_revenue_statistics [Boolean] True, if the bot's revenue statistics are available to the current
+  #   user.
   # @attr can_manage_emoji_status [Boolean] True, if the bot can manage emoji status of the current user.
   # @attr has_media_previews [Boolean] True, if the bot has media previews.
   # @attr edit_commands_link [TD::Types::InternalLinkType, nil] The internal link, which can be used to edit bot

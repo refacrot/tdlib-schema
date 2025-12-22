@@ -2,8 +2,8 @@ module TD::Types
   # Describes active stories posted by a chat.
   #
   # @attr chat_id [Integer] Identifier of the chat that posted the stories.
-  # @attr list [TD::Types::StoryList, nil] Identifier of the story list in which the stories are shown; may be null if
-  #   the stories aren't shown in a story list.
+  # @attr list [TD::Types::StoryList, nil] Identifier of the story list in which the stories are shown; may be null
+  #   if the stories aren't shown in a story list.
   # @attr order [Integer] A parameter used to determine order of the stories in the story list; 0 if the stories
   #   doesn't need to be shown in the story list.
   #   Stories must be sorted by the pair (order, story_poster_chat_id) in descending order.

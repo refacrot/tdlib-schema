@@ -1,11 +1,7 @@
 module TD::Types
   # Describes type of object, for which statistics are provided.
   class ChatStatisticsObjectType < Base
-%w[
-  message
-      story
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/chat_statistics_object_type/#{type}"
-end
+    autoload TD::Types.camelize('message'), 'tdlib/types/chat_statistics_object_type/message'
+    autoload TD::Types.camelize('story'), 'tdlib/types/chat_statistics_object_type/story'
   end
 end

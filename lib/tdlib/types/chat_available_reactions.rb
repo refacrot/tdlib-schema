@@ -1,11 +1,7 @@
 module TD::Types
   # Describes reactions available in the chat.
   class ChatAvailableReactions < Base
-%w[
-  all
-      some
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/chat_available_reactions/#{type}"
-end
+    autoload TD::Types.camelize('all'), 'tdlib/types/chat_available_reactions/all'
+    autoload TD::Types.camelize('some'), 'tdlib/types/chat_available_reactions/some'
   end
 end

@@ -1,6 +1,6 @@
 module TD::Types
   # Describes a Web App.
-  # Use getInternalLink with internalLinkTypeWebApp to share the Web App.
+  #   Use getInternalLink with internalLinkTypeWebApp to share the Web App.
   #
   # @attr short_name [TD::Types::String] Web App short name.
   # @attr title [TD::Types::String] Web App title.

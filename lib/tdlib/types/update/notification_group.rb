@@ -7,12 +7,12 @@ module TD::Types
   # @attr notification_settings_chat_id [Integer] Chat identifier, which notification settings must be applied to the
   #   added notifications.
   # @attr notification_sound_id [Integer] Identifier of the notification sound to be played; 0 if sound is disabled.
-  # @attr total_count [Integer] Total number of unread notifications in the group, can be bigger than number of active
-  #   notifications.
+  # @attr total_count [Integer] Total number of unread notifications in the group, can be bigger than number of
+  #   active notifications.
   # @attr added_notifications [Array<TD::Types::Notification>] List of added group notifications, sorted by
   #   notification identifier.
-  # @attr removed_notification_ids [Array<Integer>] Identifiers of removed group notifications, sorted by notification
-  #   identifier.
+  # @attr removed_notification_ids [Array<Integer>] Identifiers of removed group notifications, sorted by
+  #   notification identifier.
   class Update::NotificationGroup < Update
     attribute :notification_group_id, TD::Types::Coercible::Integer
     attribute :type, TD::Types::NotificationGroupType

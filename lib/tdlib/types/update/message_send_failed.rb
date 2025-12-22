@@ -1,6 +1,6 @@
 module TD::Types
   # A message failed to send.
-  # Be aware that some messages being sent can be irrecoverably deleted, in which case updateDeleteMessages will be
+  #   Be aware that some messages being sent can be irrecoverably deleted, in which case updateDeleteMessages will be
   #   received instead of this update.
   #
   # @attr message [TD::Types::Message] The failed to send message.

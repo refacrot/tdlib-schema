@@ -1,38 +1,34 @@
 module TD::Types
   # Describes a block of an instant view for a web page.
   class PageBlock < Base
-%w[
-  title
-      subtitle
-      author_date
-      header
-      subheader
-      kicker
-      paragraph
-      preformatted
-      footer
-      divider
-      anchor
-      list
-      block_quote
-      pull_quote
-      animation
-      audio
-      photo
-      video
-      voice_note
-      cover
-      embedded
-      embedded_post
-      collage
-      slideshow
-      chat_link
-      table
-      details
-      related_articles
-      map
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/page_block/#{type}"
-end
+    autoload TD::Types.camelize('title'), 'tdlib/types/page_block/title'
+    autoload TD::Types.camelize('subtitle'), 'tdlib/types/page_block/subtitle'
+    autoload TD::Types.camelize('author_date'), 'tdlib/types/page_block/author_date'
+    autoload TD::Types.camelize('header'), 'tdlib/types/page_block/header'
+    autoload TD::Types.camelize('subheader'), 'tdlib/types/page_block/subheader'
+    autoload TD::Types.camelize('kicker'), 'tdlib/types/page_block/kicker'
+    autoload TD::Types.camelize('paragraph'), 'tdlib/types/page_block/paragraph'
+    autoload TD::Types.camelize('preformatted'), 'tdlib/types/page_block/preformatted'
+    autoload TD::Types.camelize('footer'), 'tdlib/types/page_block/footer'
+    autoload TD::Types.camelize('divider'), 'tdlib/types/page_block/divider'
+    autoload TD::Types.camelize('anchor'), 'tdlib/types/page_block/anchor'
+    autoload TD::Types.camelize('list'), 'tdlib/types/page_block/list'
+    autoload TD::Types.camelize('block_quote'), 'tdlib/types/page_block/block_quote'
+    autoload TD::Types.camelize('pull_quote'), 'tdlib/types/page_block/pull_quote'
+    autoload TD::Types.camelize('animation'), 'tdlib/types/page_block/animation'
+    autoload TD::Types.camelize('audio'), 'tdlib/types/page_block/audio'
+    autoload TD::Types.camelize('photo'), 'tdlib/types/page_block/photo'
+    autoload TD::Types.camelize('video'), 'tdlib/types/page_block/video'
+    autoload TD::Types.camelize('voice_note'), 'tdlib/types/page_block/voice_note'
+    autoload TD::Types.camelize('cover'), 'tdlib/types/page_block/cover'
+    autoload TD::Types.camelize('embedded'), 'tdlib/types/page_block/embedded'
+    autoload TD::Types.camelize('embedded_post'), 'tdlib/types/page_block/embedded_post'
+    autoload TD::Types.camelize('collage'), 'tdlib/types/page_block/collage'
+    autoload TD::Types.camelize('slideshow'), 'tdlib/types/page_block/slideshow'
+    autoload TD::Types.camelize('chat_link'), 'tdlib/types/page_block/chat_link'
+    autoload TD::Types.camelize('table'), 'tdlib/types/page_block/table'
+    autoload TD::Types.camelize('details'), 'tdlib/types/page_block/details'
+    autoload TD::Types.camelize('related_articles'), 'tdlib/types/page_block/related_articles'
+    autoload TD::Types.camelize('map'), 'tdlib/types/page_block/map'
   end
 end

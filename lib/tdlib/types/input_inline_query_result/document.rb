@@ -5,8 +5,8 @@ module TD::Types
   # @attr title [TD::Types::String] Title of the resulting file.
   # @attr description [TD::Types::String] Short description of the result, if known.
   # @attr document_url [TD::Types::String] URL of the file.
-  # @attr mime_type [TD::Types::String] MIME type of the file content; only "application/pdf" and "application/zip" are
-  #   currently allowed.
+  # @attr mime_type [TD::Types::String] MIME type of the file content; only "application/pdf" and "application/zip"
+  #   are currently allowed.
   # @attr thumbnail_url [TD::Types::String] The URL of the file thumbnail, if it exists.
   # @attr thumbnail_width [Integer] Width of the thumbnail.
   # @attr thumbnail_height [Integer] Height of the thumbnail.

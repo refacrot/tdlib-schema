@@ -1,9 +1,9 @@
 module TD::Types
   # Represents a supergroup or channel with zero or more members (subscribers in the case of channels).
-  # From the point of view of the system, a channel is a special kind of a supergroup: only administrators can post and
-  #   see the list of members, and posts from all administrators use the name and photo of the channel instead of individual
-  #   names and profile photos.
-  # Unlike supergroups, channels can have an unlimited number of subscribers.
+  #   From the point of view of the system, a channel is a special kind of a supergroup: only administrators can post
+  #   and see the list of members, and posts from all administrators use the name and photo of the channel instead of
+  #   individual names and profile photos.
+  #   Unlike supergroups, channels can have an unlimited number of subscribers.
   #
   # @attr id [Integer] Supergroup or channel identifier.
   # @attr usernames [TD::Types::Usernames, nil] Usernames of the supergroup or channel; may be null.
@@ -45,8 +45,8 @@ module TD::Types
   # @attr has_direct_messages_group [Boolean] True, if the channel has direct messages group.
   # @attr has_forum_tabs [Boolean] True, if the supergroup is a forum, which topics are shown in the same way as in
   #   channel direct messages groups.
-  # @attr restriction_info [TD::Types::RestrictionInfo, nil] Information about the restrictions that must be applied to
-  #   the corresponding supergroup or channel chat; may be null if none.
+  # @attr restriction_info [TD::Types::RestrictionInfo, nil] Information about the restrictions that must be applied
+  #   to the corresponding supergroup or channel chat; may be null if none.
   # @attr paid_message_star_count [Integer] Number of Telegram Stars that must be paid by non-administrator users of
   #   the supergroup chat for each sent message.
   # @attr active_story_state [TD::Types::ActiveStoryState, nil] State of active stories of the supergroup or channel;

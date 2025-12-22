@@ -7,8 +7,8 @@ module TD::Types
   # @attr use_default_sound [Boolean] If true, the value for the relevant type of chat or the forum chat is used
   #   instead of sound_id.
   # @attr sound_id [Integer] Identifier of the notification sound to be played for messages; 0 if sound is disabled.
-  # @attr use_default_show_preview [Boolean] If true, the value for the relevant type of chat or the forum chat is used
-  #   instead of show_preview.
+  # @attr use_default_show_preview [Boolean] If true, the value for the relevant type of chat or the forum chat is
+  #   used instead of show_preview.
   # @attr show_preview [Boolean] True, if message content must be displayed in notifications.
   # @attr use_default_mute_stories [Boolean] If true, the value for the relevant type of chat is used instead of
   #   mute_stories.
@@ -26,8 +26,8 @@ module TD::Types
   #   created as for an ordinary unread message.
   # @attr use_default_disable_mention_notifications [Boolean] If true, the value for the relevant type of chat or the
   #   forum chat is used instead of disable_mention_notifications.
-  # @attr disable_mention_notifications [Boolean] If true, notifications for messages with mentions will be created as
-  #   for an ordinary unread message.
+  # @attr disable_mention_notifications [Boolean] If true, notifications for messages with mentions will be created
+  #   as for an ordinary unread message.
   class ChatNotificationSettings < Base
     attribute :use_default_mute_for, TD::Types::Bool
     attribute :mute_for, TD::Types::Coercible::Integer

@@ -1,11 +1,7 @@
 module TD::Types
   # The content of a story to post.
   class InputStoryContent < Base
-%w[
-  photo
-      video
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/input_story_content/#{type}"
-end
+    autoload TD::Types.camelize('photo'), 'tdlib/types/input_story_content/photo'
+    autoload TD::Types.camelize('video'), 'tdlib/types/input_story_content/video'
   end
 end

@@ -2,8 +2,8 @@ module TD::Types
   # Describes rights of the administrator.
   #
   # @attr can_manage_chat [Boolean] True, if the administrator can access the chat event log, get boost list, see
-  #   hidden supergroup and channel members, report supergroup spam messages, ignore slow mode, and send messages to the chat
-  #   without paying Telegram Stars.
+  #   hidden supergroup and channel members, report supergroup spam messages, ignore slow mode, and send messages to the
+  #   chat without paying Telegram Stars.
   #   Implied by any other privilege; applicable to supergroups and channels only.
   # @attr can_change_info [Boolean] True, if the administrator can change the chat title, photo, and other settings.
   # @attr can_post_messages [Boolean] True, if the administrator can create channel posts, approve suggested channel
@@ -21,12 +21,12 @@ module TD::Types
   # @attr can_promote_members [Boolean] True, if the administrator can add new administrators with a subset of their
   #   own privileges or demote administrators that were directly or indirectly promoted by them.
   # @attr can_manage_video_chats [Boolean] True, if the administrator can manage video chats.
-  # @attr can_post_stories [Boolean] True, if the administrator can create new chat stories, or edit and delete posted
-  #   stories; applicable to supergroups and channels only.
-  # @attr can_edit_stories [Boolean] True, if the administrator can edit stories posted by other users, post stories to
-  #   the chat page, pin chat stories, and access story archive; applicable to supergroups and channels only.
-  # @attr can_delete_stories [Boolean] True, if the administrator can delete stories posted by other users; applicable
-  #   to supergroups and channels only.
+  # @attr can_post_stories [Boolean] True, if the administrator can create new chat stories, or edit and delete
+  #   posted stories; applicable to supergroups and channels only.
+  # @attr can_edit_stories [Boolean] True, if the administrator can edit stories posted by other users, post stories
+  #   to the chat page, pin chat stories, and access story archive; applicable to supergroups and channels only.
+  # @attr can_delete_stories [Boolean] True, if the administrator can delete stories posted by other users;
+  #   applicable to supergroups and channels only.
   # @attr can_manage_direct_messages [Boolean] True, if the administrator can answer to channel direct messages;
   #   applicable to channels only.
   # @attr is_anonymous [Boolean] True, if the administrator isn't shown in the chat member list and sends messages

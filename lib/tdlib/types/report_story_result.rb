@@ -1,12 +1,8 @@
 module TD::Types
   # Describes result of story report.
   class ReportStoryResult < Base
-%w[
-  ok
-      option_required
-      text_required
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/report_story_result/#{type}"
-end
+    autoload TD::Types.camelize('ok'), 'tdlib/types/report_story_result/ok'
+    autoload TD::Types.camelize('option_required'), 'tdlib/types/report_story_result/option_required'
+    autoload TD::Types.camelize('text_required'), 'tdlib/types/report_story_result/text_required'
   end
 end

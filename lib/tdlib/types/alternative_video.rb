@@ -4,7 +4,8 @@ module TD::Types
   # @attr id [Integer] Unique identifier of the alternative video, which is used in the HLS file.
   # @attr width [Integer] Video width.
   # @attr height [Integer] Video height.
-  # @attr codec [TD::Types::String] Codec used for video file encoding, for example, "h264", "h265", "av1", or "av01".
+  # @attr codec [TD::Types::String] Codec used for video file encoding, for example, "h264", "h265", "av1", or
+  #   "av01".
   # @attr hls_file [TD::Types::File] HLS file describing the video.
   # @attr video [TD::Types::File] File containing the video.
   class AlternativeVideo < Base

@@ -1,13 +1,9 @@
 module TD::Types
   # Describes a photo to be set as a user profile or chat photo.
   class InputChatPhoto < Base
-%w[
-  previous
-      static
-      animation
-      sticker
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/input_chat_photo/#{type}"
-end
+    autoload TD::Types.camelize('previous'), 'tdlib/types/input_chat_photo/previous'
+    autoload TD::Types.camelize('static'), 'tdlib/types/input_chat_photo/static'
+    autoload TD::Types.camelize('animation'), 'tdlib/types/input_chat_photo/animation'
+    autoload TD::Types.camelize('sticker'), 'tdlib/types/input_chat_photo/sticker'
   end
 end

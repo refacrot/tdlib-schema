@@ -10,8 +10,8 @@ module TD::Types
   #   The list of corresponding sticker sets can be received using getAttachedStickerSets.
   # @attr supports_streaming [Boolean] True, if the video is expected to be streamed.
   # @attr minithumbnail [TD::Types::Minithumbnail, nil] Video minithumbnail; may be null.
-  # @attr thumbnail [TD::Types::Thumbnail, nil] Video thumbnail in JPEG or MPEG4 format; as defined by the sender; may
-  #   be null.
+  # @attr thumbnail [TD::Types::Thumbnail, nil] Video thumbnail in JPEG or MPEG4 format; as defined by the sender;
+  #   may be null.
   # @attr video [TD::Types::File] File containing the video.
   class Video < Base
     attribute :duration, TD::Types::Coercible::Integer

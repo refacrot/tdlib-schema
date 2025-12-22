@@ -1,12 +1,8 @@
 module TD::Types
   # Describes a stream to which TDLib internal log is written.
   class LogStream < Base
-%w[
-  default
-      file
-      empty
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/log_stream/#{type}"
-end
+    autoload TD::Types.camelize('default'), 'tdlib/types/log_stream/default'
+    autoload TD::Types.camelize('file'), 'tdlib/types/log_stream/file'
+    autoload TD::Types.camelize('empty'), 'tdlib/types/log_stream/empty'
   end
 end

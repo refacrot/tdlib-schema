@@ -5,9 +5,10 @@ module TD::Types
   # @attr forward_count [Integer] Number of times the message was forwarded.
   # @attr reply_info [TD::Types::MessageReplyInfo, nil] Information about direct or indirect replies to the message;
   #   may be null.
-  #   Currently, available only in channels with a discussion supergroup and discussion supergroups for messages, which
-  #   are not replies itself.
-  # @attr reactions [TD::Types::MessageReactions, nil] The list of reactions or tags added to the message; may be null.
+  #   Currently, available only in channels with a discussion supergroup and discussion supergroups for messages,
+  #   which are not replies itself.
+  # @attr reactions [TD::Types::MessageReactions, nil] The list of reactions or tags added to the message; may be
+  #   null.
   class MessageInteractionInfo < Base
     attribute :view_count, TD::Types::Coercible::Integer
     attribute :forward_count, TD::Types::Coercible::Integer

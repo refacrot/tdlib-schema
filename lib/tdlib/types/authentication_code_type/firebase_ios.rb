@@ -3,8 +3,8 @@ module TD::Types
   #
   # @attr receipt [TD::Types::String] Receipt of successful application token validation to compare with receipt from
   #   push notification.
-  # @attr push_timeout [Integer] Time after the next authentication method is expected to be used if verification push
-  #   notification isn't received, in seconds.
+  # @attr push_timeout [Integer] Time after the next authentication method is expected to be used if verification
+  #   push notification isn't received, in seconds.
   # @attr length [Integer] Length of the code.
   class AuthenticationCodeType::FirebaseIos < AuthenticationCodeType
     attribute :receipt, TD::Types::String

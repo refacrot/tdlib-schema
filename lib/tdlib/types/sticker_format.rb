@@ -1,12 +1,8 @@
 module TD::Types
   # Describes format of a sticker.
   class StickerFormat < Base
-%w[
-  webp
-      tgs
-      webm
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/sticker_format/#{type}"
-end
+    autoload TD::Types.camelize('webp'), 'tdlib/types/sticker_format/webp'
+    autoload TD::Types.camelize('tgs'), 'tdlib/types/sticker_format/tgs'
+    autoload TD::Types.camelize('webm'), 'tdlib/types/sticker_format/webm'
   end
 end

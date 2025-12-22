@@ -1,13 +1,9 @@
 module TD::Types
   # Represents the value of an option.
   class OptionValue < Base
-%w[
-  boolean
-      empty
-      integer
-      string
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/option_value/#{type}"
-end
+    autoload TD::Types.camelize('boolean'), 'tdlib/types/option_value/boolean'
+    autoload TD::Types.camelize('empty'), 'tdlib/types/option_value/empty'
+    autoload TD::Types.camelize('integer'), 'tdlib/types/option_value/integer'
+    autoload TD::Types.camelize('string'), 'tdlib/types/option_value/string'
   end
 end

@@ -1,11 +1,7 @@
 module TD::Types
   # Describes the type of poll.
   class PollType < Base
-%w[
-  regular
-      quiz
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/poll_type/#{type}"
-end
+    autoload TD::Types.camelize('regular'), 'tdlib/types/poll_type/regular'
+    autoload TD::Types.camelize('quiz'), 'tdlib/types/poll_type/quiz'
   end
 end

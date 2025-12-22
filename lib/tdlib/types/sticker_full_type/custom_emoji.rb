@@ -1,6 +1,6 @@
 module TD::Types
   # The sticker is a custom emoji to be used inside message text and caption.
-  # Currently, only Telegram Premium users can use custom emoji.
+  #   Currently, only Telegram Premium users can use custom emoji.
   #
   # @attr custom_emoji_id [Integer] Identifier of the custom emoji.
   # @attr needs_repainting [Boolean] True, if the sticker must be repainted to a text color in messages, the color of

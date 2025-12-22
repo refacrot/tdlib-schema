@@ -1,20 +1,16 @@
 module TD::Types
   # Represents a single rule for managing user privacy settings.
   class UserPrivacySettingRule < Base
-%w[
-  allow_all
-      allow_contacts
-      allow_bots
-      allow_premium_users
-      allow_users
-      allow_chat_members
-      restrict_all
-      restrict_contacts
-      restrict_bots
-      restrict_users
-      restrict_chat_members
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/user_privacy_setting_rule/#{type}"
-end
+    autoload TD::Types.camelize('allow_all'), 'tdlib/types/user_privacy_setting_rule/allow_all'
+    autoload TD::Types.camelize('allow_contacts'), 'tdlib/types/user_privacy_setting_rule/allow_contacts'
+    autoload TD::Types.camelize('allow_bots'), 'tdlib/types/user_privacy_setting_rule/allow_bots'
+    autoload TD::Types.camelize('allow_premium_users'), 'tdlib/types/user_privacy_setting_rule/allow_premium_users'
+    autoload TD::Types.camelize('allow_users'), 'tdlib/types/user_privacy_setting_rule/allow_users'
+    autoload TD::Types.camelize('allow_chat_members'), 'tdlib/types/user_privacy_setting_rule/allow_chat_members'
+    autoload TD::Types.camelize('restrict_all'), 'tdlib/types/user_privacy_setting_rule/restrict_all'
+    autoload TD::Types.camelize('restrict_contacts'), 'tdlib/types/user_privacy_setting_rule/restrict_contacts'
+    autoload TD::Types.camelize('restrict_bots'), 'tdlib/types/user_privacy_setting_rule/restrict_bots'
+    autoload TD::Types.camelize('restrict_users'), 'tdlib/types/user_privacy_setting_rule/restrict_users'
+    autoload TD::Types.camelize('restrict_chat_members'), 'tdlib/types/user_privacy_setting_rule/restrict_chat_members'
   end
 end

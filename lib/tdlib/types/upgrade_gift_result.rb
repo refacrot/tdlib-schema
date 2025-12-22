@@ -10,8 +10,8 @@ module TD::Types
   #   details of the upgraded gift; 0 if not available.
   # @attr next_transfer_date [Integer] Point in time (Unix timestamp) when the gift can be transferred to another
   #   owner; can be in the past; 0 if the gift can be transferred immediately or transfer isn't possible.
-  # @attr next_resale_date [Integer] Point in time (Unix timestamp) when the gift can be resold to another user; can be
-  #   in the past; 0 if the gift can't be resold; only for the receiver of the gift.
+  # @attr next_resale_date [Integer] Point in time (Unix timestamp) when the gift can be resold to another user; can
+  #   be in the past; 0 if the gift can't be resold; only for the receiver of the gift.
   # @attr export_date [Integer] Point in time (Unix timestamp) when the gift can be transferred to the TON blockchain
   #   as an NFT; can be in the past.
   class UpgradeGiftResult < Base

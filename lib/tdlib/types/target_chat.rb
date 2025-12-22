@@ -1,12 +1,8 @@
 module TD::Types
   # Describes the target chat to be opened.
   class TargetChat < Base
-%w[
-  current
-      chosen
-      internal_link
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/target_chat/#{type}"
-end
+    autoload TD::Types.camelize('current'), 'tdlib/types/target_chat/current'
+    autoload TD::Types.camelize('chosen'), 'tdlib/types/target_chat/chosen'
+    autoload TD::Types.camelize('internal_link'), 'tdlib/types/target_chat/internal_link'
   end
 end

@@ -1,11 +1,12 @@
 module TD::Types
   # A Telegram Premium gift code was created for the user.
   #
-  # @attr creator_id [TD::Types::MessageSender, nil] Identifier of a chat or a user that created the gift code; may be
-  #   null if unknown.
+  # @attr creator_id [TD::Types::MessageSender, nil] Identifier of a chat or a user that created the gift code; may
+  #   be null if unknown.
   # @attr text [TD::Types::FormattedText] Message added to the gift.
   # @attr is_from_giveaway [Boolean] True, if the gift code was created for a giveaway.
-  # @attr is_unclaimed [Boolean] True, if the winner for the corresponding Telegram Premium subscription wasn't chosen.
+  # @attr is_unclaimed [Boolean] True, if the winner for the corresponding Telegram Premium subscription wasn't
+  #   chosen.
   # @attr currency [TD::Types::String] Currency for the paid amount; empty if unknown.
   # @attr amount [Integer] The paid amount, in the smallest units of the currency; 0 if unknown.
   # @attr cryptocurrency [TD::Types::String, nil] Cryptocurrency used to pay for the gift; may be empty if none or

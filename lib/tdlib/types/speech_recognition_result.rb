@@ -1,12 +1,8 @@
 module TD::Types
   # Describes result of speech recognition in a voice note.
   class SpeechRecognitionResult < Base
-%w[
-  pending
-      text
-      error
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/speech_recognition_result/#{type}"
-end
+    autoload TD::Types.camelize('pending'), 'tdlib/types/speech_recognition_result/pending'
+    autoload TD::Types.camelize('text'), 'tdlib/types/speech_recognition_result/text'
+    autoload TD::Types.camelize('error'), 'tdlib/types/speech_recognition_result/error'
   end
 end

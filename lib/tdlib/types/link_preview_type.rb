@@ -1,47 +1,43 @@
 module TD::Types
   # Describes type of link preview.
   class LinkPreviewType < Base
-%w[
-  album
-      animation
-      app
-      article
-      audio
-      background
-      channel_boost
-      chat
-      direct_messages_chat
-      document
-      embedded_animation_player
-      embedded_audio_player
-      embedded_video_player
-      external_audio
-      external_video
-      gift_auction
-      gift_collection
-      group_call
-      invoice
-      live_story
-      message
-      photo
-      premium_gift_code
-      shareable_chat_folder
-      sticker
-      sticker_set
-      story
-      story_album
-      supergroup_boost
-      theme
-      unsupported
-      upgraded_gift
-      user
-      video
-      video_chat
-      video_note
-      voice_note
-      web_app
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/link_preview_type/#{type}"
-end
+    autoload TD::Types.camelize('album'), 'tdlib/types/link_preview_type/album'
+    autoload TD::Types.camelize('animation'), 'tdlib/types/link_preview_type/animation'
+    autoload TD::Types.camelize('app'), 'tdlib/types/link_preview_type/app'
+    autoload TD::Types.camelize('article'), 'tdlib/types/link_preview_type/article'
+    autoload TD::Types.camelize('audio'), 'tdlib/types/link_preview_type/audio'
+    autoload TD::Types.camelize('background'), 'tdlib/types/link_preview_type/background'
+    autoload TD::Types.camelize('channel_boost'), 'tdlib/types/link_preview_type/channel_boost'
+    autoload TD::Types.camelize('chat'), 'tdlib/types/link_preview_type/chat'
+    autoload TD::Types.camelize('direct_messages_chat'), 'tdlib/types/link_preview_type/direct_messages_chat'
+    autoload TD::Types.camelize('document'), 'tdlib/types/link_preview_type/document'
+    autoload TD::Types.camelize('embedded_animation_player'), 'tdlib/types/link_preview_type/embedded_animation_player'
+    autoload TD::Types.camelize('embedded_audio_player'), 'tdlib/types/link_preview_type/embedded_audio_player'
+    autoload TD::Types.camelize('embedded_video_player'), 'tdlib/types/link_preview_type/embedded_video_player'
+    autoload TD::Types.camelize('external_audio'), 'tdlib/types/link_preview_type/external_audio'
+    autoload TD::Types.camelize('external_video'), 'tdlib/types/link_preview_type/external_video'
+    autoload TD::Types.camelize('gift_auction'), 'tdlib/types/link_preview_type/gift_auction'
+    autoload TD::Types.camelize('gift_collection'), 'tdlib/types/link_preview_type/gift_collection'
+    autoload TD::Types.camelize('group_call'), 'tdlib/types/link_preview_type/group_call'
+    autoload TD::Types.camelize('invoice'), 'tdlib/types/link_preview_type/invoice'
+    autoload TD::Types.camelize('live_story'), 'tdlib/types/link_preview_type/live_story'
+    autoload TD::Types.camelize('message'), 'tdlib/types/link_preview_type/message'
+    autoload TD::Types.camelize('photo'), 'tdlib/types/link_preview_type/photo'
+    autoload TD::Types.camelize('premium_gift_code'), 'tdlib/types/link_preview_type/premium_gift_code'
+    autoload TD::Types.camelize('shareable_chat_folder'), 'tdlib/types/link_preview_type/shareable_chat_folder'
+    autoload TD::Types.camelize('sticker'), 'tdlib/types/link_preview_type/sticker'
+    autoload TD::Types.camelize('sticker_set'), 'tdlib/types/link_preview_type/sticker_set'
+    autoload TD::Types.camelize('story'), 'tdlib/types/link_preview_type/story'
+    autoload TD::Types.camelize('story_album'), 'tdlib/types/link_preview_type/story_album'
+    autoload TD::Types.camelize('supergroup_boost'), 'tdlib/types/link_preview_type/supergroup_boost'
+    autoload TD::Types.camelize('theme'), 'tdlib/types/link_preview_type/theme'
+    autoload TD::Types.camelize('unsupported'), 'tdlib/types/link_preview_type/unsupported'
+    autoload TD::Types.camelize('upgraded_gift'), 'tdlib/types/link_preview_type/upgraded_gift'
+    autoload TD::Types.camelize('user'), 'tdlib/types/link_preview_type/user'
+    autoload TD::Types.camelize('video'), 'tdlib/types/link_preview_type/video'
+    autoload TD::Types.camelize('video_chat'), 'tdlib/types/link_preview_type/video_chat'
+    autoload TD::Types.camelize('video_note'), 'tdlib/types/link_preview_type/video_note'
+    autoload TD::Types.camelize('voice_note'), 'tdlib/types/link_preview_type/voice_note'
+    autoload TD::Types.camelize('web_app'), 'tdlib/types/link_preview_type/web_app'
   end
 end

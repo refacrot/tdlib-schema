@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module TD::Types
   class Base < Dry::Struct
     # convert string keys to symbols

@@ -1,13 +1,9 @@
 module TD::Types
   # Contains information about the payment method chosen by the user.
   class InputCredentials < Base
-%w[
-  saved
-      new
-      apple_pay
-      google_pay
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/input_credentials/#{type}"
-end
+    autoload TD::Types.camelize('saved'), 'tdlib/types/input_credentials/saved'
+    autoload TD::Types.camelize('new'), 'tdlib/types/input_credentials/new'
+    autoload TD::Types.camelize('apple_pay'), 'tdlib/types/input_credentials/apple_pay'
+    autoload TD::Types.camelize('google_pay'), 'tdlib/types/input_credentials/google_pay'
   end
 end

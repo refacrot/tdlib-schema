@@ -1,13 +1,9 @@
 module TD::Types
   # Describes a paid media.
   class PaidMedia < Base
-%w[
-  preview
-      photo
-      video
-      unsupported
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/paid_media/#{type}"
-end
+    autoload TD::Types.camelize('preview'), 'tdlib/types/paid_media/preview'
+    autoload TD::Types.camelize('photo'), 'tdlib/types/paid_media/photo'
+    autoload TD::Types.camelize('video'), 'tdlib/types/paid_media/video'
+    autoload TD::Types.camelize('unsupported'), 'tdlib/types/paid_media/unsupported'
   end
 end

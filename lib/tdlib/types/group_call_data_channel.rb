@@ -1,11 +1,7 @@
 module TD::Types
   # Describes data channel for a group call.
   class GroupCallDataChannel < Base
-%w[
-  main
-      screen_sharing
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/group_call_data_channel/#{type}"
-end
+    autoload TD::Types.camelize('main'), 'tdlib/types/group_call_data_channel/main'
+    autoload TD::Types.camelize('screen_sharing'), 'tdlib/types/group_call_data_channel/screen_sharing'
   end
 end

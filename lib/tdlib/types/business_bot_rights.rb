@@ -10,15 +10,15 @@ module TD::Types
   # @attr can_edit_bio [Boolean] True, if the bot can edit bio of the business account.
   # @attr can_edit_profile_photo [Boolean] True, if the bot can edit profile photo of the business account.
   # @attr can_edit_username [Boolean] True, if the bot can edit username of the business account.
-  # @attr can_view_gifts_and_stars [Boolean] True, if the bot can view gifts and amount of Telegram Stars owned by the
-  #   business account.
+  # @attr can_view_gifts_and_stars [Boolean] True, if the bot can view gifts and amount of Telegram Stars owned by
+  #   the business account.
   # @attr can_sell_gifts [Boolean] True, if the bot can sell regular gifts received by the business account.
   # @attr can_change_gift_settings [Boolean] True, if the bot can change gift receiving settings of the business
   #   account.
   # @attr can_transfer_and_upgrade_gifts [Boolean] True, if the bot can transfer and upgrade gifts received by the
   #   business account.
-  # @attr can_transfer_stars [Boolean] True, if the bot can transfer Telegram Stars received by the business account to
-  #   account of the bot, or use them to upgrade and transfer gifts.
+  # @attr can_transfer_stars [Boolean] True, if the bot can transfer Telegram Stars received by the business account
+  #   to account of the bot, or use them to upgrade and transfer gifts.
   # @attr can_manage_stories [Boolean] True, if the bot can post, edit and delete stories.
   class BusinessBotRights < Base
     attribute :can_reply, TD::Types::Bool

@@ -1,12 +1,8 @@
 module TD::Types
   # Contains information about a payment provider.
   class PaymentProvider < Base
-%w[
-  smart_glocal
-      stripe
-      other
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/payment_provider/#{type}"
-end
+    autoload TD::Types.camelize('smart_glocal'), 'tdlib/types/payment_provider/smart_glocal'
+    autoload TD::Types.camelize('stripe'), 'tdlib/types/payment_provider/stripe'
+    autoload TD::Types.camelize('other'), 'tdlib/types/payment_provider/other'
   end
 end

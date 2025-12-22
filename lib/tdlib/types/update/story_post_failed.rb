@@ -1,6 +1,6 @@
 module TD::Types
   # A story failed to post.
-  # If the story posting is canceled, then updateStoryDeleted will be received instead of this update.
+  #   If the story posting is canceled, then updateStoryDeleted will be received instead of this update.
   #
   # @attr story [TD::Types::Story] The failed to post story.
   # @attr error [TD::Types::Error] The cause of the story posting failure.

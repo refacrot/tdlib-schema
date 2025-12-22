@@ -1,6 +1,6 @@
 module TD::Types
   # A request can't be completed unless application verification is performed; for official mobile applications only.
-  # The method setApplicationVerificationToken must be called once the verification is completed or failed.
+  #   The method setApplicationVerificationToken must be called once the verification is completed or failed.
   #
   # @attr verification_id [Integer] Unique identifier for the verification process.
   # @attr nonce [TD::Types::String] Unique base64url-encoded nonce for the classic Play Integrity verification

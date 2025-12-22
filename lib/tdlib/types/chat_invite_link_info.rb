@@ -1,7 +1,8 @@
 module TD::Types
   # Contains information about a chat invite link.
   #
-  # @attr chat_id [Integer] Chat identifier of the invite link; 0 if the user has no access to the chat before joining.
+  # @attr chat_id [Integer] Chat identifier of the invite link; 0 if the user has no access to the chat before
+  #   joining.
   # @attr accessible_for [Integer] If non-zero, the amount of time for which read access to the chat will remain
   #   available, in seconds.
   # @attr type [TD::Types::InviteLinkChatType] Type of the chat.
@@ -10,7 +11,8 @@ module TD::Types
   # @attr accent_color_id [Integer] Identifier of the accent color for chat title and background of chat photo.
   # @attr description [TD::Types::String] Chat description.
   # @attr member_count [Integer] Number of members in the chat.
-  # @attr member_user_ids [Array<Integer>] User identifiers of some chat members that may be known to the current user.
+  # @attr member_user_ids [Array<Integer>] User identifiers of some chat members that may be known to the current
+  #   user.
   # @attr subscription_info [TD::Types::ChatInviteLinkSubscriptionInfo, nil] Information about subscription plan that
   #   must be paid by the user to use the link; may be null if the link doesn't require subscription.
   # @attr creates_join_request [Boolean] True, if the link only creates join request.

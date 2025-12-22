@@ -1,11 +1,7 @@
 module TD::Types
   # Represents type of button in results of inline query.
   class InlineQueryResultsButtonType < Base
-%w[
-  start_bot
-      web_app
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/inline_query_results_button_type/#{type}"
-end
+    autoload TD::Types.camelize('start_bot'), 'tdlib/types/inline_query_results_button_type/start_bot'
+    autoload TD::Types.camelize('web_app'), 'tdlib/types/inline_query_results_button_type/web_app'
   end
 end

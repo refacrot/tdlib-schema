@@ -20,16 +20,17 @@ module TD::Types
   #   Otherwise, screenshotting and saving of the story content must be also forbidden.
   # @attr can_be_replied [Boolean] True, if the story can be replied in the chat with the user that posted the story.
   # @attr can_set_privacy_settings [Boolean] True, if the story privacy settings can be changed.
-  # @attr can_toggle_is_posted_to_chat_page [Boolean] True, if the story's is_posted_to_chat_page value can be changed.
+  # @attr can_toggle_is_posted_to_chat_page [Boolean] True, if the story's is_posted_to_chat_page value can be
+  #   changed.
   # @attr can_get_statistics [Boolean] True, if the story statistics are available through getStoryStatistics.
   # @attr can_get_interactions [Boolean] True, if interactions with the story can be received through
   #   getStoryInteractions.
   # @attr has_expired_viewers [Boolean] True, if users viewed the story can't be received, because the story has
   #   expired more than getOption("story_viewers_expiration_delay") seconds ago.
-  # @attr repost_info [TD::Types::StoryRepostInfo, nil] Information about the original story; may be null if the story
-  #   wasn't reposted.
-  # @attr interaction_info [TD::Types::StoryInteractionInfo, nil] Information about interactions with the story; may be
-  #   null if the story isn't owned or there were no interactions.
+  # @attr repost_info [TD::Types::StoryRepostInfo, nil] Information about the original story; may be null if the
+  #   story wasn't reposted.
+  # @attr interaction_info [TD::Types::StoryInteractionInfo, nil] Information about interactions with the story; may
+  #   be null if the story isn't owned or there were no interactions.
   # @attr chosen_reaction_type [TD::Types::ReactionType, nil] Type of the chosen reaction; may be null if none.
   # @attr privacy_settings [TD::Types::StoryPrivacySettings] Privacy rules affecting story visibility; may be
   #   approximate for non-owned stories.

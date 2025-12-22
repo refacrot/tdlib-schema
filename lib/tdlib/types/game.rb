@@ -1,6 +1,6 @@
 module TD::Types
   # Describes a game.
-  # Use getInternalLink with internalLinkTypeGame to share the game.
+  #   Use getInternalLink with internalLinkTypeGame to share the game.
   #
   # @attr id [Integer] Unique game identifier.
   # @attr short_name [TD::Types::String] Game short name.

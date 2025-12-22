@@ -1,12 +1,8 @@
 module TD::Types
   # Describes a statistical graph.
   class StatisticalGraph < Base
-%w[
-  data
-      async
-      error
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/statistical_graph/#{type}"
-end
+    autoload TD::Types.camelize('data'), 'tdlib/types/statistical_graph/data'
+    autoload TD::Types.camelize('async'), 'tdlib/types/statistical_graph/async'
+    autoload TD::Types.camelize('error'), 'tdlib/types/statistical_graph/error'
   end
 end

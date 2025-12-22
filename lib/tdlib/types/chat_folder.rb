@@ -9,11 +9,11 @@ module TD::Types
   #   Can't be changed if folder tags are disabled or the current user doesn't have Telegram Premium subscription.
   # @attr is_shareable [Boolean] True, if at least one link has been created for the folder.
   # @attr pinned_chat_ids [Array<Integer>] The chat identifiers of pinned chats in the folder.
-  #   There can be up to getOption("chat_folder_chosen_chat_count_max") pinned and always included non-secret chats and
-  #   the same number of secret chats, but the limit can be increased with Telegram Premium.
+  #   There can be up to getOption("chat_folder_chosen_chat_count_max") pinned and always included non-secret chats
+  #   and the same number of secret chats, but the limit can be increased with Telegram Premium.
   # @attr included_chat_ids [Array<Integer>] The chat identifiers of always included chats in the folder.
-  #   There can be up to getOption("chat_folder_chosen_chat_count_max") pinned and always included non-secret chats and
-  #   the same number of secret chats, but the limit can be increased with Telegram Premium.
+  #   There can be up to getOption("chat_folder_chosen_chat_count_max") pinned and always included non-secret chats
+  #   and the same number of secret chats, but the limit can be increased with Telegram Premium.
   # @attr excluded_chat_ids [Array<Integer>] The chat identifiers of always excluded chats in the folder.
   #   There can be up to getOption("chat_folder_chosen_chat_count_max") always excluded non-secret chats and the same
   #   number of secret chats, but the limit can be increased with Telegram Premium.

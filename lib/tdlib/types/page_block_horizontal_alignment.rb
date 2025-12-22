@@ -1,12 +1,8 @@
 module TD::Types
   # Describes a horizontal alignment of a table cell content.
   class PageBlockHorizontalAlignment < Base
-%w[
-  left
-      center
-      right
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/page_block_horizontal_alignment/#{type}"
-end
+    autoload TD::Types.camelize('left'), 'tdlib/types/page_block_horizontal_alignment/left'
+    autoload TD::Types.camelize('center'), 'tdlib/types/page_block_horizontal_alignment/center'
+    autoload TD::Types.camelize('right'), 'tdlib/types/page_block_horizontal_alignment/right'
   end
 end

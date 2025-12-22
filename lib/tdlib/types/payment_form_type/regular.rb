@@ -8,8 +8,8 @@ module TD::Types
   # @attr saved_order_info [TD::Types::OrderInfo, nil] Saved server-side order information; may be null.
   # @attr saved_credentials [Array<TD::Types::SavedCredentials>] The list of saved payment credentials.
   # @attr can_save_credentials [Boolean] True, if the user can choose to save credentials.
-  # @attr need_password [Boolean] True, if the user will be able to save credentials, if sets up a 2-step verification
-  #   password.
+  # @attr need_password [Boolean] True, if the user will be able to save credentials, if sets up a 2-step
+  #   verification password.
   class PaymentFormType::Regular < PaymentFormType
     attribute :invoice, TD::Types::Invoice
     attribute :payment_provider_user_id, TD::Types::Coercible::Integer

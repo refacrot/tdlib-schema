@@ -1,6 +1,6 @@
 module TD::Types
   # A chat.
-  # (Can be a private chat, basic group, supergroup, or secret chat).
+  #   (Can be a private chat, basic group, supergroup, or secret chat).
   #
   # @attr id [Integer] Chat unique identifier.
   # @attr type [TD::Types::ChatType] Type of the chat.
@@ -12,7 +12,8 @@ module TD::Types
   #   preview background for messages sent by the chat; 0 if none.
   # @attr upgraded_gift_colors [TD::Types::UpgradedGiftColors, nil] Color scheme based on an upgraded gift to be used
   #   for the chat instead of accent_color_id and background_custom_emoji_id; may be null if none.
-  # @attr profile_accent_color_id [Integer] Identifier of the profile accent color for the chat's profile; -1 if none.
+  # @attr profile_accent_color_id [Integer] Identifier of the profile accent color for the chat's profile; -1 if
+  #   none.
   # @attr profile_background_custom_emoji_id [Integer] Identifier of a custom emoji to be shown on the background of
   #   the chat's profile; 0 if none.
   # @attr permissions [TD::Types::ChatPermissions] Actions that non-administrator chat members are allowed to take in
@@ -52,19 +53,19 @@ module TD::Types
   # @attr emoji_status [TD::Types::EmojiStatus, nil] Emoji status to be shown along with chat title; may be null.
   # @attr background [TD::Types::ChatBackground, nil] Background set for the chat; may be null if none.
   # @attr theme [TD::Types::ChatTheme, nil] Theme set for the chat; may be null if none.
-  # @attr action_bar [TD::Types::ChatActionBar, nil] Information about actions which must be possible to do through the
-  #   chat action bar; may be null if none.
-  # @attr business_bot_manage_bar [TD::Types::BusinessBotManageBar, nil] Information about bar for managing a business
-  #   bot in the chat; may be null if none.
+  # @attr action_bar [TD::Types::ChatActionBar, nil] Information about actions which must be possible to do through
+  #   the chat action bar; may be null if none.
+  # @attr business_bot_manage_bar [TD::Types::BusinessBotManageBar, nil] Information about bar for managing a
+  #   business bot in the chat; may be null if none.
   # @attr video_chat [TD::Types::VideoChat] Information about video chat of the chat.
-  # @attr pending_join_requests [TD::Types::ChatJoinRequestsInfo, nil] Information about pending join requests; may be
-  #   null if none.
+  # @attr pending_join_requests [TD::Types::ChatJoinRequestsInfo, nil] Information about pending join requests; may
+  #   be null if none.
   # @attr reply_markup_message_id [Integer] Identifier of the message from which reply markup needs to be used; 0 if
   #   there is no default custom reply markup in the chat.
   # @attr draft_message [TD::Types::DraftMessage, nil] A draft of a message in the chat; may be null if none.
   # @attr client_data [TD::Types::String] Application-specific data associated with the chat.
-  #   (For example, the chat scroll position or local chat notification settings can be stored here.) Persistent if the
-  #   message database is used.
+  #   (For example, the chat scroll position or local chat notification settings can be stored here.) Persistent if
+  #   the message database is used.
   class Chat < Base
     attribute :id, TD::Types::Coercible::Integer
     attribute :type, TD::Types::ChatType

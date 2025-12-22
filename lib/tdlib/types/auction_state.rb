@@ -1,11 +1,7 @@
 module TD::Types
   # Describes state of an auction.
   class AuctionState < Base
-%w[
-  active
-      finished
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/auction_state/#{type}"
-end
+    autoload TD::Types.camelize('active'), 'tdlib/types/auction_state/active'
+    autoload TD::Types.camelize('finished'), 'tdlib/types/auction_state/finished'
   end
 end

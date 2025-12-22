@@ -1,20 +1,16 @@
 module TD::Types
   # Describes source of a message.
   class MessageSource < Base
-%w[
-  chat_history
-      message_thread_history
-      forum_topic_history
-      direct_messages_chat_topic_history
-      history_preview
-      chat_list
-      search
-      chat_event_log
-      notification
-      screenshot
-      other
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/message_source/#{type}"
-end
+    autoload TD::Types.camelize('chat_history'), 'tdlib/types/message_source/chat_history'
+    autoload TD::Types.camelize('message_thread_history'), 'tdlib/types/message_source/message_thread_history'
+    autoload TD::Types.camelize('forum_topic_history'), 'tdlib/types/message_source/forum_topic_history'
+    autoload TD::Types.camelize('direct_messages_chat_topic_history'), 'tdlib/types/message_source/direct_messages_chat_topic_history'
+    autoload TD::Types.camelize('history_preview'), 'tdlib/types/message_source/history_preview'
+    autoload TD::Types.camelize('chat_list'), 'tdlib/types/message_source/chat_list'
+    autoload TD::Types.camelize('search'), 'tdlib/types/message_source/search'
+    autoload TD::Types.camelize('chat_event_log'), 'tdlib/types/message_source/chat_event_log'
+    autoload TD::Types.camelize('notification'), 'tdlib/types/message_source/notification'
+    autoload TD::Types.camelize('screenshot'), 'tdlib/types/message_source/screenshot'
+    autoload TD::Types.camelize('other'), 'tdlib/types/message_source/other'
   end
 end

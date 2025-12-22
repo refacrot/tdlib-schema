@@ -6,7 +6,8 @@ module TD::Types
   # @attr sticker_width [Integer] Expected width of the sticker, which can be used if the sticker is null.
   # @attr sticker_height [Integer] Expected height of the sticker, which can be used if the sticker is null.
   # @attr fitzpatrick_type [Integer] Emoji modifier fitzpatrick type; 0-6; 0 if none.
-  # @attr sound [TD::Types::File, nil] File containing the sound to be played when the sticker is clicked; may be null.
+  # @attr sound [TD::Types::File, nil] File containing the sound to be played when the sticker is clicked; may be
+  #   null.
   #   The sound is encoded with the Opus codec, and stored inside an OGG container.
   class AnimatedEmoji < Base
     attribute :sticker, TD::Types::Sticker.optional.default(nil)

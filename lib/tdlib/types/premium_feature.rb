@@ -1,35 +1,31 @@
 module TD::Types
   # Describes a feature available to Premium users.
   class PremiumFeature < Base
-%w[
-  increased_limits
-      increased_upload_file_size
-      improved_download_speed
-      voice_recognition
-      disabled_ads
-      unique_reactions
-      unique_stickers
-      custom_emoji
-      advanced_chat_management
-      profile_badge
-      emoji_status
-      animated_profile_photo
-      forum_topic_icon
-      app_icons
-      real_time_chat_translation
-      upgraded_stories
-      chat_boost
-      accent_color
-      background_for_both
-      saved_messages_tags
-      message_privacy
-      last_seen_times
-      business
-      message_effects
-      checklists
-      paid_messages
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/premium_feature/#{type}"
-end
+    autoload TD::Types.camelize('increased_limits'), 'tdlib/types/premium_feature/increased_limits'
+    autoload TD::Types.camelize('increased_upload_file_size'), 'tdlib/types/premium_feature/increased_upload_file_size'
+    autoload TD::Types.camelize('improved_download_speed'), 'tdlib/types/premium_feature/improved_download_speed'
+    autoload TD::Types.camelize('voice_recognition'), 'tdlib/types/premium_feature/voice_recognition'
+    autoload TD::Types.camelize('disabled_ads'), 'tdlib/types/premium_feature/disabled_ads'
+    autoload TD::Types.camelize('unique_reactions'), 'tdlib/types/premium_feature/unique_reactions'
+    autoload TD::Types.camelize('unique_stickers'), 'tdlib/types/premium_feature/unique_stickers'
+    autoload TD::Types.camelize('custom_emoji'), 'tdlib/types/premium_feature/custom_emoji'
+    autoload TD::Types.camelize('advanced_chat_management'), 'tdlib/types/premium_feature/advanced_chat_management'
+    autoload TD::Types.camelize('profile_badge'), 'tdlib/types/premium_feature/profile_badge'
+    autoload TD::Types.camelize('emoji_status'), 'tdlib/types/premium_feature/emoji_status'
+    autoload TD::Types.camelize('animated_profile_photo'), 'tdlib/types/premium_feature/animated_profile_photo'
+    autoload TD::Types.camelize('forum_topic_icon'), 'tdlib/types/premium_feature/forum_topic_icon'
+    autoload TD::Types.camelize('app_icons'), 'tdlib/types/premium_feature/app_icons'
+    autoload TD::Types.camelize('real_time_chat_translation'), 'tdlib/types/premium_feature/real_time_chat_translation'
+    autoload TD::Types.camelize('upgraded_stories'), 'tdlib/types/premium_feature/upgraded_stories'
+    autoload TD::Types.camelize('chat_boost'), 'tdlib/types/premium_feature/chat_boost'
+    autoload TD::Types.camelize('accent_color'), 'tdlib/types/premium_feature/accent_color'
+    autoload TD::Types.camelize('background_for_both'), 'tdlib/types/premium_feature/background_for_both'
+    autoload TD::Types.camelize('saved_messages_tags'), 'tdlib/types/premium_feature/saved_messages_tags'
+    autoload TD::Types.camelize('message_privacy'), 'tdlib/types/premium_feature/message_privacy'
+    autoload TD::Types.camelize('last_seen_times'), 'tdlib/types/premium_feature/last_seen_times'
+    autoload TD::Types.camelize('business'), 'tdlib/types/premium_feature/business'
+    autoload TD::Types.camelize('message_effects'), 'tdlib/types/premium_feature/message_effects'
+    autoload TD::Types.camelize('checklists'), 'tdlib/types/premium_feature/checklists'
+    autoload TD::Types.camelize('paid_messages'), 'tdlib/types/premium_feature/paid_messages'
   end
 end

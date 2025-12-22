@@ -13,8 +13,8 @@ module TD::Types
   #   shown small and only the first frame must be shown for videos.
   # @attr show_media_above_description [Boolean] True, if media must be shown above link preview description;
   #   otherwise, the media must be shown below the description.
-  # @attr skip_confirmation [Boolean] True, if there is no need to show an ordinary open URL confirmation, when opening
-  #   the URL from the preview, because the URL is shown in the message text in clear.
+  # @attr skip_confirmation [Boolean] True, if there is no need to show an ordinary open URL confirmation, when
+  #   opening the URL from the preview, because the URL is shown in the message text in clear.
   # @attr show_above_text [Boolean] True, if the link preview must be shown above message text; otherwise, the link
   #   preview must be shown below the message text.
   # @attr instant_view_version [Integer] Version of instant view (currently, can be 1 or 2) for the web page; 0 if

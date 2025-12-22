@@ -5,8 +5,8 @@ module TD::Types
   # @attr current_amount [TD::Types::StarAmount] The amount of Telegram Stars that aren't withdrawn yet.
   # @attr available_amount [TD::Types::StarAmount] The amount of Telegram Stars that are available for withdrawal.
   # @attr withdrawal_enabled [Boolean] True, if Telegram Stars can be withdrawn now or later.
-  # @attr next_withdrawal_in [Integer] Time left before the next withdrawal can be started, in seconds; 0 if withdrawal
-  #   can be started now.
+  # @attr next_withdrawal_in [Integer] Time left before the next withdrawal can be started, in seconds; 0 if
+  #   withdrawal can be started now.
   class StarRevenueStatus < Base
     attribute :total_amount, TD::Types::StarAmount
     attribute :current_amount, TD::Types::StarAmount

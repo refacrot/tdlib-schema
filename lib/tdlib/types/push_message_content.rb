@@ -1,54 +1,50 @@
 module TD::Types
   # Contains content of a push message notification.
   class PushMessageContent < Base
-%w[
-  hidden
-      animation
-      audio
-      contact
-      contact_registered
-      document
-      game
-      game_score
-      invoice
-      location
-      paid_media
-      photo
-      poll
-      premium_gift_code
-      giveaway
-      gift
-      upgraded_gift
-      screenshot_taken
-      sticker
-      story
-      text
-      checklist
-      video
-      video_note
-      voice_note
-      basic_group_chat_create
-      video_chat_started
-      video_chat_ended
-      invite_video_chat_participants
-      chat_add_members
-      chat_change_photo
-      chat_change_title
-      chat_set_background
-      chat_set_theme
-      chat_delete_member
-      chat_join_by_link
-      chat_join_by_request
-      recurring_payment
-      suggest_profile_photo
-      suggest_birthdate
-      proximity_alert_triggered
-      checklist_tasks_added
-      checklist_tasks_done
-      message_forwards
-      media_album
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/push_message_content/#{type}"
-end
+    autoload TD::Types.camelize('hidden'), 'tdlib/types/push_message_content/hidden'
+    autoload TD::Types.camelize('animation'), 'tdlib/types/push_message_content/animation'
+    autoload TD::Types.camelize('audio'), 'tdlib/types/push_message_content/audio'
+    autoload TD::Types.camelize('contact'), 'tdlib/types/push_message_content/contact'
+    autoload TD::Types.camelize('contact_registered'), 'tdlib/types/push_message_content/contact_registered'
+    autoload TD::Types.camelize('document'), 'tdlib/types/push_message_content/document'
+    autoload TD::Types.camelize('game'), 'tdlib/types/push_message_content/game'
+    autoload TD::Types.camelize('game_score'), 'tdlib/types/push_message_content/game_score'
+    autoload TD::Types.camelize('invoice'), 'tdlib/types/push_message_content/invoice'
+    autoload TD::Types.camelize('location'), 'tdlib/types/push_message_content/location'
+    autoload TD::Types.camelize('paid_media'), 'tdlib/types/push_message_content/paid_media'
+    autoload TD::Types.camelize('photo'), 'tdlib/types/push_message_content/photo'
+    autoload TD::Types.camelize('poll'), 'tdlib/types/push_message_content/poll'
+    autoload TD::Types.camelize('premium_gift_code'), 'tdlib/types/push_message_content/premium_gift_code'
+    autoload TD::Types.camelize('giveaway'), 'tdlib/types/push_message_content/giveaway'
+    autoload TD::Types.camelize('gift'), 'tdlib/types/push_message_content/gift'
+    autoload TD::Types.camelize('upgraded_gift'), 'tdlib/types/push_message_content/upgraded_gift'
+    autoload TD::Types.camelize('screenshot_taken'), 'tdlib/types/push_message_content/screenshot_taken'
+    autoload TD::Types.camelize('sticker'), 'tdlib/types/push_message_content/sticker'
+    autoload TD::Types.camelize('story'), 'tdlib/types/push_message_content/story'
+    autoload TD::Types.camelize('text'), 'tdlib/types/push_message_content/text'
+    autoload TD::Types.camelize('checklist'), 'tdlib/types/push_message_content/checklist'
+    autoload TD::Types.camelize('video'), 'tdlib/types/push_message_content/video'
+    autoload TD::Types.camelize('video_note'), 'tdlib/types/push_message_content/video_note'
+    autoload TD::Types.camelize('voice_note'), 'tdlib/types/push_message_content/voice_note'
+    autoload TD::Types.camelize('basic_group_chat_create'), 'tdlib/types/push_message_content/basic_group_chat_create'
+    autoload TD::Types.camelize('video_chat_started'), 'tdlib/types/push_message_content/video_chat_started'
+    autoload TD::Types.camelize('video_chat_ended'), 'tdlib/types/push_message_content/video_chat_ended'
+    autoload TD::Types.camelize('invite_video_chat_participants'), 'tdlib/types/push_message_content/invite_video_chat_participants'
+    autoload TD::Types.camelize('chat_add_members'), 'tdlib/types/push_message_content/chat_add_members'
+    autoload TD::Types.camelize('chat_change_photo'), 'tdlib/types/push_message_content/chat_change_photo'
+    autoload TD::Types.camelize('chat_change_title'), 'tdlib/types/push_message_content/chat_change_title'
+    autoload TD::Types.camelize('chat_set_background'), 'tdlib/types/push_message_content/chat_set_background'
+    autoload TD::Types.camelize('chat_set_theme'), 'tdlib/types/push_message_content/chat_set_theme'
+    autoload TD::Types.camelize('chat_delete_member'), 'tdlib/types/push_message_content/chat_delete_member'
+    autoload TD::Types.camelize('chat_join_by_link'), 'tdlib/types/push_message_content/chat_join_by_link'
+    autoload TD::Types.camelize('chat_join_by_request'), 'tdlib/types/push_message_content/chat_join_by_request'
+    autoload TD::Types.camelize('recurring_payment'), 'tdlib/types/push_message_content/recurring_payment'
+    autoload TD::Types.camelize('suggest_profile_photo'), 'tdlib/types/push_message_content/suggest_profile_photo'
+    autoload TD::Types.camelize('suggest_birthdate'), 'tdlib/types/push_message_content/suggest_birthdate'
+    autoload TD::Types.camelize('proximity_alert_triggered'), 'tdlib/types/push_message_content/proximity_alert_triggered'
+    autoload TD::Types.camelize('checklist_tasks_added'), 'tdlib/types/push_message_content/checklist_tasks_added'
+    autoload TD::Types.camelize('checklist_tasks_done'), 'tdlib/types/push_message_content/checklist_tasks_done'
+    autoload TD::Types.camelize('message_forwards'), 'tdlib/types/push_message_content/message_forwards'
+    autoload TD::Types.camelize('media_album'), 'tdlib/types/push_message_content/media_album'
   end
 end

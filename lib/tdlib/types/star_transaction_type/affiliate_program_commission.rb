@@ -3,8 +3,8 @@ module TD::Types
   #   channel chats only.
   #
   # @attr chat_id [Integer] Identifier of the chat that created the affiliate program.
-  # @attr commission_per_mille [Integer] The number of Telegram Stars received by the affiliate for each 1000 Telegram
-  #   Stars received by the program owner.
+  # @attr commission_per_mille [Integer] The number of Telegram Stars received by the affiliate for each 1000
+  #   Telegram Stars received by the program owner.
   class StarTransactionType::AffiliateProgramCommission < StarTransactionType
     attribute :chat_id, TD::Types::Coercible::Integer
     attribute :commission_per_mille, TD::Types::Coercible::Integer

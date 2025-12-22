@@ -1,12 +1,8 @@
 module TD::Types
   # Describes the type of proxy server.
   class ProxyType < Base
-%w[
-  socks5
-      http
-      mtproto
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/proxy_type/#{type}"
-end
+    autoload TD::Types.camelize('socks5'), 'tdlib/types/proxy_type/socks5'
+    autoload TD::Types.camelize('http'), 'tdlib/types/proxy_type/http'
+    autoload TD::Types.camelize('mtproto'), 'tdlib/types/proxy_type/mtproto'
   end
 end

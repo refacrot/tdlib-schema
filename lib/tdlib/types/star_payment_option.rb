@@ -1,12 +1,12 @@
 module TD::Types
   # Describes an option for buying Telegram Stars.
-  # Use telegramPaymentPurposeStars for out-of-store payments.
+  #   Use telegramPaymentPurposeStars for out-of-store payments.
   #
   # @attr currency [TD::Types::String] ISO 4217 currency code for the payment.
   # @attr amount [Integer] The amount to pay, in the smallest units of the currency.
   # @attr star_count [Integer] Number of Telegram Stars that will be purchased.
-  # @attr store_product_id [TD::Types::String, nil] Identifier of the store product associated with the option; may be
-  #   empty if none.
+  # @attr store_product_id [TD::Types::String, nil] Identifier of the store product associated with the option; may
+  #   be empty if none.
   # @attr is_additional [Boolean] True, if the option must be shown only in the full list of payment options.
   class StarPaymentOption < Base
     attribute :currency, TD::Types::String

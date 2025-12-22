@@ -1,11 +1,7 @@
 module TD::Types
   # Represents result of starting a live story.
   class StartLiveStoryResult < Base
-%w[
-  ok
-      fail
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/start_live_story_result/#{type}"
-end
+    autoload TD::Types.camelize('ok'), 'tdlib/types/start_live_story_result/ok'
+    autoload TD::Types.camelize('fail'), 'tdlib/types/start_live_story_result/fail'
   end
 end

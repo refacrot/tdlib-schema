@@ -5,10 +5,10 @@ module TD::Types
   #   after upgrade.
   # @attr symbols [Array<TD::Types::UpgradedGiftSymbol>] Examples of possible symbols that can be chosen for the gift
   #   after upgrade.
-  # @attr backdrops [Array<TD::Types::UpgradedGiftBackdrop>] Examples of possible backdrops that can be chosen for the
-  #   gift after upgrade.
-  # @attr prices [Array<TD::Types::GiftUpgradePrice>] Examples of price for gift upgrade from the maximum price to the
-  #   minimum price.
+  # @attr backdrops [Array<TD::Types::UpgradedGiftBackdrop>] Examples of possible backdrops that can be chosen for
+  #   the gift after upgrade.
+  # @attr prices [Array<TD::Types::GiftUpgradePrice>] Examples of price for gift upgrade from the maximum price to
+  #   the minimum price.
   # @attr next_prices [Array<TD::Types::GiftUpgradePrice>] Next changes for the price for gift upgrade with more
   #   granularity than in prices.
   class GiftUpgradePreview < Base

@@ -3,8 +3,8 @@ module TD::Types
   #
   # @attr is_public [Boolean] True, if the link is a public link for a message or a forum topic in a chat.
   # @attr chat_id [Integer] If found, identifier of the chat to which the link points, 0 otherwise.
-  # @attr topic_id [TD::Types::MessageTopic, nil] Identifier of the specific topic in which the message must be opened,
-  #   or a topic to open if the message is missing; may be null if none.
+  # @attr topic_id [TD::Types::MessageTopic, nil] Identifier of the specific topic in which the message must be
+  #   opened, or a topic to open if the message is missing; may be null if none.
   # @attr message [TD::Types::Message, nil] If found, the linked message; may be null.
   # @attr media_timestamp [Integer] Timestamp from which the video/audio/video note/voice note/story playing must
   #   start, in seconds; 0 if not specified.

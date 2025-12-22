@@ -7,8 +7,8 @@ module TD::Types
   # @attr star_count [Integer] Number of Telegram Stars distributed among winners of the giveaway.
   # @attr giveaway_message_id [Integer] Identifier of the corresponding giveaway message; can be an identifier of a
   #   deleted message.
-  # @attr is_unclaimed [Boolean] True, if the winner for the corresponding giveaway prize wasn't chosen, because there
-  #   were not enough participants.
+  # @attr is_unclaimed [Boolean] True, if the winner for the corresponding giveaway prize wasn't chosen, because
+  #   there were not enough participants.
   class ChatBoostSource::Giveaway < ChatBoostSource
     attribute :user_id, TD::Types::Coercible::Integer
     attribute :gift_code, TD::Types::String

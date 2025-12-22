@@ -1,8 +1,8 @@
 module TD::Types
   # Contains state of Telegram Premium subscription and promotion videos for Premium features.
   #
-  # @attr state [TD::Types::FormattedText, nil] Text description of the state of the current Premium subscription; may
-  #   be empty if the current user has no Telegram Premium subscription.
+  # @attr state [TD::Types::FormattedText, nil] Text description of the state of the current Premium subscription;
+  #   may be empty if the current user has no Telegram Premium subscription.
   # @attr payment_options [Array<TD::Types::PremiumStatePaymentOption>] The list of available options for buying
   #   Telegram Premium.
   # @attr animations [Array<TD::Types::PremiumFeaturePromotionAnimation>] The list of available promotion animations

@@ -1,11 +1,7 @@
 module TD::Types
   # Describes source of stickers for an emoji category.
   class EmojiCategorySource < Base
-%w[
-  search
-      premium
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/emoji_category_source/#{type}"
-end
+    autoload TD::Types.camelize('search'), 'tdlib/types/emoji_category_source/search'
+    autoload TD::Types.camelize('premium'), 'tdlib/types/emoji_category_source/premium'
   end
 end

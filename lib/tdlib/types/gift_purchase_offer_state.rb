@@ -1,12 +1,8 @@
 module TD::Types
   # Describes state of a gift purchase offer.
   class GiftPurchaseOfferState < Base
-%w[
-  pending
-      accepted
-      rejected
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/gift_purchase_offer_state/#{type}"
-end
+    autoload TD::Types.camelize('pending'), 'tdlib/types/gift_purchase_offer_state/pending'
+    autoload TD::Types.camelize('accepted'), 'tdlib/types/gift_purchase_offer_state/accepted'
+    autoload TD::Types.camelize('rejected'), 'tdlib/types/gift_purchase_offer_state/rejected'
   end
 end

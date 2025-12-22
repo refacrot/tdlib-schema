@@ -5,8 +5,8 @@ module TD::Types
   # @attr transaction_id [TD::Types::String] Identifier of the transaction for Telegram Stars credit.
   # @attr boosted_chat_id [Integer] Identifier of the supergroup or channel chat, which was automatically boosted by
   #   the winners of the giveaway.
-  # @attr giveaway_message_id [Integer] Identifier of the message with the giveaway in the boosted chat; may be 0 or an
-  #   identifier of a deleted message.
+  # @attr giveaway_message_id [Integer] Identifier of the message with the giveaway in the boosted chat; may be 0 or
+  #   an identifier of a deleted message.
   # @attr is_unclaimed [Boolean] True, if the corresponding winner wasn't chosen and the Telegram Stars were received
   #   by the owner of the boosted chat.
   # @attr sticker [TD::Types::Sticker, nil] A sticker to be shown in the message; may be null if unknown.

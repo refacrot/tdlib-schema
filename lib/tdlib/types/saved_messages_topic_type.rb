@@ -1,12 +1,8 @@
 module TD::Types
   # Describes type of Saved Messages topic.
   class SavedMessagesTopicType < Base
-%w[
-  my_notes
-      author_hidden
-      saved_from_chat
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/saved_messages_topic_type/#{type}"
-end
+    autoload TD::Types.camelize('my_notes'), 'tdlib/types/saved_messages_topic_type/my_notes'
+    autoload TD::Types.camelize('author_hidden'), 'tdlib/types/saved_messages_topic_type/author_hidden'
+    autoload TD::Types.camelize('saved_from_chat'), 'tdlib/types/saved_messages_topic_type/saved_from_chat'
   end
 end

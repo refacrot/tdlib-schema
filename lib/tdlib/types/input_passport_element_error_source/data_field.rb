@@ -1,6 +1,6 @@
 module TD::Types
   # A data field contains an error.
-  # The error is considered resolved when the field's value changes.
+  #   The error is considered resolved when the field's value changes.
   #
   # @attr field_name [TD::Types::String] Field name.
   # @attr data_hash [String] Current data hash.

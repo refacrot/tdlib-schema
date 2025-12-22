@@ -1,7 +1,7 @@
 module TD::Types
   # Number of unread chats, i.e.
-  # with unread messages or marked as unread, has changed.
-  # This update is sent only if the message database is used.
+  #   with unread messages or marked as unread, has changed.
+  #   This update is sent only if the message database is used.
   #
   # @attr chat_list [TD::Types::ChatList] The chat list with changed number of unread messages.
   # @attr total_count [Integer] Approximate total number of chats in the chat list.

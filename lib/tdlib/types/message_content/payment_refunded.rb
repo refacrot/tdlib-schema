@@ -1,7 +1,8 @@
 module TD::Types
   # A payment has been refunded.
   #
-  # @attr owner_id [TD::Types::MessageSender] Identifier of the previous owner of the Telegram Stars that refunds them.
+  # @attr owner_id [TD::Types::MessageSender] Identifier of the previous owner of the Telegram Stars that refunds
+  #   them.
   # @attr currency [TD::Types::String] Currency for the price of the product.
   # @attr total_amount [Integer] Total price for the product, in the smallest units of the currency.
   # @attr invoice_payload [String] Invoice payload; only for bots.

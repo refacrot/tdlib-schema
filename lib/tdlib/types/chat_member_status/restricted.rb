@@ -1,6 +1,6 @@
 module TD::Types
   # The user is under certain restrictions in the chat.
-  # Not supported in basic groups and channels.
+  #   Not supported in basic groups and channels.
   #
   # @attr is_member [Boolean] True, if the user is a member of the chat.
   # @attr restricted_until_date [Integer] Point in time (Unix timestamp) when restrictions will be lifted from the

@@ -4,8 +4,8 @@ module TD::Types
   # @attr boost_url [TD::Types::String] An HTTP URL, which can be used to boost the chat.
   # @attr applied_slot_ids [Array<Integer>] Identifiers of boost slots of the current user applied to the chat.
   # @attr level [Integer] Current boost level of the chat.
-  # @attr gift_code_boost_count [Integer] The number of boosts received by the chat from created Telegram Premium gift
-  #   codes and giveaways; always 0 if the current user isn't an administrator in the chat.
+  # @attr gift_code_boost_count [Integer] The number of boosts received by the chat from created Telegram Premium
+  #   gift codes and giveaways; always 0 if the current user isn't an administrator in the chat.
   # @attr boost_count [Integer] The number of boosts received by the chat.
   # @attr current_level_boost_count [Integer] The number of boosts added to reach the current level.
   # @attr next_level_boost_count [Integer] The number of boosts needed to reach the next level; 0 if the next level

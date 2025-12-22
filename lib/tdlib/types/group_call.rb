@@ -3,23 +3,24 @@ module TD::Types
   #
   # @attr id [Integer] Group call identifier.
   # @attr title [TD::Types::String] Group call title; for video chats only.
-  # @attr invite_link [TD::Types::String] Invite link for the group call; for group calls that aren't bound to a chat.
+  # @attr invite_link [TD::Types::String] Invite link for the group call; for group calls that aren't bound to a
+  #   chat.
   #   For video chats call getVideoChatInviteLink to get the link.
   #   For live stories in chats with username call getInternalLink with internalLinkTypeLiveStory.
   # @attr paid_message_star_count [Integer] The minimum number of Telegram Stars that must be paid by general
   #   participant for each sent message to the call; for live stories only.
   # @attr scheduled_start_date [Integer] Point in time (Unix timestamp) when the group call is expected to be started
   #   by an administrator; 0 if it is already active or was ended; for video chats only.
-  # @attr enabled_start_notification [Boolean] True, if the group call is scheduled and the current user will receive a
-  #   notification when the group call starts; for video chats only.
+  # @attr enabled_start_notification [Boolean] True, if the group call is scheduled and the current user will receive
+  #   a notification when the group call starts; for video chats only.
   # @attr is_active [Boolean] True, if the call is active.
   # @attr is_video_chat [Boolean] True, if the call is bound to a chat.
   # @attr is_live_story [Boolean] True, if the call is a live story of a chat.
   # @attr is_rtmp_stream [Boolean] True, if the call is an RTMP stream instead of an ordinary video chat; for video
   #   chats and live stories only.
   # @attr is_joined [Boolean] True, if the call is joined.
-  # @attr need_rejoin [Boolean] True, if user was kicked from the call because of network loss and the call needs to be
-  #   rejoined.
+  # @attr need_rejoin [Boolean] True, if user was kicked from the call because of network loss and the call needs to
+  #   be rejoined.
   # @attr is_owned [Boolean] True, if the user is the owner of the call and can end the call, change volume level of
   #   other users, or ban users there; for group calls that aren't bound to a chat.
   # @attr can_be_managed [Boolean] True, if the current user can manage the group call; for video chats and live
@@ -41,8 +42,8 @@ module TD::Types
   #   mute_new_participants setting; for video chats only.
   # @attr can_send_messages [Boolean] True, if the current user can send messages to the group call.
   # @attr are_messages_allowed [Boolean] True, if sending of messages is allowed in the group call.
-  # @attr can_toggle_are_messages_allowed [Boolean] True, if the current user can enable or disable sending of messages
-  #   in the group call.
+  # @attr can_toggle_are_messages_allowed [Boolean] True, if the current user can enable or disable sending of
+  #   messages in the group call.
   # @attr can_delete_messages [Boolean] True, if the user can delete messages in the group call.
   # @attr record_duration [Integer] Duration of the ongoing group call recording, in seconds; 0 if none.
   #   An {TD::Types::Update::GroupCall} update is not triggered when value of this field changes, but the same

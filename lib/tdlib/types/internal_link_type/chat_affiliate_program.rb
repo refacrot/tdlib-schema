@@ -1,6 +1,6 @@
 module TD::Types
   # The link is an affiliate program link.
-  # Call searchChatAffiliateProgram with the given username and referrer to process the link.
+  #   Call searchChatAffiliateProgram with the given username and referrer to process the link.
   #
   # @attr username [TD::Types::String] Username to be passed to searchChatAffiliateProgram.
   # @attr referrer [TD::Types::String] Referrer to be passed to searchChatAffiliateProgram.

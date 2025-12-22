@@ -1,11 +1,7 @@
 module TD::Types
   # Contains statistics about network usage.
   class NetworkStatisticsEntry < Base
-%w[
-  file
-      call
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/network_statistics_entry/#{type}"
-end
+    autoload TD::Types.camelize('file'), 'tdlib/types/network_statistics_entry/file'
+    autoload TD::Types.camelize('call'), 'tdlib/types/network_statistics_entry/call'
   end
 end

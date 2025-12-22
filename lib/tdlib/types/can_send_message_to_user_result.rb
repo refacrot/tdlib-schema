@@ -1,13 +1,9 @@
 module TD::Types
   # Describes result of canSendMessageToUser.
   class CanSendMessageToUserResult < Base
-%w[
-  ok
-      user_has_paid_messages
-      user_is_deleted
-      user_restricts_new_chats
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/can_send_message_to_user_result/#{type}"
-end
+    autoload TD::Types.camelize('ok'), 'tdlib/types/can_send_message_to_user_result/ok'
+    autoload TD::Types.camelize('user_has_paid_messages'), 'tdlib/types/can_send_message_to_user_result/user_has_paid_messages'
+    autoload TD::Types.camelize('user_is_deleted'), 'tdlib/types/can_send_message_to_user_result/user_is_deleted'
+    autoload TD::Types.camelize('user_restricts_new_chats'), 'tdlib/types/can_send_message_to_user_result/user_restricts_new_chats'
   end
 end

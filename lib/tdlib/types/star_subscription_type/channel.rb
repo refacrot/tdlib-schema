@@ -1,8 +1,8 @@
 module TD::Types
   # Describes a subscription to a channel chat.
   #
-  # @attr can_reuse [Boolean] True, if the subscription is active and the user can use the method reuseStarSubscription
-  #   to join the subscribed chat again.
+  # @attr can_reuse [Boolean] True, if the subscription is active and the user can use the method
+  #   reuseStarSubscription to join the subscribed chat again.
   # @attr invite_link [TD::Types::String, nil] The invite link that can be used to renew the subscription if it has
   #   been expired; may be empty, if the link isn't available anymore.
   class StarSubscriptionType::Channel < StarSubscriptionType

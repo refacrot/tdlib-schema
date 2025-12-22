@@ -1,6 +1,6 @@
 module TD::Types
   # Describes an animation file.
-  # The animation must be encoded in GIF or MPEG4 format.
+  #   The animation must be encoded in GIF or MPEG4 format.
   #
   # @attr duration [Integer] Duration of the animation, in seconds; as defined by the sender.
   # @attr width [Integer] Width of the animation.

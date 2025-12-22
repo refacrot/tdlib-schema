@@ -13,8 +13,8 @@ module TD::Types
   # @attr title [TD::Types::String] Title of the sponsored message.
   # @attr button_text [TD::Types::String] Text for the message action button.
   # @attr accent_color_id [Integer] Identifier of the accent color for title, button text and message background.
-  # @attr background_custom_emoji_id [Integer] Identifier of a custom emoji to be shown on the message background; 0 if
-  #   none.
+  # @attr background_custom_emoji_id [Integer] Identifier of a custom emoji to be shown on the message background; 0
+  #   if none.
   # @attr additional_info [TD::Types::String] If non-empty, additional information about the sponsored message to be
   #   shown along with the message.
   class SponsoredMessage < Base

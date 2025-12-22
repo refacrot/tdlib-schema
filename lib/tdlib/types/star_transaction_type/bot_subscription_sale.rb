@@ -5,8 +5,8 @@ module TD::Types
   # @attr subscription_period [Integer] The number of seconds between consecutive Telegram Star debitings.
   # @attr product_info [TD::Types::ProductInfo] Information about the bought subscription.
   # @attr invoice_payload [String] Invoice payload.
-  # @attr affiliate [TD::Types::AffiliateInfo, nil] Information about the affiliate which received commission from the
-  #   transaction; may be null if none.
+  # @attr affiliate [TD::Types::AffiliateInfo, nil] Information about the affiliate which received commission from
+  #   the transaction; may be null if none.
   class StarTransactionType::BotSubscriptionSale < StarTransactionType
     attribute :user_id, TD::Types::Coercible::Integer
     attribute :subscription_period, TD::Types::Coercible::Integer

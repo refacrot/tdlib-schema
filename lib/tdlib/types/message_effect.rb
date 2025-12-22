@@ -3,7 +3,8 @@ module TD::Types
   #
   # @attr id [Integer] Unique identifier of the effect.
   # @attr static_icon [TD::Types::Sticker, nil] Static icon for the effect in WEBP format; may be null if none.
-  # @attr emoji [TD::Types::String] Emoji corresponding to the effect that can be used if static icon isn't available.
+  # @attr emoji [TD::Types::String] Emoji corresponding to the effect that can be used if static icon isn't
+  #   available.
   # @attr is_premium [Boolean] True, if Telegram Premium subscription is required to use the effect.
   # @attr type [TD::Types::MessageEffectType] Type of the effect.
   class MessageEffect < Base

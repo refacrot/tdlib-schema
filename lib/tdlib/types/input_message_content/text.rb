@@ -1,7 +1,8 @@
 module TD::Types
   # A text message.
   #
-  # @attr text [TD::Types::FormattedText] Formatted text to be sent; 0-getOption("message_text_length_max") characters.
+  # @attr text [TD::Types::FormattedText] Formatted text to be sent; 0-getOption("message_text_length_max")
+  #   characters.
   #   Only Bold, Italic, Underline, Strikethrough, Spoiler, CustomEmoji, BlockQuote, ExpandableBlockQuote, Code, Pre,
   #   PreCode, TextUrl and MentionName entities are allowed to be specified manually.
   # @attr link_preview_options [TD::Types::LinkPreviewOptions, nil] Options to be used for generation of a link

@@ -1,6 +1,6 @@
 module TD::Types
   # A new incoming shipping query; for bots only.
-  # Only for invoices with flexible price.
+  #   Only for invoices with flexible price.
   #
   # @attr id [Integer] Unique query identifier.
   # @attr sender_user_id [Integer] Identifier of the user who sent the query.

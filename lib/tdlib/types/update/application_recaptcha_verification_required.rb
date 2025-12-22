@@ -1,6 +1,6 @@
 module TD::Types
   # A request can't be completed unless reCAPTCHA verification is performed; for official mobile applications only.
-  # The method setApplicationVerificationToken must be called once the verification is completed or failed.
+  #   The method setApplicationVerificationToken must be called once the verification is completed or failed.
   #
   # @attr verification_id [Integer] Unique identifier for the verification process.
   # @attr action [TD::Types::String] The action for the check.

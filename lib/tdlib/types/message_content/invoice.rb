@@ -1,6 +1,6 @@
 module TD::Types
   # A message with an invoice from a bot.
-  # Use getInternalLink with internalLinkTypeBotStart to share the invoice.
+  #   Use getInternalLink with internalLinkTypeBotStart to share the invoice.
   #
   # @attr product_info [TD::Types::ProductInfo] Information about the product.
   # @attr currency [TD::Types::String] Currency for the product price.

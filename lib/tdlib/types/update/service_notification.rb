@@ -1,6 +1,6 @@
 module TD::Types
   # A service notification from the server was received.
-  # Upon receiving this the application must show a popup with the content of the notification.
+  #   Upon receiving this the application must show a popup with the content of the notification.
   #
   # @attr type [TD::Types::String] Notification type.
   #   If type begins with "AUTH_KEY_DROP_", then two buttons "Cancel" and "Log out" must be shown under notification;

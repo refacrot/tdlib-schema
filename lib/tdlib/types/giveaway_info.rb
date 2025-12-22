@@ -1,11 +1,7 @@
 module TD::Types
   # Contains information about a giveaway.
   class GiveawayInfo < Base
-%w[
-  ongoing
-      completed
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/giveaway_info/#{type}"
-end
+    autoload TD::Types.camelize('ongoing'), 'tdlib/types/giveaway_info/ongoing'
+    autoload TD::Types.camelize('completed'), 'tdlib/types/giveaway_info/completed'
   end
 end

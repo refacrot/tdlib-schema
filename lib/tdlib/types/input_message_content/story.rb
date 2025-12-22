@@ -1,7 +1,7 @@
 module TD::Types
   # A message with a forwarded story.
-  # Stories can't be forwarded to secret chats.
-  # A story can be forwarded only if story.can_be_forwarded.
+  #   Stories can't be forwarded to secret chats.
+  #   A story can be forwarded only if story.can_be_forwarded.
   #
   # @attr story_poster_chat_id [Integer] Identifier of the chat that posted the story.
   # @attr story_id [Integer] Story identifier.

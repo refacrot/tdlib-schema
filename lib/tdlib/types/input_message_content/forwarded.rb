@@ -6,7 +6,8 @@ module TD::Types
   #   A message can be forwarded only if messageProperties.can_be_forwarded.
   # @attr in_game_share [Boolean] Pass true if a game message is being shared from a launched game; applies only to
   #   game messages.
-  # @attr replace_video_start_timestamp [Boolean] Pass true to replace video start timestamp in the forwarded message.
+  # @attr replace_video_start_timestamp [Boolean] Pass true to replace video start timestamp in the forwarded
+  #   message.
   # @attr new_video_start_timestamp [Integer] The new video start timestamp; ignored if replace_video_start_timestamp
   #   == false.
   # @attr copy_options [TD::Types::MessageCopyOptions] Options to be used to copy content of the message without

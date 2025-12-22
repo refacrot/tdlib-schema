@@ -1,11 +1,7 @@
 module TD::Types
   # Describes type of block list.
   class BlockList < Base
-%w[
-  main
-      stories
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/block_list/#{type}"
-end
+    autoload TD::Types.camelize('main'), 'tdlib/types/block_list/main'
+    autoload TD::Types.camelize('stories'), 'tdlib/types/block_list/stories'
   end
 end

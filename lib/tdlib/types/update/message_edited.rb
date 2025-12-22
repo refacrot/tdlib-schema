@@ -1,6 +1,6 @@
 module TD::Types
   # A message was edited.
-  # Changes in the message content will come in a separate updateMessageContent.
+  #   Changes in the message content will come in a separate updateMessageContent.
   #
   # @attr chat_id [Integer] Chat identifier.
   # @attr message_id [Integer] Message identifier.

@@ -14,8 +14,8 @@ module TD::Types
   #   A sticker set can't be installed and archived simultaneously.
   # @attr is_official [Boolean] True, if the sticker set is official.
   # @attr sticker_type [TD::Types::StickerType] Type of the stickers in the set.
-  # @attr needs_repainting [Boolean] True, if stickers in the sticker set are custom emoji that must be repainted; for
-  #   custom emoji sticker sets only.
+  # @attr needs_repainting [Boolean] True, if stickers in the sticker set are custom emoji that must be repainted;
+  #   for custom emoji sticker sets only.
   # @attr is_allowed_as_chat_emoji_status [Boolean] True, if stickers in the sticker set are custom emoji that can be
   #   used as chat emoji status; for custom emoji sticker sets only.
   # @attr is_viewed [Boolean] True for already viewed trending sticker sets.

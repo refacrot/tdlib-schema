@@ -5,8 +5,8 @@ module TD::Types
   #   by the winners of the giveaway for duration of the Telegram Premium subscription, or for the specified time.
   #   If the chat is a channel, then can_post_messages administrator right is required in the channel, otherwise, the
   #   user must be an administrator in the supergroup.
-  # @attr additional_chat_ids [Array<Integer>] Identifiers of other supergroup or channel chats that must be subscribed
-  #   by the users to be eligible for the giveaway.
+  # @attr additional_chat_ids [Array<Integer>] Identifiers of other supergroup or channel chats that must be
+  #   subscribed by the users to be eligible for the giveaway.
   #   There can be up to getOption("giveaway_additional_chat_count_max") additional chats.
   # @attr winners_selection_date [Integer] Point in time (Unix timestamp) when the giveaway is expected to be
   #   performed; must be 60-getOption("giveaway_duration_max") seconds in the future in scheduled giveaways.

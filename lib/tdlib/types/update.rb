@@ -1,182 +1,178 @@
 module TD::Types
   # Contains notifications about data changes.
   class Update < Base
-%w[
-  authorization_state
-      new_message
-      message_send_acknowledged
-      message_send_succeeded
-      message_send_failed
-      message_content
-      message_edited
-      message_is_pinned
-      message_interaction_info
-      message_content_opened
-      message_mention_read
-      message_unread_reactions
-      message_fact_check
-      message_suggested_post_info
-      message_live_location_viewed
-      video_published
-      new_chat
-      chat_title
-      chat_photo
-      chat_accent_colors
-      chat_permissions
-      chat_last_message
-      chat_position
-      chat_added_to_list
-      chat_removed_from_list
-      chat_read_inbox
-      chat_read_outbox
-      chat_action_bar
-      chat_business_bot_manage_bar
-      chat_available_reactions
-      chat_draft_message
-      chat_emoji_status
-      chat_message_sender
-      chat_message_auto_delete_time
-      chat_notification_settings
-      chat_pending_join_requests
-      chat_reply_markup
-      chat_background
-      chat_theme
-      chat_unread_mention_count
-      chat_unread_reaction_count
-      chat_video_chat
-      chat_default_disable_notification
-      chat_has_protected_content
-      chat_is_translatable
-      chat_is_marked_as_unread
-      chat_view_as_topics
-      chat_block_list
-      chat_has_scheduled_messages
-      chat_folders
-      chat_online_member_count
-      saved_messages_topic
-      saved_messages_topic_count
-      direct_messages_chat_topic
-      topic_message_count
-      quick_reply_shortcut
-      quick_reply_shortcut_deleted
-      quick_reply_shortcuts
-      quick_reply_shortcut_messages
-      forum_topic_info
-      forum_topic
-      scope_notification_settings
-      reaction_notification_settings
-      notification
-      notification_group
-      active_notifications
-      have_pending_notifications
-      delete_messages
-      chat_action
-      pending_text_message
-      user_status
-      user
-      basic_group
-      supergroup
-      secret_chat
-      user_full_info
-      basic_group_full_info
-      supergroup_full_info
-      service_notification
-      file
-      file_generation_start
-      file_generation_stop
-      file_downloads
-      file_added_to_downloads
-      file_download
-      file_removed_from_downloads
-      application_verification_required
-      application_recaptcha_verification_required
-      call
-      group_call
-      group_call_participant
-      group_call_participants
-      group_call_verification_state
-      new_group_call_message
-      new_group_call_paid_reaction
-      group_call_message_send_failed
-      group_call_messages_deleted
-      live_story_top_donors
-      new_call_signaling_data
-      gift_auction_state
-      active_gift_auctions
-      user_privacy_setting_rules
-      unread_message_count
-      unread_chat_count
-      story
-      story_deleted
-      story_post_succeeded
-      story_post_failed
-      chat_active_stories
-      story_list_chat_count
-      story_stealth_mode
-      trusted_mini_app_bots
-      option
-      sticker_set
-      installed_sticker_sets
-      trending_sticker_sets
-      recent_stickers
-      favorite_stickers
-      saved_animations
-      saved_notification_sounds
-      default_background
-      emoji_chat_themes
-      accent_colors
-      profile_accent_colors
-      language_pack_strings
-      connection_state
-      freeze_state
-      age_verification_parameters
-      terms_of_service
-      unconfirmed_session
-      attachment_menu_bots
-      web_app_message_sent
-      active_emoji_reactions
-      available_message_effects
-      default_reaction_type
-      default_paid_reaction_type
-      saved_messages_tags
-      active_live_location_messages
-      owned_star_count
-      owned_ton_count
-      chat_revenue_amount
-      star_revenue_status
-      ton_revenue_status
-      speech_recognition_trial
-      group_call_message_levels
-      dice_emojis
-      animated_emoji_message_clicked
-      animation_search_parameters
-      suggested_actions
-      speed_limit_notification
-      contact_close_birthdays
-      autosave_settings
-      business_connection
-      new_business_message
-      business_message_edited
-      business_messages_deleted
-      new_inline_query
-      new_chosen_inline_result
-      new_callback_query
-      new_inline_callback_query
-      new_business_callback_query
-      new_shipping_query
-      new_pre_checkout_query
-      new_custom_event
-      new_custom_query
-      poll
-      poll_answer
-      chat_member
-      new_chat_join_request
-      chat_boost
-      message_reaction
-      message_reactions
-      paid_media_purchased
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/update/#{type}"
-end
+    autoload TD::Types.camelize('authorization_state'), 'tdlib/types/update/authorization_state'
+    autoload TD::Types.camelize('new_message'), 'tdlib/types/update/new_message'
+    autoload TD::Types.camelize('message_send_acknowledged'), 'tdlib/types/update/message_send_acknowledged'
+    autoload TD::Types.camelize('message_send_succeeded'), 'tdlib/types/update/message_send_succeeded'
+    autoload TD::Types.camelize('message_send_failed'), 'tdlib/types/update/message_send_failed'
+    autoload TD::Types.camelize('message_content'), 'tdlib/types/update/message_content'
+    autoload TD::Types.camelize('message_edited'), 'tdlib/types/update/message_edited'
+    autoload TD::Types.camelize('message_is_pinned'), 'tdlib/types/update/message_is_pinned'
+    autoload TD::Types.camelize('message_interaction_info'), 'tdlib/types/update/message_interaction_info'
+    autoload TD::Types.camelize('message_content_opened'), 'tdlib/types/update/message_content_opened'
+    autoload TD::Types.camelize('message_mention_read'), 'tdlib/types/update/message_mention_read'
+    autoload TD::Types.camelize('message_unread_reactions'), 'tdlib/types/update/message_unread_reactions'
+    autoload TD::Types.camelize('message_fact_check'), 'tdlib/types/update/message_fact_check'
+    autoload TD::Types.camelize('message_suggested_post_info'), 'tdlib/types/update/message_suggested_post_info'
+    autoload TD::Types.camelize('message_live_location_viewed'), 'tdlib/types/update/message_live_location_viewed'
+    autoload TD::Types.camelize('video_published'), 'tdlib/types/update/video_published'
+    autoload TD::Types.camelize('new_chat'), 'tdlib/types/update/new_chat'
+    autoload TD::Types.camelize('chat_title'), 'tdlib/types/update/chat_title'
+    autoload TD::Types.camelize('chat_photo'), 'tdlib/types/update/chat_photo'
+    autoload TD::Types.camelize('chat_accent_colors'), 'tdlib/types/update/chat_accent_colors'
+    autoload TD::Types.camelize('chat_permissions'), 'tdlib/types/update/chat_permissions'
+    autoload TD::Types.camelize('chat_last_message'), 'tdlib/types/update/chat_last_message'
+    autoload TD::Types.camelize('chat_position'), 'tdlib/types/update/chat_position'
+    autoload TD::Types.camelize('chat_added_to_list'), 'tdlib/types/update/chat_added_to_list'
+    autoload TD::Types.camelize('chat_removed_from_list'), 'tdlib/types/update/chat_removed_from_list'
+    autoload TD::Types.camelize('chat_read_inbox'), 'tdlib/types/update/chat_read_inbox'
+    autoload TD::Types.camelize('chat_read_outbox'), 'tdlib/types/update/chat_read_outbox'
+    autoload TD::Types.camelize('chat_action_bar'), 'tdlib/types/update/chat_action_bar'
+    autoload TD::Types.camelize('chat_business_bot_manage_bar'), 'tdlib/types/update/chat_business_bot_manage_bar'
+    autoload TD::Types.camelize('chat_available_reactions'), 'tdlib/types/update/chat_available_reactions'
+    autoload TD::Types.camelize('chat_draft_message'), 'tdlib/types/update/chat_draft_message'
+    autoload TD::Types.camelize('chat_emoji_status'), 'tdlib/types/update/chat_emoji_status'
+    autoload TD::Types.camelize('chat_message_sender'), 'tdlib/types/update/chat_message_sender'
+    autoload TD::Types.camelize('chat_message_auto_delete_time'), 'tdlib/types/update/chat_message_auto_delete_time'
+    autoload TD::Types.camelize('chat_notification_settings'), 'tdlib/types/update/chat_notification_settings'
+    autoload TD::Types.camelize('chat_pending_join_requests'), 'tdlib/types/update/chat_pending_join_requests'
+    autoload TD::Types.camelize('chat_reply_markup'), 'tdlib/types/update/chat_reply_markup'
+    autoload TD::Types.camelize('chat_background'), 'tdlib/types/update/chat_background'
+    autoload TD::Types.camelize('chat_theme'), 'tdlib/types/update/chat_theme'
+    autoload TD::Types.camelize('chat_unread_mention_count'), 'tdlib/types/update/chat_unread_mention_count'
+    autoload TD::Types.camelize('chat_unread_reaction_count'), 'tdlib/types/update/chat_unread_reaction_count'
+    autoload TD::Types.camelize('chat_video_chat'), 'tdlib/types/update/chat_video_chat'
+    autoload TD::Types.camelize('chat_default_disable_notification'), 'tdlib/types/update/chat_default_disable_notification'
+    autoload TD::Types.camelize('chat_has_protected_content'), 'tdlib/types/update/chat_has_protected_content'
+    autoload TD::Types.camelize('chat_is_translatable'), 'tdlib/types/update/chat_is_translatable'
+    autoload TD::Types.camelize('chat_is_marked_as_unread'), 'tdlib/types/update/chat_is_marked_as_unread'
+    autoload TD::Types.camelize('chat_view_as_topics'), 'tdlib/types/update/chat_view_as_topics'
+    autoload TD::Types.camelize('chat_block_list'), 'tdlib/types/update/chat_block_list'
+    autoload TD::Types.camelize('chat_has_scheduled_messages'), 'tdlib/types/update/chat_has_scheduled_messages'
+    autoload TD::Types.camelize('chat_folders'), 'tdlib/types/update/chat_folders'
+    autoload TD::Types.camelize('chat_online_member_count'), 'tdlib/types/update/chat_online_member_count'
+    autoload TD::Types.camelize('saved_messages_topic'), 'tdlib/types/update/saved_messages_topic'
+    autoload TD::Types.camelize('saved_messages_topic_count'), 'tdlib/types/update/saved_messages_topic_count'
+    autoload TD::Types.camelize('direct_messages_chat_topic'), 'tdlib/types/update/direct_messages_chat_topic'
+    autoload TD::Types.camelize('topic_message_count'), 'tdlib/types/update/topic_message_count'
+    autoload TD::Types.camelize('quick_reply_shortcut'), 'tdlib/types/update/quick_reply_shortcut'
+    autoload TD::Types.camelize('quick_reply_shortcut_deleted'), 'tdlib/types/update/quick_reply_shortcut_deleted'
+    autoload TD::Types.camelize('quick_reply_shortcuts'), 'tdlib/types/update/quick_reply_shortcuts'
+    autoload TD::Types.camelize('quick_reply_shortcut_messages'), 'tdlib/types/update/quick_reply_shortcut_messages'
+    autoload TD::Types.camelize('forum_topic_info'), 'tdlib/types/update/forum_topic_info'
+    autoload TD::Types.camelize('forum_topic'), 'tdlib/types/update/forum_topic'
+    autoload TD::Types.camelize('scope_notification_settings'), 'tdlib/types/update/scope_notification_settings'
+    autoload TD::Types.camelize('reaction_notification_settings'), 'tdlib/types/update/reaction_notification_settings'
+    autoload TD::Types.camelize('notification'), 'tdlib/types/update/notification'
+    autoload TD::Types.camelize('notification_group'), 'tdlib/types/update/notification_group'
+    autoload TD::Types.camelize('active_notifications'), 'tdlib/types/update/active_notifications'
+    autoload TD::Types.camelize('have_pending_notifications'), 'tdlib/types/update/have_pending_notifications'
+    autoload TD::Types.camelize('delete_messages'), 'tdlib/types/update/delete_messages'
+    autoload TD::Types.camelize('chat_action'), 'tdlib/types/update/chat_action'
+    autoload TD::Types.camelize('pending_text_message'), 'tdlib/types/update/pending_text_message'
+    autoload TD::Types.camelize('user_status'), 'tdlib/types/update/user_status'
+    autoload TD::Types.camelize('user'), 'tdlib/types/update/user'
+    autoload TD::Types.camelize('basic_group'), 'tdlib/types/update/basic_group'
+    autoload TD::Types.camelize('supergroup'), 'tdlib/types/update/supergroup'
+    autoload TD::Types.camelize('secret_chat'), 'tdlib/types/update/secret_chat'
+    autoload TD::Types.camelize('user_full_info'), 'tdlib/types/update/user_full_info'
+    autoload TD::Types.camelize('basic_group_full_info'), 'tdlib/types/update/basic_group_full_info'
+    autoload TD::Types.camelize('supergroup_full_info'), 'tdlib/types/update/supergroup_full_info'
+    autoload TD::Types.camelize('service_notification'), 'tdlib/types/update/service_notification'
+    autoload TD::Types.camelize('file'), 'tdlib/types/update/file'
+    autoload TD::Types.camelize('file_generation_start'), 'tdlib/types/update/file_generation_start'
+    autoload TD::Types.camelize('file_generation_stop'), 'tdlib/types/update/file_generation_stop'
+    autoload TD::Types.camelize('file_downloads'), 'tdlib/types/update/file_downloads'
+    autoload TD::Types.camelize('file_added_to_downloads'), 'tdlib/types/update/file_added_to_downloads'
+    autoload TD::Types.camelize('file_download'), 'tdlib/types/update/file_download'
+    autoload TD::Types.camelize('file_removed_from_downloads'), 'tdlib/types/update/file_removed_from_downloads'
+    autoload TD::Types.camelize('application_verification_required'), 'tdlib/types/update/application_verification_required'
+    autoload TD::Types.camelize('application_recaptcha_verification_required'), 'tdlib/types/update/application_recaptcha_verification_required'
+    autoload TD::Types.camelize('call'), 'tdlib/types/update/call'
+    autoload TD::Types.camelize('group_call'), 'tdlib/types/update/group_call'
+    autoload TD::Types.camelize('group_call_participant'), 'tdlib/types/update/group_call_participant'
+    autoload TD::Types.camelize('group_call_participants'), 'tdlib/types/update/group_call_participants'
+    autoload TD::Types.camelize('group_call_verification_state'), 'tdlib/types/update/group_call_verification_state'
+    autoload TD::Types.camelize('new_group_call_message'), 'tdlib/types/update/new_group_call_message'
+    autoload TD::Types.camelize('new_group_call_paid_reaction'), 'tdlib/types/update/new_group_call_paid_reaction'
+    autoload TD::Types.camelize('group_call_message_send_failed'), 'tdlib/types/update/group_call_message_send_failed'
+    autoload TD::Types.camelize('group_call_messages_deleted'), 'tdlib/types/update/group_call_messages_deleted'
+    autoload TD::Types.camelize('live_story_top_donors'), 'tdlib/types/update/live_story_top_donors'
+    autoload TD::Types.camelize('new_call_signaling_data'), 'tdlib/types/update/new_call_signaling_data'
+    autoload TD::Types.camelize('gift_auction_state'), 'tdlib/types/update/gift_auction_state'
+    autoload TD::Types.camelize('active_gift_auctions'), 'tdlib/types/update/active_gift_auctions'
+    autoload TD::Types.camelize('user_privacy_setting_rules'), 'tdlib/types/update/user_privacy_setting_rules'
+    autoload TD::Types.camelize('unread_message_count'), 'tdlib/types/update/unread_message_count'
+    autoload TD::Types.camelize('unread_chat_count'), 'tdlib/types/update/unread_chat_count'
+    autoload TD::Types.camelize('story'), 'tdlib/types/update/story'
+    autoload TD::Types.camelize('story_deleted'), 'tdlib/types/update/story_deleted'
+    autoload TD::Types.camelize('story_post_succeeded'), 'tdlib/types/update/story_post_succeeded'
+    autoload TD::Types.camelize('story_post_failed'), 'tdlib/types/update/story_post_failed'
+    autoload TD::Types.camelize('chat_active_stories'), 'tdlib/types/update/chat_active_stories'
+    autoload TD::Types.camelize('story_list_chat_count'), 'tdlib/types/update/story_list_chat_count'
+    autoload TD::Types.camelize('story_stealth_mode'), 'tdlib/types/update/story_stealth_mode'
+    autoload TD::Types.camelize('trusted_mini_app_bots'), 'tdlib/types/update/trusted_mini_app_bots'
+    autoload TD::Types.camelize('option'), 'tdlib/types/update/option'
+    autoload TD::Types.camelize('sticker_set'), 'tdlib/types/update/sticker_set'
+    autoload TD::Types.camelize('installed_sticker_sets'), 'tdlib/types/update/installed_sticker_sets'
+    autoload TD::Types.camelize('trending_sticker_sets'), 'tdlib/types/update/trending_sticker_sets'
+    autoload TD::Types.camelize('recent_stickers'), 'tdlib/types/update/recent_stickers'
+    autoload TD::Types.camelize('favorite_stickers'), 'tdlib/types/update/favorite_stickers'
+    autoload TD::Types.camelize('saved_animations'), 'tdlib/types/update/saved_animations'
+    autoload TD::Types.camelize('saved_notification_sounds'), 'tdlib/types/update/saved_notification_sounds'
+    autoload TD::Types.camelize('default_background'), 'tdlib/types/update/default_background'
+    autoload TD::Types.camelize('emoji_chat_themes'), 'tdlib/types/update/emoji_chat_themes'
+    autoload TD::Types.camelize('accent_colors'), 'tdlib/types/update/accent_colors'
+    autoload TD::Types.camelize('profile_accent_colors'), 'tdlib/types/update/profile_accent_colors'
+    autoload TD::Types.camelize('language_pack_strings'), 'tdlib/types/update/language_pack_strings'
+    autoload TD::Types.camelize('connection_state'), 'tdlib/types/update/connection_state'
+    autoload TD::Types.camelize('freeze_state'), 'tdlib/types/update/freeze_state'
+    autoload TD::Types.camelize('age_verification_parameters'), 'tdlib/types/update/age_verification_parameters'
+    autoload TD::Types.camelize('terms_of_service'), 'tdlib/types/update/terms_of_service'
+    autoload TD::Types.camelize('unconfirmed_session'), 'tdlib/types/update/unconfirmed_session'
+    autoload TD::Types.camelize('attachment_menu_bots'), 'tdlib/types/update/attachment_menu_bots'
+    autoload TD::Types.camelize('web_app_message_sent'), 'tdlib/types/update/web_app_message_sent'
+    autoload TD::Types.camelize('active_emoji_reactions'), 'tdlib/types/update/active_emoji_reactions'
+    autoload TD::Types.camelize('available_message_effects'), 'tdlib/types/update/available_message_effects'
+    autoload TD::Types.camelize('default_reaction_type'), 'tdlib/types/update/default_reaction_type'
+    autoload TD::Types.camelize('default_paid_reaction_type'), 'tdlib/types/update/default_paid_reaction_type'
+    autoload TD::Types.camelize('saved_messages_tags'), 'tdlib/types/update/saved_messages_tags'
+    autoload TD::Types.camelize('active_live_location_messages'), 'tdlib/types/update/active_live_location_messages'
+    autoload TD::Types.camelize('owned_star_count'), 'tdlib/types/update/owned_star_count'
+    autoload TD::Types.camelize('owned_ton_count'), 'tdlib/types/update/owned_ton_count'
+    autoload TD::Types.camelize('chat_revenue_amount'), 'tdlib/types/update/chat_revenue_amount'
+    autoload TD::Types.camelize('star_revenue_status'), 'tdlib/types/update/star_revenue_status'
+    autoload TD::Types.camelize('ton_revenue_status'), 'tdlib/types/update/ton_revenue_status'
+    autoload TD::Types.camelize('speech_recognition_trial'), 'tdlib/types/update/speech_recognition_trial'
+    autoload TD::Types.camelize('group_call_message_levels'), 'tdlib/types/update/group_call_message_levels'
+    autoload TD::Types.camelize('dice_emojis'), 'tdlib/types/update/dice_emojis'
+    autoload TD::Types.camelize('animated_emoji_message_clicked'), 'tdlib/types/update/animated_emoji_message_clicked'
+    autoload TD::Types.camelize('animation_search_parameters'), 'tdlib/types/update/animation_search_parameters'
+    autoload TD::Types.camelize('suggested_actions'), 'tdlib/types/update/suggested_actions'
+    autoload TD::Types.camelize('speed_limit_notification'), 'tdlib/types/update/speed_limit_notification'
+    autoload TD::Types.camelize('contact_close_birthdays'), 'tdlib/types/update/contact_close_birthdays'
+    autoload TD::Types.camelize('autosave_settings'), 'tdlib/types/update/autosave_settings'
+    autoload TD::Types.camelize('business_connection'), 'tdlib/types/update/business_connection'
+    autoload TD::Types.camelize('new_business_message'), 'tdlib/types/update/new_business_message'
+    autoload TD::Types.camelize('business_message_edited'), 'tdlib/types/update/business_message_edited'
+    autoload TD::Types.camelize('business_messages_deleted'), 'tdlib/types/update/business_messages_deleted'
+    autoload TD::Types.camelize('new_inline_query'), 'tdlib/types/update/new_inline_query'
+    autoload TD::Types.camelize('new_chosen_inline_result'), 'tdlib/types/update/new_chosen_inline_result'
+    autoload TD::Types.camelize('new_callback_query'), 'tdlib/types/update/new_callback_query'
+    autoload TD::Types.camelize('new_inline_callback_query'), 'tdlib/types/update/new_inline_callback_query'
+    autoload TD::Types.camelize('new_business_callback_query'), 'tdlib/types/update/new_business_callback_query'
+    autoload TD::Types.camelize('new_shipping_query'), 'tdlib/types/update/new_shipping_query'
+    autoload TD::Types.camelize('new_pre_checkout_query'), 'tdlib/types/update/new_pre_checkout_query'
+    autoload TD::Types.camelize('new_custom_event'), 'tdlib/types/update/new_custom_event'
+    autoload TD::Types.camelize('new_custom_query'), 'tdlib/types/update/new_custom_query'
+    autoload TD::Types.camelize('poll'), 'tdlib/types/update/poll'
+    autoload TD::Types.camelize('poll_answer'), 'tdlib/types/update/poll_answer'
+    autoload TD::Types.camelize('chat_member'), 'tdlib/types/update/chat_member'
+    autoload TD::Types.camelize('new_chat_join_request'), 'tdlib/types/update/new_chat_join_request'
+    autoload TD::Types.camelize('chat_boost'), 'tdlib/types/update/chat_boost'
+    autoload TD::Types.camelize('message_reaction'), 'tdlib/types/update/message_reaction'
+    autoload TD::Types.camelize('message_reactions'), 'tdlib/types/update/message_reactions'
+    autoload TD::Types.camelize('paid_media_purchased'), 'tdlib/types/update/paid_media_purchased'
   end
 end

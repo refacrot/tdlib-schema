@@ -1,101 +1,97 @@
 module TD::Types
   # Contains the content of a message.
   class MessageContent < Base
-%w[
-  text
-      animation
-      audio
-      document
-      paid_media
-      photo
-      sticker
-      video
-      video_note
-      voice_note
-      expired_photo
-      expired_video
-      expired_video_note
-      expired_voice_note
-      location
-      venue
-      contact
-      animated_emoji
-      dice
-      game
-      poll
-      story
-      checklist
-      invoice
-      call
-      group_call
-      video_chat_scheduled
-      video_chat_started
-      video_chat_ended
-      invite_video_chat_participants
-      basic_group_chat_create
-      supergroup_chat_create
-      chat_change_title
-      chat_change_photo
-      chat_delete_photo
-      chat_add_members
-      chat_join_by_link
-      chat_join_by_request
-      chat_delete_member
-      chat_upgrade_to
-      chat_upgrade_from
-      pin_message
-      screenshot_taken
-      chat_set_background
-      chat_set_theme
-      chat_set_message_auto_delete_time
-      chat_boost
-      forum_topic_created
-      forum_topic_edited
-      forum_topic_is_closed_toggled
-      forum_topic_is_hidden_toggled
-      suggest_profile_photo
-      suggest_birthdate
-      custom_service_action
-      game_score
-      payment_successful
-      payment_successful_bot
-      payment_refunded
-      gifted_premium
-      premium_gift_code
-      giveaway_created
-      giveaway
-      giveaway_completed
-      giveaway_winners
-      gifted_stars
-      gifted_ton
-      giveaway_prize_stars
-      gift
-      upgraded_gift
-      refunded_upgraded_gift
-      upgraded_gift_purchase_offer
-      upgraded_gift_purchase_offer_declined
-      paid_messages_refunded
-      paid_message_price_changed
-      direct_message_price_changed
-      checklist_tasks_done
-      checklist_tasks_added
-      suggested_post_approval_failed
-      suggested_post_approved
-      suggested_post_declined
-      suggested_post_paid
-      suggested_post_refunded
-      contact_registered
-      users_shared
-      chat_shared
-      bot_write_access_allowed
-      web_app_data_sent
-      web_app_data_received
-      passport_data_sent
-      passport_data_received
-      proximity_alert_triggered
-      unsupported
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/message_content/#{type}"
-end
+    autoload TD::Types.camelize('text'), 'tdlib/types/message_content/text'
+    autoload TD::Types.camelize('animation'), 'tdlib/types/message_content/animation'
+    autoload TD::Types.camelize('audio'), 'tdlib/types/message_content/audio'
+    autoload TD::Types.camelize('document'), 'tdlib/types/message_content/document'
+    autoload TD::Types.camelize('paid_media'), 'tdlib/types/message_content/paid_media'
+    autoload TD::Types.camelize('photo'), 'tdlib/types/message_content/photo'
+    autoload TD::Types.camelize('sticker'), 'tdlib/types/message_content/sticker'
+    autoload TD::Types.camelize('video'), 'tdlib/types/message_content/video'
+    autoload TD::Types.camelize('video_note'), 'tdlib/types/message_content/video_note'
+    autoload TD::Types.camelize('voice_note'), 'tdlib/types/message_content/voice_note'
+    autoload TD::Types.camelize('expired_photo'), 'tdlib/types/message_content/expired_photo'
+    autoload TD::Types.camelize('expired_video'), 'tdlib/types/message_content/expired_video'
+    autoload TD::Types.camelize('expired_video_note'), 'tdlib/types/message_content/expired_video_note'
+    autoload TD::Types.camelize('expired_voice_note'), 'tdlib/types/message_content/expired_voice_note'
+    autoload TD::Types.camelize('location'), 'tdlib/types/message_content/location'
+    autoload TD::Types.camelize('venue'), 'tdlib/types/message_content/venue'
+    autoload TD::Types.camelize('contact'), 'tdlib/types/message_content/contact'
+    autoload TD::Types.camelize('animated_emoji'), 'tdlib/types/message_content/animated_emoji'
+    autoload TD::Types.camelize('dice'), 'tdlib/types/message_content/dice'
+    autoload TD::Types.camelize('game'), 'tdlib/types/message_content/game'
+    autoload TD::Types.camelize('poll'), 'tdlib/types/message_content/poll'
+    autoload TD::Types.camelize('story'), 'tdlib/types/message_content/story'
+    autoload TD::Types.camelize('checklist'), 'tdlib/types/message_content/checklist'
+    autoload TD::Types.camelize('invoice'), 'tdlib/types/message_content/invoice'
+    autoload TD::Types.camelize('call'), 'tdlib/types/message_content/call'
+    autoload TD::Types.camelize('group_call'), 'tdlib/types/message_content/group_call'
+    autoload TD::Types.camelize('video_chat_scheduled'), 'tdlib/types/message_content/video_chat_scheduled'
+    autoload TD::Types.camelize('video_chat_started'), 'tdlib/types/message_content/video_chat_started'
+    autoload TD::Types.camelize('video_chat_ended'), 'tdlib/types/message_content/video_chat_ended'
+    autoload TD::Types.camelize('invite_video_chat_participants'), 'tdlib/types/message_content/invite_video_chat_participants'
+    autoload TD::Types.camelize('basic_group_chat_create'), 'tdlib/types/message_content/basic_group_chat_create'
+    autoload TD::Types.camelize('supergroup_chat_create'), 'tdlib/types/message_content/supergroup_chat_create'
+    autoload TD::Types.camelize('chat_change_title'), 'tdlib/types/message_content/chat_change_title'
+    autoload TD::Types.camelize('chat_change_photo'), 'tdlib/types/message_content/chat_change_photo'
+    autoload TD::Types.camelize('chat_delete_photo'), 'tdlib/types/message_content/chat_delete_photo'
+    autoload TD::Types.camelize('chat_add_members'), 'tdlib/types/message_content/chat_add_members'
+    autoload TD::Types.camelize('chat_join_by_link'), 'tdlib/types/message_content/chat_join_by_link'
+    autoload TD::Types.camelize('chat_join_by_request'), 'tdlib/types/message_content/chat_join_by_request'
+    autoload TD::Types.camelize('chat_delete_member'), 'tdlib/types/message_content/chat_delete_member'
+    autoload TD::Types.camelize('chat_upgrade_to'), 'tdlib/types/message_content/chat_upgrade_to'
+    autoload TD::Types.camelize('chat_upgrade_from'), 'tdlib/types/message_content/chat_upgrade_from'
+    autoload TD::Types.camelize('pin_message'), 'tdlib/types/message_content/pin_message'
+    autoload TD::Types.camelize('screenshot_taken'), 'tdlib/types/message_content/screenshot_taken'
+    autoload TD::Types.camelize('chat_set_background'), 'tdlib/types/message_content/chat_set_background'
+    autoload TD::Types.camelize('chat_set_theme'), 'tdlib/types/message_content/chat_set_theme'
+    autoload TD::Types.camelize('chat_set_message_auto_delete_time'), 'tdlib/types/message_content/chat_set_message_auto_delete_time'
+    autoload TD::Types.camelize('chat_boost'), 'tdlib/types/message_content/chat_boost'
+    autoload TD::Types.camelize('forum_topic_created'), 'tdlib/types/message_content/forum_topic_created'
+    autoload TD::Types.camelize('forum_topic_edited'), 'tdlib/types/message_content/forum_topic_edited'
+    autoload TD::Types.camelize('forum_topic_is_closed_toggled'), 'tdlib/types/message_content/forum_topic_is_closed_toggled'
+    autoload TD::Types.camelize('forum_topic_is_hidden_toggled'), 'tdlib/types/message_content/forum_topic_is_hidden_toggled'
+    autoload TD::Types.camelize('suggest_profile_photo'), 'tdlib/types/message_content/suggest_profile_photo'
+    autoload TD::Types.camelize('suggest_birthdate'), 'tdlib/types/message_content/suggest_birthdate'
+    autoload TD::Types.camelize('custom_service_action'), 'tdlib/types/message_content/custom_service_action'
+    autoload TD::Types.camelize('game_score'), 'tdlib/types/message_content/game_score'
+    autoload TD::Types.camelize('payment_successful'), 'tdlib/types/message_content/payment_successful'
+    autoload TD::Types.camelize('payment_successful_bot'), 'tdlib/types/message_content/payment_successful_bot'
+    autoload TD::Types.camelize('payment_refunded'), 'tdlib/types/message_content/payment_refunded'
+    autoload TD::Types.camelize('gifted_premium'), 'tdlib/types/message_content/gifted_premium'
+    autoload TD::Types.camelize('premium_gift_code'), 'tdlib/types/message_content/premium_gift_code'
+    autoload TD::Types.camelize('giveaway_created'), 'tdlib/types/message_content/giveaway_created'
+    autoload TD::Types.camelize('giveaway'), 'tdlib/types/message_content/giveaway'
+    autoload TD::Types.camelize('giveaway_completed'), 'tdlib/types/message_content/giveaway_completed'
+    autoload TD::Types.camelize('giveaway_winners'), 'tdlib/types/message_content/giveaway_winners'
+    autoload TD::Types.camelize('gifted_stars'), 'tdlib/types/message_content/gifted_stars'
+    autoload TD::Types.camelize('gifted_ton'), 'tdlib/types/message_content/gifted_ton'
+    autoload TD::Types.camelize('giveaway_prize_stars'), 'tdlib/types/message_content/giveaway_prize_stars'
+    autoload TD::Types.camelize('gift'), 'tdlib/types/message_content/gift'
+    autoload TD::Types.camelize('upgraded_gift'), 'tdlib/types/message_content/upgraded_gift'
+    autoload TD::Types.camelize('refunded_upgraded_gift'), 'tdlib/types/message_content/refunded_upgraded_gift'
+    autoload TD::Types.camelize('upgraded_gift_purchase_offer'), 'tdlib/types/message_content/upgraded_gift_purchase_offer'
+    autoload TD::Types.camelize('upgraded_gift_purchase_offer_declined'), 'tdlib/types/message_content/upgraded_gift_purchase_offer_declined'
+    autoload TD::Types.camelize('paid_messages_refunded'), 'tdlib/types/message_content/paid_messages_refunded'
+    autoload TD::Types.camelize('paid_message_price_changed'), 'tdlib/types/message_content/paid_message_price_changed'
+    autoload TD::Types.camelize('direct_message_price_changed'), 'tdlib/types/message_content/direct_message_price_changed'
+    autoload TD::Types.camelize('checklist_tasks_done'), 'tdlib/types/message_content/checklist_tasks_done'
+    autoload TD::Types.camelize('checklist_tasks_added'), 'tdlib/types/message_content/checklist_tasks_added'
+    autoload TD::Types.camelize('suggested_post_approval_failed'), 'tdlib/types/message_content/suggested_post_approval_failed'
+    autoload TD::Types.camelize('suggested_post_approved'), 'tdlib/types/message_content/suggested_post_approved'
+    autoload TD::Types.camelize('suggested_post_declined'), 'tdlib/types/message_content/suggested_post_declined'
+    autoload TD::Types.camelize('suggested_post_paid'), 'tdlib/types/message_content/suggested_post_paid'
+    autoload TD::Types.camelize('suggested_post_refunded'), 'tdlib/types/message_content/suggested_post_refunded'
+    autoload TD::Types.camelize('contact_registered'), 'tdlib/types/message_content/contact_registered'
+    autoload TD::Types.camelize('users_shared'), 'tdlib/types/message_content/users_shared'
+    autoload TD::Types.camelize('chat_shared'), 'tdlib/types/message_content/chat_shared'
+    autoload TD::Types.camelize('bot_write_access_allowed'), 'tdlib/types/message_content/bot_write_access_allowed'
+    autoload TD::Types.camelize('web_app_data_sent'), 'tdlib/types/message_content/web_app_data_sent'
+    autoload TD::Types.camelize('web_app_data_received'), 'tdlib/types/message_content/web_app_data_received'
+    autoload TD::Types.camelize('passport_data_sent'), 'tdlib/types/message_content/passport_data_sent'
+    autoload TD::Types.camelize('passport_data_received'), 'tdlib/types/message_content/passport_data_received'
+    autoload TD::Types.camelize('proximity_alert_triggered'), 'tdlib/types/message_content/proximity_alert_triggered'
+    autoload TD::Types.camelize('unsupported'), 'tdlib/types/message_content/unsupported'
   end
 end

@@ -3,8 +3,8 @@ module TD::Types
   #
   # @attr id [TD::Types::String] Unique identifier of the query result.
   # @attr location [TD::Types::Location] Location result.
-  # @attr live_period [Integer] Amount of time relative to the message sent time until the location can be updated, in
-  #   seconds.
+  # @attr live_period [Integer] Amount of time relative to the message sent time until the location can be updated,
+  #   in seconds.
   # @attr title [TD::Types::String] Title of the result.
   # @attr thumbnail_url [TD::Types::String] URL of the result thumbnail, if it exists.
   # @attr thumbnail_width [Integer] Thumbnail width, if known.

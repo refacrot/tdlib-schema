@@ -22,29 +22,30 @@ module TD::Types
   # @attr is_contact [Boolean] The user is a contact of the current user.
   # @attr is_mutual_contact [Boolean] The user is a contact of the current user and the current user is a contact of
   #   the user.
-  # @attr is_close_friend [Boolean] The user is a close friend of the current user; implies that the user is a contact.
+  # @attr is_close_friend [Boolean] The user is a close friend of the current user; implies that the user is a
+  #   contact.
   # @attr verification_status [TD::Types::VerificationStatus, nil] Information about verification status of the user;
   #   may be null if none.
   # @attr is_premium [Boolean] True, if the user is a Telegram Premium user.
   # @attr is_support [Boolean] True, if the user is Telegram support account.
-  # @attr restriction_info [TD::Types::RestrictionInfo, nil] Information about restrictions that must be applied to the
-  #   corresponding private chat; may be null if none.
-  # @attr active_story_state [TD::Types::ActiveStoryState, nil] State of active stories of the user; may be null if the
-  #   user has no active stories.
+  # @attr restriction_info [TD::Types::RestrictionInfo, nil] Information about restrictions that must be applied to
+  #   the corresponding private chat; may be null if none.
+  # @attr active_story_state [TD::Types::ActiveStoryState, nil] State of active stories of the user; may be null if
+  #   the user has no active stories.
   # @attr restricts_new_chats [Boolean] True, if the user may restrict new chats with non-contacts.
   #   Use canSendMessageToUser to check whether the current user can message the user or try to create a chat with
   #   them.
   # @attr paid_message_star_count [Integer] Number of Telegram Stars that must be paid by general user for each sent
   #   message to the user.
-  #   If positive and {TD::Types::UserFullInfo} is unknown, use canSendMessageToUser to check whether the current user
-  #   must pay.
+  #   If positive and {TD::Types::UserFullInfo} is unknown, use canSendMessageToUser to check whether the current
+  #   user must pay.
   # @attr have_access [Boolean] If false, the user is inaccessible, and the only information known about the user is
   #   inside this class.
   #   Identifier of the user can't be passed to any method.
   # @attr type [TD::Types::UserType] Type of the user.
   # @attr language_code [TD::Types::String] IETF language tag of the user's language; only available to bots.
-  # @attr added_to_attachment_menu [Boolean] True, if the user added the current bot to attachment menu; only available
-  #   to bots.
+  # @attr added_to_attachment_menu [Boolean] True, if the user added the current bot to attachment menu; only
+  #   available to bots.
   class User < Base
     attribute :id, TD::Types::Coercible::Integer
     attribute :first_name, TD::Types::String

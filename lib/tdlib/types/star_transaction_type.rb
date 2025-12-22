@@ -1,54 +1,50 @@
 module TD::Types
   # Describes type of transaction with Telegram Stars.
   class StarTransactionType < Base
-%w[
-  premium_bot_deposit
-      app_store_deposit
-      google_play_deposit
-      fragment_deposit
-      user_deposit
-      giveaway_deposit
-      fragment_withdrawal
-      telegram_ads_withdrawal
-      telegram_api_usage
-      bot_paid_media_purchase
-      bot_paid_media_sale
-      channel_paid_media_purchase
-      channel_paid_media_sale
-      bot_invoice_purchase
-      bot_invoice_sale
-      bot_subscription_purchase
-      bot_subscription_sale
-      channel_subscription_purchase
-      channel_subscription_sale
-      gift_auction_bid
-      gift_purchase
-      gift_purchase_offer
-      gift_transfer
-      gift_original_details_drop
-      gift_sale
-      gift_upgrade
-      gift_upgrade_purchase
-      upgraded_gift_purchase
-      upgraded_gift_sale
-      channel_paid_reaction_send
-      channel_paid_reaction_receive
-      affiliate_program_commission
-      paid_message_send
-      paid_message_receive
-      paid_group_call_message_send
-      paid_group_call_message_receive
-      paid_group_call_reaction_send
-      paid_group_call_reaction_receive
-      suggested_post_payment_send
-      suggested_post_payment_receive
-      premium_purchase
-      business_bot_transfer_send
-      business_bot_transfer_receive
-      public_post_search
-      unsupported
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/star_transaction_type/#{type}"
-end
+    autoload TD::Types.camelize('premium_bot_deposit'), 'tdlib/types/star_transaction_type/premium_bot_deposit'
+    autoload TD::Types.camelize('app_store_deposit'), 'tdlib/types/star_transaction_type/app_store_deposit'
+    autoload TD::Types.camelize('google_play_deposit'), 'tdlib/types/star_transaction_type/google_play_deposit'
+    autoload TD::Types.camelize('fragment_deposit'), 'tdlib/types/star_transaction_type/fragment_deposit'
+    autoload TD::Types.camelize('user_deposit'), 'tdlib/types/star_transaction_type/user_deposit'
+    autoload TD::Types.camelize('giveaway_deposit'), 'tdlib/types/star_transaction_type/giveaway_deposit'
+    autoload TD::Types.camelize('fragment_withdrawal'), 'tdlib/types/star_transaction_type/fragment_withdrawal'
+    autoload TD::Types.camelize('telegram_ads_withdrawal'), 'tdlib/types/star_transaction_type/telegram_ads_withdrawal'
+    autoload TD::Types.camelize('telegram_api_usage'), 'tdlib/types/star_transaction_type/telegram_api_usage'
+    autoload TD::Types.camelize('bot_paid_media_purchase'), 'tdlib/types/star_transaction_type/bot_paid_media_purchase'
+    autoload TD::Types.camelize('bot_paid_media_sale'), 'tdlib/types/star_transaction_type/bot_paid_media_sale'
+    autoload TD::Types.camelize('channel_paid_media_purchase'), 'tdlib/types/star_transaction_type/channel_paid_media_purchase'
+    autoload TD::Types.camelize('channel_paid_media_sale'), 'tdlib/types/star_transaction_type/channel_paid_media_sale'
+    autoload TD::Types.camelize('bot_invoice_purchase'), 'tdlib/types/star_transaction_type/bot_invoice_purchase'
+    autoload TD::Types.camelize('bot_invoice_sale'), 'tdlib/types/star_transaction_type/bot_invoice_sale'
+    autoload TD::Types.camelize('bot_subscription_purchase'), 'tdlib/types/star_transaction_type/bot_subscription_purchase'
+    autoload TD::Types.camelize('bot_subscription_sale'), 'tdlib/types/star_transaction_type/bot_subscription_sale'
+    autoload TD::Types.camelize('channel_subscription_purchase'), 'tdlib/types/star_transaction_type/channel_subscription_purchase'
+    autoload TD::Types.camelize('channel_subscription_sale'), 'tdlib/types/star_transaction_type/channel_subscription_sale'
+    autoload TD::Types.camelize('gift_auction_bid'), 'tdlib/types/star_transaction_type/gift_auction_bid'
+    autoload TD::Types.camelize('gift_purchase'), 'tdlib/types/star_transaction_type/gift_purchase'
+    autoload TD::Types.camelize('gift_purchase_offer'), 'tdlib/types/star_transaction_type/gift_purchase_offer'
+    autoload TD::Types.camelize('gift_transfer'), 'tdlib/types/star_transaction_type/gift_transfer'
+    autoload TD::Types.camelize('gift_original_details_drop'), 'tdlib/types/star_transaction_type/gift_original_details_drop'
+    autoload TD::Types.camelize('gift_sale'), 'tdlib/types/star_transaction_type/gift_sale'
+    autoload TD::Types.camelize('gift_upgrade'), 'tdlib/types/star_transaction_type/gift_upgrade'
+    autoload TD::Types.camelize('gift_upgrade_purchase'), 'tdlib/types/star_transaction_type/gift_upgrade_purchase'
+    autoload TD::Types.camelize('upgraded_gift_purchase'), 'tdlib/types/star_transaction_type/upgraded_gift_purchase'
+    autoload TD::Types.camelize('upgraded_gift_sale'), 'tdlib/types/star_transaction_type/upgraded_gift_sale'
+    autoload TD::Types.camelize('channel_paid_reaction_send'), 'tdlib/types/star_transaction_type/channel_paid_reaction_send'
+    autoload TD::Types.camelize('channel_paid_reaction_receive'), 'tdlib/types/star_transaction_type/channel_paid_reaction_receive'
+    autoload TD::Types.camelize('affiliate_program_commission'), 'tdlib/types/star_transaction_type/affiliate_program_commission'
+    autoload TD::Types.camelize('paid_message_send'), 'tdlib/types/star_transaction_type/paid_message_send'
+    autoload TD::Types.camelize('paid_message_receive'), 'tdlib/types/star_transaction_type/paid_message_receive'
+    autoload TD::Types.camelize('paid_group_call_message_send'), 'tdlib/types/star_transaction_type/paid_group_call_message_send'
+    autoload TD::Types.camelize('paid_group_call_message_receive'), 'tdlib/types/star_transaction_type/paid_group_call_message_receive'
+    autoload TD::Types.camelize('paid_group_call_reaction_send'), 'tdlib/types/star_transaction_type/paid_group_call_reaction_send'
+    autoload TD::Types.camelize('paid_group_call_reaction_receive'), 'tdlib/types/star_transaction_type/paid_group_call_reaction_receive'
+    autoload TD::Types.camelize('suggested_post_payment_send'), 'tdlib/types/star_transaction_type/suggested_post_payment_send'
+    autoload TD::Types.camelize('suggested_post_payment_receive'), 'tdlib/types/star_transaction_type/suggested_post_payment_receive'
+    autoload TD::Types.camelize('premium_purchase'), 'tdlib/types/star_transaction_type/premium_purchase'
+    autoload TD::Types.camelize('business_bot_transfer_send'), 'tdlib/types/star_transaction_type/business_bot_transfer_send'
+    autoload TD::Types.camelize('business_bot_transfer_receive'), 'tdlib/types/star_transaction_type/business_bot_transfer_receive'
+    autoload TD::Types.camelize('public_post_search'), 'tdlib/types/star_transaction_type/public_post_search'
+    autoload TD::Types.camelize('unsupported'), 'tdlib/types/star_transaction_type/unsupported'
   end
 end

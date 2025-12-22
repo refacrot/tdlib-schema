@@ -5,8 +5,8 @@ module TD::Types
   # @attr text [TD::Types::String] Text of the advertisement.
   # @attr min_display_duration [Integer] The minimum amount of time the advertisement must be displayed before it can
   #   be hidden by the user, in seconds.
-  # @attr max_display_duration [Integer] The maximum amount of time the advertisement must be displayed before it must
-  #   be automatically hidden, in seconds.
+  # @attr max_display_duration [Integer] The maximum amount of time the advertisement must be displayed before it
+  #   must be automatically hidden, in seconds.
   # @attr can_be_reported [Boolean] True, if the advertisement can be reported to Telegram moderators through
   #   reportVideoMessageAdvertisement.
   # @attr sponsor [TD::Types::AdvertisementSponsor] Information about the sponsor of the advertisement.

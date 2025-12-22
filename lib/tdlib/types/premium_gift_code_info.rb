@@ -1,14 +1,14 @@
 module TD::Types
   # Contains information about a Telegram Premium gift code.
   #
-  # @attr creator_id [TD::Types::MessageSender, nil] Identifier of a chat or a user that created the gift code; may be
-  #   null if unknown.
+  # @attr creator_id [TD::Types::MessageSender, nil] Identifier of a chat or a user that created the gift code; may
+  #   be null if unknown.
   #   If null and the code is from {TD::Types::MessageContent::PremiumGiftCode} message, then creator_id from the
   #   message can be used.
   # @attr creation_date [Integer] Point in time (Unix timestamp) when the code was created.
   # @attr is_from_giveaway [Boolean] True, if the gift code was created for a giveaway.
-  # @attr giveaway_message_id [Integer] Identifier of the corresponding giveaway message in the creator_id chat; may be
-  #   0 or an identifier of a deleted message.
+  # @attr giveaway_message_id [Integer] Identifier of the corresponding giveaway message in the creator_id chat; may
+  #   be 0 or an identifier of a deleted message.
   # @attr month_count [Integer] Number of months the Telegram Premium subscription will be active after code
   #   activation; 0 if the number of months isn't integer.
   # @attr day_count [Integer] Number of days the Telegram Premium subscription will be active after code activation.

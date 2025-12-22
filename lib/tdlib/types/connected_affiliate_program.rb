@@ -5,8 +5,8 @@ module TD::Types
   # @attr bot_user_id [Integer] User identifier of the bot created the program.
   # @attr parameters [TD::Types::AffiliateProgramParameters] The parameters of the affiliate program.
   # @attr connection_date [Integer] Point in time (Unix timestamp) when the affiliate program was connected.
-  # @attr is_disconnected [Boolean] True, if the program was canceled by the bot, or disconnected by the chat owner and
-  #   isn't available anymore.
+  # @attr is_disconnected [Boolean] True, if the program was canceled by the bot, or disconnected by the chat owner
+  #   and isn't available anymore.
   # @attr user_count [Integer] The number of users that used the affiliate program.
   # @attr revenue_star_count [Integer] The number of Telegram Stars that were earned by the affiliate program.
   class ConnectedAffiliateProgram < Base

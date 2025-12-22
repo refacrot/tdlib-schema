@@ -9,8 +9,8 @@ module TD::Types
   # @attr from_background [Boolean] Pass true if the message is sent from the background.
   # @attr protect_content [Boolean] Pass true if the content of the message must be protected from forwarding and
   #   saving; for bots only.
-  # @attr allow_paid_broadcast [Boolean] Pass true to allow the message to ignore regular broadcast limits for a small
-  #   fee; for bots only.
+  # @attr allow_paid_broadcast [Boolean] Pass true to allow the message to ignore regular broadcast limits for a
+  #   small fee; for bots only.
   # @attr paid_message_star_count [Integer] The number of Telegram Stars the user agreed to pay to send the messages.
   # @attr update_order_of_installed_sticker_sets [Boolean] Pass true if the user explicitly chosen a sticker or a
   #   custom emoji from an installed sticker set; applicable only to sendMessage and sendMessageAlbum.

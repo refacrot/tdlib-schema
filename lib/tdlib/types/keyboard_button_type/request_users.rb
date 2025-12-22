@@ -1,6 +1,6 @@
 module TD::Types
   # A button that requests users to be shared by the current user; available only in private chats.
-  # Use the method shareUsersWithBot to complete the request.
+  #   Use the method shareUsersWithBot to complete the request.
   #
   # @attr id [Integer] Unique button identifier.
   # @attr restrict_user_is_bot [Boolean] True, if the shared users must or must not be bots.

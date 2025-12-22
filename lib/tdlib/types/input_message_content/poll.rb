@@ -1,7 +1,7 @@
 module TD::Types
   # A message with a poll.
-  # Polls can't be sent to secret chats and channel direct messages chats.
-  # Polls can be sent to a private chat only if the chat is a chat with a bot or the Saved Messages chat.
+  #   Polls can't be sent to secret chats and channel direct messages chats.
+  #   Polls can be sent to a private chat only if the chat is a chat with a bot or the Saved Messages chat.
   #
   # @attr question [TD::Types::FormattedText] Poll question; 1-255 characters (up to 300 characters for bots).
   #   Only custom emoji entities are allowed to be added and only by Premium users.

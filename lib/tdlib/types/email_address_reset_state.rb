@@ -1,11 +1,7 @@
 module TD::Types
   # Describes reset state of an email address.
   class EmailAddressResetState < Base
-%w[
-  available
-      pending
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/email_address_reset_state/#{type}"
-end
+    autoload TD::Types.camelize('available'), 'tdlib/types/email_address_reset_state/available'
+    autoload TD::Types.camelize('pending'), 'tdlib/types/email_address_reset_state/pending'
   end
 end

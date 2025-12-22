@@ -1,6 +1,6 @@
 module TD::Types
-  # Describes settings for greeting messages that are automatically sent by a Telegram Business account as response to
-  #   incoming messages in an inactive private chat.
+  # Describes settings for greeting messages that are automatically sent by a Telegram Business account as response
+  #   to incoming messages in an inactive private chat.
   #
   # @attr shortcut_id [Integer] Unique quick reply shortcut identifier for the greeting messages.
   # @attr recipients [TD::Types::BusinessRecipients] Chosen recipients of the greeting messages.

@@ -6,8 +6,8 @@ module TD::Types
   # @attr min_bid [Integer] The minimum possible bid in the auction in Telegram Stars.
   # @attr bid_levels [Array<TD::Types::AuctionBid>] A sparse list of bids that were made in the auction.
   # @attr top_bidder_user_ids [Array<Integer>] User identifiers of at most 3 users with the biggest bids.
-  # @attr rounds [Array<TD::Types::AuctionRound>] Rounds of the auction in which their duration or extension rules are
-  #   changed.
+  # @attr rounds [Array<TD::Types::AuctionRound>] Rounds of the auction in which their duration or extension rules
+  #   are changed.
   # @attr current_round_end_date [Integer] Point in time (Unix timestamp) when the current round will end.
   # @attr current_round_number [Integer] 1-based number of the current round.
   # @attr total_round_count [Integer] The total number of rounds.

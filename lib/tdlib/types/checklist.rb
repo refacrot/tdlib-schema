@@ -7,8 +7,8 @@ module TD::Types
   # @attr others_can_add_tasks [Boolean] True, if users other than creator of the list can add tasks to the list.
   # @attr can_add_tasks [Boolean] True, if the current user can add tasks to the list if they have Telegram Premium
   #   subscription.
-  # @attr others_can_mark_tasks_as_done [Boolean] True, if users other than creator of the list can mark tasks as done
-  #   or not done.
+  # @attr others_can_mark_tasks_as_done [Boolean] True, if users other than creator of the list can mark tasks as
+  #   done or not done.
   #   If true, then the checklist is called "group checklist".
   # @attr can_mark_tasks_as_done [Boolean] True, if the current user can mark tasks as done or not done if they have
   #   Telegram Premium subscription.

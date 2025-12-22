@@ -9,8 +9,8 @@ module TD::Types
   # @attr winner_count [Integer] Number of winners in the giveaway.
   # @attr activation_count [Integer] Number of winners, which activated their gift codes; for Telegram Premium
   #   giveaways only.
-  # @attr gift_code [TD::Types::String] Telegram Premium gift code that was received by the current user; empty if the
-  #   user isn't a winner in the giveaway or the giveaway isn't a Telegram Premium giveaway.
+  # @attr gift_code [TD::Types::String] Telegram Premium gift code that was received by the current user; empty if
+  #   the user isn't a winner in the giveaway or the giveaway isn't a Telegram Premium giveaway.
   # @attr won_star_count [Integer] The amount of Telegram Stars won by the current user; 0 if the user isn't a winner
   #   in the giveaway or the giveaway isn't a Telegram Star giveaway.
   class GiveawayInfo::Completed < GiveawayInfo

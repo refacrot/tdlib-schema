@@ -1,61 +1,57 @@
 module TD::Types
   # Represents a chat event.
   class ChatEventAction < Base
-%w[
-  message_edited
-      message_deleted
-      message_pinned
-      message_unpinned
-      poll_stopped
-      member_joined
-      member_joined_by_invite_link
-      member_joined_by_request
-      member_invited
-      member_left
-      member_promoted
-      member_restricted
-      member_subscription_extended
-      available_reactions_changed
-      background_changed
-      description_changed
-      emoji_status_changed
-      linked_chat_changed
-      location_changed
-      message_auto_delete_time_changed
-      permissions_changed
-      photo_changed
-      slow_mode_delay_changed
-      sticker_set_changed
-      custom_emoji_sticker_set_changed
-      title_changed
-      username_changed
-      active_usernames_changed
-      accent_color_changed
-      profile_accent_color_changed
-      has_protected_content_toggled
-      invites_toggled
-      is_all_history_available_toggled
-      has_aggressive_anti_spam_enabled_toggled
-      sign_messages_toggled
-      show_message_sender_toggled
-      automatic_translation_toggled
-      invite_link_edited
-      invite_link_revoked
-      invite_link_deleted
-      video_chat_created
-      video_chat_ended
-      video_chat_mute_new_participants_toggled
-      video_chat_participant_is_muted_toggled
-      video_chat_participant_volume_level_changed
-      is_forum_toggled
-      forum_topic_created
-      forum_topic_edited
-      forum_topic_toggle_is_closed
-      forum_topic_toggle_is_hidden
-      forum_topic_deleted
-      forum_topic_pinned
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/chat_event_action/#{type}"
-end
+    autoload TD::Types.camelize('message_edited'), 'tdlib/types/chat_event_action/message_edited'
+    autoload TD::Types.camelize('message_deleted'), 'tdlib/types/chat_event_action/message_deleted'
+    autoload TD::Types.camelize('message_pinned'), 'tdlib/types/chat_event_action/message_pinned'
+    autoload TD::Types.camelize('message_unpinned'), 'tdlib/types/chat_event_action/message_unpinned'
+    autoload TD::Types.camelize('poll_stopped'), 'tdlib/types/chat_event_action/poll_stopped'
+    autoload TD::Types.camelize('member_joined'), 'tdlib/types/chat_event_action/member_joined'
+    autoload TD::Types.camelize('member_joined_by_invite_link'), 'tdlib/types/chat_event_action/member_joined_by_invite_link'
+    autoload TD::Types.camelize('member_joined_by_request'), 'tdlib/types/chat_event_action/member_joined_by_request'
+    autoload TD::Types.camelize('member_invited'), 'tdlib/types/chat_event_action/member_invited'
+    autoload TD::Types.camelize('member_left'), 'tdlib/types/chat_event_action/member_left'
+    autoload TD::Types.camelize('member_promoted'), 'tdlib/types/chat_event_action/member_promoted'
+    autoload TD::Types.camelize('member_restricted'), 'tdlib/types/chat_event_action/member_restricted'
+    autoload TD::Types.camelize('member_subscription_extended'), 'tdlib/types/chat_event_action/member_subscription_extended'
+    autoload TD::Types.camelize('available_reactions_changed'), 'tdlib/types/chat_event_action/available_reactions_changed'
+    autoload TD::Types.camelize('background_changed'), 'tdlib/types/chat_event_action/background_changed'
+    autoload TD::Types.camelize('description_changed'), 'tdlib/types/chat_event_action/description_changed'
+    autoload TD::Types.camelize('emoji_status_changed'), 'tdlib/types/chat_event_action/emoji_status_changed'
+    autoload TD::Types.camelize('linked_chat_changed'), 'tdlib/types/chat_event_action/linked_chat_changed'
+    autoload TD::Types.camelize('location_changed'), 'tdlib/types/chat_event_action/location_changed'
+    autoload TD::Types.camelize('message_auto_delete_time_changed'), 'tdlib/types/chat_event_action/message_auto_delete_time_changed'
+    autoload TD::Types.camelize('permissions_changed'), 'tdlib/types/chat_event_action/permissions_changed'
+    autoload TD::Types.camelize('photo_changed'), 'tdlib/types/chat_event_action/photo_changed'
+    autoload TD::Types.camelize('slow_mode_delay_changed'), 'tdlib/types/chat_event_action/slow_mode_delay_changed'
+    autoload TD::Types.camelize('sticker_set_changed'), 'tdlib/types/chat_event_action/sticker_set_changed'
+    autoload TD::Types.camelize('custom_emoji_sticker_set_changed'), 'tdlib/types/chat_event_action/custom_emoji_sticker_set_changed'
+    autoload TD::Types.camelize('title_changed'), 'tdlib/types/chat_event_action/title_changed'
+    autoload TD::Types.camelize('username_changed'), 'tdlib/types/chat_event_action/username_changed'
+    autoload TD::Types.camelize('active_usernames_changed'), 'tdlib/types/chat_event_action/active_usernames_changed'
+    autoload TD::Types.camelize('accent_color_changed'), 'tdlib/types/chat_event_action/accent_color_changed'
+    autoload TD::Types.camelize('profile_accent_color_changed'), 'tdlib/types/chat_event_action/profile_accent_color_changed'
+    autoload TD::Types.camelize('has_protected_content_toggled'), 'tdlib/types/chat_event_action/has_protected_content_toggled'
+    autoload TD::Types.camelize('invites_toggled'), 'tdlib/types/chat_event_action/invites_toggled'
+    autoload TD::Types.camelize('is_all_history_available_toggled'), 'tdlib/types/chat_event_action/is_all_history_available_toggled'
+    autoload TD::Types.camelize('has_aggressive_anti_spam_enabled_toggled'), 'tdlib/types/chat_event_action/has_aggressive_anti_spam_enabled_toggled'
+    autoload TD::Types.camelize('sign_messages_toggled'), 'tdlib/types/chat_event_action/sign_messages_toggled'
+    autoload TD::Types.camelize('show_message_sender_toggled'), 'tdlib/types/chat_event_action/show_message_sender_toggled'
+    autoload TD::Types.camelize('automatic_translation_toggled'), 'tdlib/types/chat_event_action/automatic_translation_toggled'
+    autoload TD::Types.camelize('invite_link_edited'), 'tdlib/types/chat_event_action/invite_link_edited'
+    autoload TD::Types.camelize('invite_link_revoked'), 'tdlib/types/chat_event_action/invite_link_revoked'
+    autoload TD::Types.camelize('invite_link_deleted'), 'tdlib/types/chat_event_action/invite_link_deleted'
+    autoload TD::Types.camelize('video_chat_created'), 'tdlib/types/chat_event_action/video_chat_created'
+    autoload TD::Types.camelize('video_chat_ended'), 'tdlib/types/chat_event_action/video_chat_ended'
+    autoload TD::Types.camelize('video_chat_mute_new_participants_toggled'), 'tdlib/types/chat_event_action/video_chat_mute_new_participants_toggled'
+    autoload TD::Types.camelize('video_chat_participant_is_muted_toggled'), 'tdlib/types/chat_event_action/video_chat_participant_is_muted_toggled'
+    autoload TD::Types.camelize('video_chat_participant_volume_level_changed'), 'tdlib/types/chat_event_action/video_chat_participant_volume_level_changed'
+    autoload TD::Types.camelize('is_forum_toggled'), 'tdlib/types/chat_event_action/is_forum_toggled'
+    autoload TD::Types.camelize('forum_topic_created'), 'tdlib/types/chat_event_action/forum_topic_created'
+    autoload TD::Types.camelize('forum_topic_edited'), 'tdlib/types/chat_event_action/forum_topic_edited'
+    autoload TD::Types.camelize('forum_topic_toggle_is_closed'), 'tdlib/types/chat_event_action/forum_topic_toggle_is_closed'
+    autoload TD::Types.camelize('forum_topic_toggle_is_hidden'), 'tdlib/types/chat_event_action/forum_topic_toggle_is_hidden'
+    autoload TD::Types.camelize('forum_topic_deleted'), 'tdlib/types/chat_event_action/forum_topic_deleted'
+    autoload TD::Types.camelize('forum_topic_pinned'), 'tdlib/types/chat_event_action/forum_topic_pinned'
   end
 end

@@ -1,11 +1,7 @@
 module TD::Types
   # Describes type of emoji status.
   class EmojiStatusType < Base
-%w[
-  custom_emoji
-      upgraded_gift
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/emoji_status_type/#{type}"
-end
+    autoload TD::Types.camelize('custom_emoji'), 'tdlib/types/emoji_status_type/custom_emoji'
+    autoload TD::Types.camelize('upgraded_gift'), 'tdlib/types/emoji_status_type/upgraded_gift'
   end
 end

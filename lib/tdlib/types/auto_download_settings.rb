@@ -8,8 +8,8 @@ module TD::Types
   # @attr video_upload_bitrate [Integer] The maximum suggested bitrate for uploaded videos, in kbit/s.
   # @attr preload_large_videos [Boolean] True, if the beginning of video files needs to be preloaded for instant
   #   playback.
-  # @attr preload_next_audio [Boolean] True, if the next audio track needs to be preloaded while the user is listening
-  #   to an audio file.
+  # @attr preload_next_audio [Boolean] True, if the next audio track needs to be preloaded while the user is
+  #   listening to an audio file.
   # @attr preload_stories [Boolean] True, if stories needs to be preloaded.
   # @attr use_less_data_for_calls [Boolean] True, if "use less data for calls" option needs to be enabled.
   class AutoDownloadSettings < Base

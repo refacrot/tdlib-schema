@@ -5,8 +5,8 @@ module TD::Types
   # @attr can_retry [Boolean] True, if the message can be re-sent using resendMessages or
   #   readdQuickReplyShortcutMessages.
   # @attr need_another_sender [Boolean] True, if the message can be re-sent only on behalf of a different sender.
-  # @attr need_another_reply_quote [Boolean] True, if the message can be re-sent only if another quote is chosen in the
-  #   message that is replied by the given message.
+  # @attr need_another_reply_quote [Boolean] True, if the message can be re-sent only if another quote is chosen in
+  #   the message that is replied by the given message.
   # @attr need_drop_reply [Boolean] True, if the message can be re-sent only if the message to be replied is removed.
   #   This will be done automatically by resendMessages.
   # @attr required_paid_message_star_count [Integer] The number of Telegram Stars that must be paid to send the

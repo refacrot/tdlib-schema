@@ -1,6 +1,6 @@
 module TD::Types
   # Describes an option for gifting Telegram Premium to a user.
-  # Use telegramPaymentPurposePremiumGift for out-of-store payments or payments in Telegram Stars.
+  #   Use telegramPaymentPurposePremiumGift for out-of-store payments or payments in Telegram Stars.
   #
   # @attr currency [TD::Types::String] ISO 4217 currency code for the payment.
   # @attr amount [Integer] The amount to pay, in the smallest units of the currency.

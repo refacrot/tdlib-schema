@@ -6,8 +6,8 @@ module TD::Types
   # @attr star_count [Integer] The number of Telegram Stars that were paid for the gift.
   # @attr auction_round_number [Integer] Identifier of the auction round in which the gift was acquired.
   # @attr auction_round_position [Integer] Position of the user in the round among all auction participants.
-  # @attr unique_gift_number [Integer] Unique number of the gift among gifts upgraded from the same gift after upgrade;
-  #   0 if yet unassigned.
+  # @attr unique_gift_number [Integer] Unique number of the gift among gifts upgraded from the same gift after
+  #   upgrade; 0 if yet unassigned.
   # @attr text [TD::Types::FormattedText] Message added to the gift.
   # @attr is_private [Boolean] True, if the sender and gift text are shown only to the gift receiver; otherwise,
   #   everyone will be able to see them.

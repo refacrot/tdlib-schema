@@ -1,13 +1,9 @@
 module TD::Types
   # Describes result of group call participant invitation.
   class InviteGroupCallParticipantResult < Base
-%w[
-  user_privacy_restricted
-      user_already_participant
-      user_was_banned
-      success
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/invite_group_call_participant_result/#{type}"
-end
+    autoload TD::Types.camelize('user_privacy_restricted'), 'tdlib/types/invite_group_call_participant_result/user_privacy_restricted'
+    autoload TD::Types.camelize('user_already_participant'), 'tdlib/types/invite_group_call_participant_result/user_already_participant'
+    autoload TD::Types.camelize('user_was_banned'), 'tdlib/types/invite_group_call_participant_result/user_was_banned'
+    autoload TD::Types.camelize('success'), 'tdlib/types/invite_group_call_participant_result/success'
   end
 end

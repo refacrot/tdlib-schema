@@ -1,14 +1,10 @@
 module TD::Types
   # Describes result of sponsored message or chat report.
   class ReportSponsoredResult < Base
-%w[
-  ok
-      failed
-      option_required
-      ads_hidden
-      premium_required
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/report_sponsored_result/#{type}"
-end
+    autoload TD::Types.camelize('ok'), 'tdlib/types/report_sponsored_result/ok'
+    autoload TD::Types.camelize('failed'), 'tdlib/types/report_sponsored_result/failed'
+    autoload TD::Types.camelize('option_required'), 'tdlib/types/report_sponsored_result/option_required'
+    autoload TD::Types.camelize('ads_hidden'), 'tdlib/types/report_sponsored_result/ads_hidden'
+    autoload TD::Types.camelize('premium_required'), 'tdlib/types/report_sponsored_result/premium_required'
   end
 end

@@ -10,8 +10,8 @@ module TD::Types
   # @attr suggested_tip_amounts [Array<Integer>] Suggested amounts of tip in the smallest units of the currency.
   # @attr recurring_payment_terms_of_service_url [TD::Types::String] An HTTP URL with terms of service for recurring
   #   payments.
-  #   If non-empty, the invoice payment will result in recurring payments and the user must accept the terms of service
-  #   before allowed to pay.
+  #   If non-empty, the invoice payment will result in recurring payments and the user must accept the terms of
+  #   service before allowed to pay.
   # @attr terms_of_service_url [TD::Types::String] An HTTP URL with terms of service for non-recurring payments.
   #   If non-empty, then the user must accept the terms of service before allowed to pay.
   # @attr is_test [Boolean] True, if the payment is a test payment.

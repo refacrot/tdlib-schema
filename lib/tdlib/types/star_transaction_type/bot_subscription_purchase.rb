@@ -1,6 +1,6 @@
 module TD::Types
-  # The transaction is a purchase of a subscription from a bot or a business account by the current user; relevant for
-  #   regular users only.
+  # The transaction is a purchase of a subscription from a bot or a business account by the current user; relevant
+  #   for regular users only.
   #
   # @attr user_id [Integer] Identifier of the bot or the business account user that created the subscription link.
   # @attr subscription_period [Integer] The number of seconds between consecutive Telegram Star debitings.

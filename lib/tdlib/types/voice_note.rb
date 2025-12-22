@@ -6,8 +6,8 @@ module TD::Types
   # @attr mime_type [TD::Types::String] MIME type of the file; as defined by the sender.
   #   Usually, one of "audio/ogg" for Opus in an OGG container, "audio/mpeg" for an MP3 audio, or "audio/mp4" for an
   #   M4A audio.
-  # @attr speech_recognition_result [TD::Types::SpeechRecognitionResult, nil] Result of speech recognition in the voice
-  #   note; may be null.
+  # @attr speech_recognition_result [TD::Types::SpeechRecognitionResult, nil] Result of speech recognition in the
+  #   voice note; may be null.
   # @attr voice [TD::Types::File] File containing the voice note.
   class VoiceNote < Base
     attribute :duration, TD::Types::Coercible::Integer

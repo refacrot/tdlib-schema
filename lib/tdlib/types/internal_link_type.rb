@@ -1,67 +1,63 @@
 module TD::Types
   # Describes an internal https://t.me or tg: link, which must be processed by the application in a special way.
   class InternalLinkType < Base
-%w[
-  active_sessions
-      attachment_menu_bot
-      authentication_code
-      background
-      bot_add_to_channel
-      bot_start
-      bot_start_in_group
-      business_chat
-      buy_stars
-      change_phone_number
-      chat_affiliate_program
-      chat_boost
-      chat_folder_invite
-      chat_folder_settings
-      chat_invite
-      default_message_auto_delete_timer_settings
-      direct_messages_chat
-      edit_profile_settings
-      game
-      gift_auction
-      gift_collection
-      group_call
-      instant_view
-      invoice
-      language_pack
-      language_settings
-      live_story
-      login_email_settings
-      main_web_app
-      message
-      message_draft
-      my_stars
-      my_toncoins
-      passport_data_request
-      password_settings
-      phone_number_confirmation
-      phone_number_privacy_settings
-      premium_features
-      premium_gift
-      premium_gift_code
-      privacy_and_security_settings
-      proxy
-      public_chat
-      qr_code_authentication
-      restore_purchases
-      settings
-      sticker_set
-      story
-      story_album
-      theme
-      theme_settings
-      unknown_deep_link
-      unsupported_proxy
-      upgraded_gift
-      user_phone_number
-      user_token
-      video_chat
-      web_app
-].each do |type|
-  autoload TD::Types.camelize(type), "tdlib/types/internal_link_type/#{type}"
-end
+    autoload TD::Types.camelize('active_sessions'), 'tdlib/types/internal_link_type/active_sessions'
+    autoload TD::Types.camelize('attachment_menu_bot'), 'tdlib/types/internal_link_type/attachment_menu_bot'
+    autoload TD::Types.camelize('authentication_code'), 'tdlib/types/internal_link_type/authentication_code'
+    autoload TD::Types.camelize('background'), 'tdlib/types/internal_link_type/background'
+    autoload TD::Types.camelize('bot_add_to_channel'), 'tdlib/types/internal_link_type/bot_add_to_channel'
+    autoload TD::Types.camelize('bot_start'), 'tdlib/types/internal_link_type/bot_start'
+    autoload TD::Types.camelize('bot_start_in_group'), 'tdlib/types/internal_link_type/bot_start_in_group'
+    autoload TD::Types.camelize('business_chat'), 'tdlib/types/internal_link_type/business_chat'
+    autoload TD::Types.camelize('buy_stars'), 'tdlib/types/internal_link_type/buy_stars'
+    autoload TD::Types.camelize('change_phone_number'), 'tdlib/types/internal_link_type/change_phone_number'
+    autoload TD::Types.camelize('chat_affiliate_program'), 'tdlib/types/internal_link_type/chat_affiliate_program'
+    autoload TD::Types.camelize('chat_boost'), 'tdlib/types/internal_link_type/chat_boost'
+    autoload TD::Types.camelize('chat_folder_invite'), 'tdlib/types/internal_link_type/chat_folder_invite'
+    autoload TD::Types.camelize('chat_folder_settings'), 'tdlib/types/internal_link_type/chat_folder_settings'
+    autoload TD::Types.camelize('chat_invite'), 'tdlib/types/internal_link_type/chat_invite'
+    autoload TD::Types.camelize('default_message_auto_delete_timer_settings'), 'tdlib/types/internal_link_type/default_message_auto_delete_timer_settings'
+    autoload TD::Types.camelize('direct_messages_chat'), 'tdlib/types/internal_link_type/direct_messages_chat'
+    autoload TD::Types.camelize('edit_profile_settings'), 'tdlib/types/internal_link_type/edit_profile_settings'
+    autoload TD::Types.camelize('game'), 'tdlib/types/internal_link_type/game'
+    autoload TD::Types.camelize('gift_auction'), 'tdlib/types/internal_link_type/gift_auction'
+    autoload TD::Types.camelize('gift_collection'), 'tdlib/types/internal_link_type/gift_collection'
+    autoload TD::Types.camelize('group_call'), 'tdlib/types/internal_link_type/group_call'
+    autoload TD::Types.camelize('instant_view'), 'tdlib/types/internal_link_type/instant_view'
+    autoload TD::Types.camelize('invoice'), 'tdlib/types/internal_link_type/invoice'
+    autoload TD::Types.camelize('language_pack'), 'tdlib/types/internal_link_type/language_pack'
+    autoload TD::Types.camelize('language_settings'), 'tdlib/types/internal_link_type/language_settings'
+    autoload TD::Types.camelize('live_story'), 'tdlib/types/internal_link_type/live_story'
+    autoload TD::Types.camelize('login_email_settings'), 'tdlib/types/internal_link_type/login_email_settings'
+    autoload TD::Types.camelize('main_web_app'), 'tdlib/types/internal_link_type/main_web_app'
+    autoload TD::Types.camelize('message'), 'tdlib/types/internal_link_type/message'
+    autoload TD::Types.camelize('message_draft'), 'tdlib/types/internal_link_type/message_draft'
+    autoload TD::Types.camelize('my_stars'), 'tdlib/types/internal_link_type/my_stars'
+    autoload TD::Types.camelize('my_toncoins'), 'tdlib/types/internal_link_type/my_toncoins'
+    autoload TD::Types.camelize('passport_data_request'), 'tdlib/types/internal_link_type/passport_data_request'
+    autoload TD::Types.camelize('password_settings'), 'tdlib/types/internal_link_type/password_settings'
+    autoload TD::Types.camelize('phone_number_confirmation'), 'tdlib/types/internal_link_type/phone_number_confirmation'
+    autoload TD::Types.camelize('phone_number_privacy_settings'), 'tdlib/types/internal_link_type/phone_number_privacy_settings'
+    autoload TD::Types.camelize('premium_features'), 'tdlib/types/internal_link_type/premium_features'
+    autoload TD::Types.camelize('premium_gift'), 'tdlib/types/internal_link_type/premium_gift'
+    autoload TD::Types.camelize('premium_gift_code'), 'tdlib/types/internal_link_type/premium_gift_code'
+    autoload TD::Types.camelize('privacy_and_security_settings'), 'tdlib/types/internal_link_type/privacy_and_security_settings'
+    autoload TD::Types.camelize('proxy'), 'tdlib/types/internal_link_type/proxy'
+    autoload TD::Types.camelize('public_chat'), 'tdlib/types/internal_link_type/public_chat'
+    autoload TD::Types.camelize('qr_code_authentication'), 'tdlib/types/internal_link_type/qr_code_authentication'
+    autoload TD::Types.camelize('restore_purchases'), 'tdlib/types/internal_link_type/restore_purchases'
+    autoload TD::Types.camelize('settings'), 'tdlib/types/internal_link_type/settings'
+    autoload TD::Types.camelize('sticker_set'), 'tdlib/types/internal_link_type/sticker_set'
+    autoload TD::Types.camelize('story'), 'tdlib/types/internal_link_type/story'
+    autoload TD::Types.camelize('story_album'), 'tdlib/types/internal_link_type/story_album'
+    autoload TD::Types.camelize('theme'), 'tdlib/types/internal_link_type/theme'
+    autoload TD::Types.camelize('theme_settings'), 'tdlib/types/internal_link_type/theme_settings'
+    autoload TD::Types.camelize('unknown_deep_link'), 'tdlib/types/internal_link_type/unknown_deep_link'
+    autoload TD::Types.camelize('unsupported_proxy'), 'tdlib/types/internal_link_type/unsupported_proxy'
+    autoload TD::Types.camelize('upgraded_gift'), 'tdlib/types/internal_link_type/upgraded_gift'
+    autoload TD::Types.camelize('user_phone_number'), 'tdlib/types/internal_link_type/user_phone_number'
+    autoload TD::Types.camelize('user_token'), 'tdlib/types/internal_link_type/user_token'
+    autoload TD::Types.camelize('video_chat'), 'tdlib/types/internal_link_type/video_chat'
+    autoload TD::Types.camelize('web_app'), 'tdlib/types/internal_link_type/web_app'
   end
 end
