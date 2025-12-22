@@ -1,0 +1,51 @@
+require 'dry-struct'
+require 'dry-types'
+
+module TD::Types
+  include Dry.Types()
+
+  LOOKUP_TABLE = {
+      <%= config[:lookup_table].join(",\n      ") %>
+  }.freeze
+
+  module_function
+
+  # Recursively wraps a hash into typed classes
+  def wrap(object)
+    # Wrapping each entry in array
+    if object.kind_of?(::Array)
+      object.map { |o| wrap(o) }
+    elsif object.kind_of?(::Hash)
+      type = object.delete('@type')
+
+      object.each do |key, val|
+        if val.respond_to?(:each)
+          object[key] = wrap(val)
+        end
+      end
+
+      unless type
+        return object
+      end
+
+      if (klass = LOOKUP_TABLE[type])
+        const_get(klass).new(object)
+      else
+        raise ArgumentError.new("Can't find class for #{type}")
+      end
+    else
+      object
+    end
+  end
+
+  # Simple implementation for internal use only.
+  def camelize(str)
+    str.gsub(/(?:_|(\/)|^)([a-z\d]*)/i) { "#{$1}#{$2.capitalize}" }
+  end
+
+  %w[
+    <%= (config[:class_hierarchy]["Base"].map { |c| c.underscore } + ['base']).sort_by { |c| c }.join("\n    ") %>
+  ].each do |type|
+    autoload camelize(type), "tdlib/types/#{type}"
+  end
+end

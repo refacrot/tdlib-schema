@@ -1,0 +1,16 @@
+module TD::Types
+<%= config[:description] %>
+<%- if config[:attributes_doc].present? -%>
+  #
+<%= config[:attributes_doc] %>
+<%- end -%>
+  class <%= config[:class_name] %>
+    <%- config[:attributes].each do |attr, info| -%>
+    attribute :<%= attr %>, <%= "#{info[:type]}#{ ".optional.default(nil)" if info[:optional] }" %>
+    <%- end -%>
+    <%- "\n" if config[:attributes].any? && config[:types].any? -%>
+    <%- config[:types].each do |type| -%>
+    autoload TD::Types.camelize('<%= type[:name] %>'), '<%= type[:path] %>'
+    <%- end -%>
+  end
+end

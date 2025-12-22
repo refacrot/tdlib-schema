@@ -1,0 +1,15 @@
+# frozen_string_literal: true
+
+# This is a generated module from current TDLib scheme
+# It contains all available TDLib methods
+module TD::ClientMethods
+<% config[:methods].each do |method| -%>
+<%= method[:description]%>
+  #
+<%= method[:params_doc] %>
+  def <%= method[:name]%><%= method[:params]%>
+    <%= method[:content] %>
+  end
+<%= "\n" if method != config[:methods].last -%>
+<% end -%>
+end
